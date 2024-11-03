@@ -97,17 +97,29 @@
       "outbounds": [
         "auto",
         "direct",
-        "🇸🇬 新加坡 SG04",
-        "直连订阅每日早更，注意更新本地订阅",
-        "🇸🇬 新加坡 SG01",
-        "🇭🇰 [vless]HK-A04",
-        "免费_备用↓",
-        "最新官网 bujidao.org",
-        "UkOFdDqe_hysteria2",
-        "vZMp3j3X_hysteria2",
-        "JKp6PPaI_hysteria2",
-        "UOL4c6VJ_hysteria2",
-        "🇦🇶 OAQvVtlF_hysteria2"
+        "ðŸ‡ºðŸ‡¸ US,",
+        "ðŸ‡¸ðŸ‡¬ SG,",
+        "ðŸ‡­ðŸ‡° HK,",
+        "ðŸ‡¯ðŸ‡µ JP,",
+        "ðŸ‡ºðŸ‡¸ US, 2",
+        "ðŸ‡¹ðŸ‡¼ TW,",
+        "ðŸ‡­ðŸ‡° HK, 2",
+        "ðŸ‡¯ðŸ‡µ JP, 2",
+        "ðŸ‡°ðŸ‡· KR,",
+        "ðŸ‡¨ðŸ‡¦ CA,",
+        "ðŸ‡­ðŸ‡° HK, 3",
+        "ðŸ‡¯ðŸ‡µ JP, 3",
+        "ðŸ‡¯ðŸ‡µ JP, 4",
+        "ðŸ‡¹ðŸ‡¼ TW, 2",
+        "ðŸ‡­ðŸ‡° HK, 4",
+        "ðŸ‡¨ðŸ‡¦ CA, 2",
+        "ðŸ‡¯ðŸ‡µ JP, 5",
+        "ðŸ‡ºðŸ‡¸ US, 3",
+        "ðŸ‡­ðŸ‡° HK, 5",
+        "ðŸ‡¸ðŸ‡¬ SG, 2",
+        "ðŸ‡°ðŸ‡· KR, 2",
+        "ðŸ‡ºðŸ‡¸ US, 4",
+        "ðŸ‡­ðŸ‡° HK, 6"
       ]
     },
     {
@@ -320,66 +332,88 @@
       "tag": "HongKong",
       "type": "selector",
       "outbounds": [
-        "🇭🇰 [vless]HK-A04"
+        "ðŸ‡­ðŸ‡° HK,",
+        "ðŸ‡­ðŸ‡° HK, 2",
+        "ðŸ‡­ðŸ‡° HK, 3",
+        "ðŸ‡­ðŸ‡° HK, 4",
+        "ðŸ‡­ðŸ‡° HK, 5",
+        "ðŸ‡­ðŸ‡° HK, 6"
       ]
     },
     {
       "tag": "TaiWan",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "ðŸ‡¹ðŸ‡¼ TW,",
+        "ðŸ‡¹ðŸ‡¼ TW, 2"
       ]
     },
     {
       "tag": "Singapore",
       "type": "selector",
       "outbounds": [
-        "🇸🇬 新加坡 SG04",
-        "🇸🇬 新加坡 SG01"
+        "ðŸ‡¸ðŸ‡¬ SG,",
+        "ðŸ‡¸ðŸ‡¬ SG, 2"
       ]
     },
     {
       "tag": "Japan",
       "type": "selector",
       "outbounds": [
-        "直连订阅每日早更，注意更新本地订阅"
+        "ðŸ‡¯ðŸ‡µ JP,",
+        "ðŸ‡¯ðŸ‡µ JP, 2",
+        "ðŸ‡¯ðŸ‡µ JP, 3",
+        "ðŸ‡¯ðŸ‡µ JP, 4",
+        "ðŸ‡¯ðŸ‡µ JP, 5"
       ]
     },
     {
       "tag": "America",
       "type": "selector",
       "outbounds": [
-        "Proxy"
+        "ðŸ‡ºðŸ‡¸ US,",
+        "ðŸ‡ºðŸ‡¸ US, 2",
+        "ðŸ‡ºðŸ‡¸ US, 3",
+        "ðŸ‡ºðŸ‡¸ US, 4"
       ]
     },
     {
       "tag": "Others",
       "type": "selector",
       "outbounds": [
-        "免费_备用↓",
-        "最新官网 bujidao.org",
-        "UkOFdDqe_hysteria2",
-        "vZMp3j3X_hysteria2",
-        "JKp6PPaI_hysteria2",
-        "UOL4c6VJ_hysteria2",
-        "🇦🇶 OAQvVtlF_hysteria2"
+        "ðŸ‡°ðŸ‡· KR,",
+        "ðŸ‡¨ðŸ‡¦ CA,",
+        "ðŸ‡¨ðŸ‡¦ CA, 2",
+        "ðŸ‡°ðŸ‡· KR, 2"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇸🇬 新加坡 SG04",
-        "直连订阅每日早更，注意更新本地订阅",
-        "🇸🇬 新加坡 SG01",
-        "🇭🇰 [vless]HK-A04",
-        "免费_备用↓",
-        "最新官网 bujidao.org",
-        "UkOFdDqe_hysteria2",
-        "vZMp3j3X_hysteria2",
-        "JKp6PPaI_hysteria2",
-        "UOL4c6VJ_hysteria2",
-        "🇦🇶 OAQvVtlF_hysteria2"
+        "ðŸ‡ºðŸ‡¸ US,",
+        "ðŸ‡¸ðŸ‡¬ SG,",
+        "ðŸ‡­ðŸ‡° HK,",
+        "ðŸ‡¯ðŸ‡µ JP,",
+        "ðŸ‡ºðŸ‡¸ US, 2",
+        "ðŸ‡¹ðŸ‡¼ TW,",
+        "ðŸ‡­ðŸ‡° HK, 2",
+        "ðŸ‡¯ðŸ‡µ JP, 2",
+        "ðŸ‡°ðŸ‡· KR,",
+        "ðŸ‡¨ðŸ‡¦ CA,",
+        "ðŸ‡­ðŸ‡° HK, 3",
+        "ðŸ‡¯ðŸ‡µ JP, 3",
+        "ðŸ‡¯ðŸ‡µ JP, 4",
+        "ðŸ‡¹ðŸ‡¼ TW, 2",
+        "ðŸ‡­ðŸ‡° HK, 4",
+        "ðŸ‡¨ðŸ‡¦ CA, 2",
+        "ðŸ‡¯ðŸ‡µ JP, 5",
+        "ðŸ‡ºðŸ‡¸ US, 3",
+        "ðŸ‡­ðŸ‡° HK, 5",
+        "ðŸ‡¸ðŸ‡¬ SG, 2",
+        "ðŸ‡°ðŸ‡· KR, 2",
+        "ðŸ‡ºðŸ‡¸ US, 4",
+        "ðŸ‡­ðŸ‡° HK, 6"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -398,202 +432,188 @@
       "tag": "block"
     },
     {
-      "tag": "🇸🇬 新加坡 SG04",
-      "type": "vmess",
-      "server": "hymg1.tax5kkf9.buzz",
-      "server_port": 80,
-      "uuid": "4bf074f4-7e9c-4e4b-a10d-156e26199729",
-      "security": "auto",
-      "alter_id": 0,
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "sg04.a9cf1ad4-c944.cfd"
-        },
-        "path": "/"
-      }
+      "tag": "ðŸ‡ºðŸ‡¸ US,",
+      "type": "shadowsocks",
+      "server": "54.185.199.99",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "直连订阅每日早更，注意更新本地订阅",
-      "type": "vmess",
-      "server": "doo4s.tax5kkf9.buzz",
-      "server_port": 80,
-      "uuid": "4bf074f4-7e9c-4e4b-a10d-156e26199729",
-      "security": "auto",
-      "alter_id": 0,
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "sg01.a9cf1ad4-c944.cfd"
-        },
-        "path": "/"
-      }
+      "tag": "ðŸ‡¸ðŸ‡¬ SG,",
+      "type": "shadowsocks",
+      "server": "54.255.245.62",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "🇸🇬 新加坡 SG01",
-      "type": "vmess",
-      "server": "po9hm.tax5kkf9.buzz",
-      "server_port": 80,
-      "uuid": "4bf074f4-7e9c-4e4b-a10d-156e26199729",
-      "security": "auto",
-      "alter_id": 0,
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "sg01.a9cf1ad4-c944.cfd"
-        },
-        "path": "/"
-      }
+      "tag": "ðŸ‡­ðŸ‡° HK,",
+      "type": "shadowsocks",
+      "server": "54.200.148.115",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "🇭🇰 [vless]HK-A04",
-      "type": "vless",
-      "server": "buojgxexjpztpq0hnaqklyhl88tk2smc.i-love-gfw.org",
-      "server_port": 8443,
-      "uuid": "30384749-d518-4588-ae45-15557408bcc4",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "www.luogu.com.cn",
-        "reality": {
-          "enabled": true,
-          "public_key": "yRRkOvJgSk5sejnIWVrtfoqgo-nKyYSS5-SCiY8yzUg",
-          "short_id": "8ccc55f2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
+      "tag": "ðŸ‡¯ðŸ‡µ JP,",
+      "type": "shadowsocks",
+      "server": "52.69.236.102",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "免费_备用↓",
-      "type": "vless",
-      "server": "c1.bujidao.org",
-      "server_port": 2083,
-      "uuid": "1ccc1dd8-d8ed-4b69-b0c2-27f6282f9755",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "vl.bujidao.cc"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vl.bujidao.cc"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "max_early_data": 2048
-      }
+      "tag": "ðŸ‡ºðŸ‡¸ US, 2",
+      "type": "shadowsocks",
+      "server": "35.86.117.124",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "最新官网 bujidao.org",
-      "type": "vless",
-      "server": "c2-4.bujidao.org",
-      "server_port": 2083,
-      "uuid": "1ccc1dd8-d8ed-4b69-b0c2-27f6282f9755",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "vl.xiaoxiaobujidao.xyz"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vl.xiaoxiaobujidao.xyz"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "max_early_data": 2048
-      }
+      "tag": "ðŸ‡¹ðŸ‡¼ TW,",
+      "type": "shadowsocks",
+      "server": "13.215.208.195",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "UkOFdDqe_hysteria2",
-      "type": "hysteria2",
-      "server": "sg5.ddns-link-b5.uk",
-      "server_port": 9990,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "tag": "ðŸ‡­ðŸ‡° HK, 2",
+      "type": "shadowsocks",
+      "server": "47.129.174.107",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "vZMp3j3X_hysteria2",
-      "type": "hysteria2",
-      "server": "sg1.ddns-link-b5.uk",
-      "server_port": 1784,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "tag": "ðŸ‡¯ðŸ‡µ JP, 2",
+      "type": "shadowsocks",
+      "server": "13.250.25.159",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "JKp6PPaI_hysteria2",
-      "type": "hysteria2",
-      "server": "sg2.ddns-link-b5.uk",
-      "server_port": 3300,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "tag": "ðŸ‡°ðŸ‡· KR,",
+      "type": "shadowsocks",
+      "server": "18.136.197.165",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "UOL4c6VJ_hysteria2",
-      "type": "hysteria2",
-      "server": "sg3.ddns-link-b5.uk",
-      "server_port": 5412,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "tag": "ðŸ‡¨ðŸ‡¦ CA,",
+      "type": "shadowsocks",
+      "server": "35.87.185.248",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "tag": "🇦🇶 OAQvVtlF_hysteria2",
-      "type": "hysteria2",
-      "server": "sg4.ddns-link-b5.uk",
-      "server_port": 7415,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "tag": "ðŸ‡­ðŸ‡° HK, 3",
+      "type": "shadowsocks",
+      "server": "57.181.42.181",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡¯ðŸ‡µ JP, 3",
+      "type": "shadowsocks",
+      "server": "54.254.7.5",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡¯ðŸ‡µ JP, 4",
+      "type": "shadowsocks",
+      "server": "43.201.254.74",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡¹ðŸ‡¼ TW, 2",
+      "type": "shadowsocks",
+      "server": "54.169.135.226",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡­ðŸ‡° HK, 4",
+      "type": "shadowsocks",
+      "server": "54.95.5.168",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡¨ðŸ‡¦ CA, 2",
+      "type": "shadowsocks",
+      "server": "54.68.160.24",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡¯ðŸ‡µ JP, 5",
+      "type": "shadowsocks",
+      "server": "52.77.209.61",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡ºðŸ‡¸ US, 3",
+      "type": "shadowsocks",
+      "server": "34.209.103.254",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡­ðŸ‡° HK, 5",
+      "type": "shadowsocks",
+      "server": "52.43.127.109",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡¸ðŸ‡¬ SG, 2",
+      "type": "shadowsocks",
+      "server": "52.198.168.235",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡°ðŸ‡· KR, 2",
+      "type": "shadowsocks",
+      "server": "3.112.215.69",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡ºðŸ‡¸ US, 4",
+      "type": "shadowsocks",
+      "server": "18.236.95.86",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "tag": "ðŸ‡­ðŸ‡° HK, 6",
+      "type": "shadowsocks",
+      "server": "43.201.254.211",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     }
   ],
   "route": {
