@@ -1,0 +1,700 @@
+{
+  "log": {
+    "level": "debug",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "",
+      "default_mode": "rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": false
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "tls://8.8.8.8",
+        "detour": "proxy"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "server": "block"
+      },
+      {
+        "outbound": "any",
+        "server": "localDns",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "direct",
+        "server": "localDns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "address": "172.19.0.1/30",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "endpoint_independent_nat": false,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true,
+      "users": []
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "direct",
+        "请保持每周一次更新订阅",
+        "邀请好友注册获得40%佣金",
+        "剩余流量：172.57 GB",
+        "距离下次重置剩余：12 天",
+        "套餐到期：2024-11-17",
+        "❤️主：daishu04.com",
+        "❤️备：lovedaishu.life",
+        "❤️备：daishu.pro",
+        "❤️永久：daishu.love",
+        "🇭🇰 专线VIP1|1x 香港1",
+        "🇭🇰 专线VIP1|1x 香港2",
+        "🇯🇵 专线VIP1|1x 日本1|ChatGPT",
+        "🇯🇵 专线VIP1|1x 日本2|ChatGPT",
+        "🇯🇵 专线VIP1|1x 日本3|ChatGPT",
+        "🇸🇬 专线VIP1|1x 新加坡1",
+        "🇸🇬 专线VIP1|1x 新加坡2",
+        "🇸🇬 专线VIP1|1x 新加坡3",
+        "🇰🇷 专线VIP1|1x 韩国1",
+        "🇰🇷 专线VIP1|1x 韩国2",
+        "🇹🇼 专线VIP1|1x 台湾|ChatGPT",
+        "🇺🇸 专线VIP1|1x 美国1",
+        "🇺🇸 专线VIP1|1x 美国2",
+        "🇺🇸 专线VIP1|1x 美国3",
+        "🇬🇧 专线VIP1|1x 英国",
+        "🇮🇳 专线VIP1|1x 印度",
+        "🇻🇳 专线VIP1|1x 越南1",
+        "🇻🇳 专线VIP1|1x 越南2",
+        "🇦🇺 专线VIP1|1x 悉尼1",
+        "🇦🇺 专线VIP1|1x 悉尼2",
+        "🇮🇳 🇮🇩专线VIP1|1x 印度尼西亚",
+        "🇷🇺 专线VIP1|1x 俄罗斯",
+        "🇺🇦 专线VIP1|1x 乌克兰",
+        "🇦🇪 专线VIP1|1x 迪拜",
+        "🇩🇪 专线VIP1|1x 德国",
+        "🇫🇷 专线VIP1|1x 法国",
+        "🇻🇮 🇳🇱专线VIP1|1x 荷兰",
+        "🇨🇭 专线VIP1|1x 瑞士",
+        "🇪🇸 专线VIP1|1x 西班牙"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "请保持每周一次更新订阅",
+        "邀请好友注册获得40%佣金",
+        "剩余流量：172.57 GB",
+        "距离下次重置剩余：12 天",
+        "套餐到期：2024-11-17",
+        "❤️主：daishu04.com",
+        "❤️备：lovedaishu.life",
+        "❤️备：daishu.pro",
+        "❤️永久：daishu.love",
+        "🇭🇰 专线VIP1|1x 香港1",
+        "🇭🇰 专线VIP1|1x 香港2",
+        "🇯🇵 专线VIP1|1x 日本1|ChatGPT",
+        "🇯🇵 专线VIP1|1x 日本2|ChatGPT",
+        "🇯🇵 专线VIP1|1x 日本3|ChatGPT",
+        "🇸🇬 专线VIP1|1x 新加坡1",
+        "🇸🇬 专线VIP1|1x 新加坡2",
+        "🇸🇬 专线VIP1|1x 新加坡3",
+        "🇰🇷 专线VIP1|1x 韩国1",
+        "🇰🇷 专线VIP1|1x 韩国2",
+        "🇹🇼 专线VIP1|1x 台湾|ChatGPT",
+        "🇺🇸 专线VIP1|1x 美国1",
+        "🇺🇸 专线VIP1|1x 美国2",
+        "🇺🇸 专线VIP1|1x 美国3",
+        "🇬🇧 专线VIP1|1x 英国",
+        "🇮🇳 专线VIP1|1x 印度",
+        "🇻🇳 专线VIP1|1x 越南1",
+        "🇻🇳 专线VIP1|1x 越南2",
+        "🇦🇺 专线VIP1|1x 悉尼1",
+        "🇦🇺 专线VIP1|1x 悉尼2",
+        "🇮🇳 🇮🇩专线VIP1|1x 印度尼西亚",
+        "🇷🇺 专线VIP1|1x 俄罗斯",
+        "🇺🇦 专线VIP1|1x 乌克兰",
+        "🇦🇪 专线VIP1|1x 迪拜",
+        "🇩🇪 专线VIP1|1x 德国",
+        "🇫🇷 专线VIP1|1x 法国",
+        "🇻🇮 🇳🇱专线VIP1|1x 荷兰",
+        "🇨🇭 专线VIP1|1x 瑞士",
+        "🇪🇸 专线VIP1|1x 西班牙"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "tag": "请保持每周一次更新订阅",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "邀请好友注册获得40%佣金",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "剩余流量：172.57 GB",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "距离下次重置剩余：12 天",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "套餐到期：2024-11-17",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "❤️主：daishu04.com",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "❤️备：lovedaishu.life",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "❤️备：daishu.pro",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "❤️永久：daishu.love",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇭🇰 专线VIP1|1x 香港1",
+      "type": "trojan",
+      "server": "hk1.iqiyi-tv.site",
+      "server_port": 17701,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇭🇰 专线VIP1|1x 香港2",
+      "type": "trojan",
+      "server": "hk2.iqiyi-tv.site",
+      "server_port": 17702,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇯🇵 专线VIP1|1x 日本1|ChatGPT",
+      "type": "trojan",
+      "server": "jp1.pptv-tv.store",
+      "server_port": 17721,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇯🇵 专线VIP1|1x 日本2|ChatGPT",
+      "type": "trojan",
+      "server": "jp2.pptv-tv.store",
+      "server_port": 17722,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇯🇵 专线VIP1|1x 日本3|ChatGPT",
+      "type": "trojan",
+      "server": "jp3.pptv-tv.store",
+      "server_port": 17723,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇸🇬 专线VIP1|1x 新加坡1",
+      "type": "trojan",
+      "server": "sg1.pptv-tv.store",
+      "server_port": 17711,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇸🇬 专线VIP1|1x 新加坡2",
+      "type": "trojan",
+      "server": "sg2.pptv-tv.store",
+      "server_port": 17712,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇸🇬 专线VIP1|1x 新加坡3",
+      "type": "trojan",
+      "server": "sg3.pptv-tv.store",
+      "server_port": 17713,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇰🇷 专线VIP1|1x 韩国1",
+      "type": "trojan",
+      "server": "kr1.pptv-tv.store",
+      "server_port": 17731,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇰🇷 专线VIP1|1x 韩国2",
+      "type": "trojan",
+      "server": "kr2.pptv-tv.store",
+      "server_port": 17732,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇹🇼 专线VIP1|1x 台湾|ChatGPT",
+      "type": "trojan",
+      "server": "tw1.pptv-tv.store",
+      "server_port": 17786,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇺🇸 专线VIP1|1x 美国1",
+      "type": "trojan",
+      "server": "us1.pptv-tv.store",
+      "server_port": 17741,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇺🇸 专线VIP1|1x 美国2",
+      "type": "trojan",
+      "server": "us2.pptv-tv.store",
+      "server_port": 17742,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇺🇸 专线VIP1|1x 美国3",
+      "type": "trojan",
+      "server": "us3.pptv-tv.store",
+      "server_port": 17743,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇬🇧 专线VIP1|1x 英国",
+      "type": "trojan",
+      "server": "gb1.pptv-tv.store",
+      "server_port": 17756,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇮🇳 专线VIP1|1x 印度",
+      "type": "trojan",
+      "server": "in.pptv-tv.store",
+      "server_port": 17728,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇻🇳 专线VIP1|1x 越南1",
+      "type": "trojan",
+      "server": "vn1.pptv-tv.store",
+      "server_port": 17751,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇻🇳 专线VIP1|1x 越南2",
+      "type": "trojan",
+      "server": "vn2.pptv-tv.store",
+      "server_port": 17752,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇦🇺 专线VIP1|1x 悉尼1",
+      "type": "trojan",
+      "server": "au1.pptv-tv.store",
+      "server_port": 17753,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇦🇺 专线VIP1|1x 悉尼2",
+      "type": "trojan",
+      "server": "au2.pptv-tv.store",
+      "server_port": 17754,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇮🇳 🇮🇩专线VIP1|1x 印度尼西亚",
+      "type": "trojan",
+      "server": "id1.pptv-tv.store",
+      "server_port": 17618,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇷🇺 专线VIP1|1x 俄罗斯",
+      "type": "trojan",
+      "server": "ru1.pptv-tv.store",
+      "server_port": 17615,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇺🇦 专线VIP1|1x 乌克兰",
+      "type": "trojan",
+      "server": "ua1.pptv-tv.store",
+      "server_port": 17749,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇦🇪 专线VIP1|1x 迪拜",
+      "type": "trojan",
+      "server": "ae1.pptv-tv.store",
+      "server_port": 17720,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇩🇪 专线VIP1|1x 德国",
+      "type": "trojan",
+      "server": "de1.pptv-tv.store",
+      "server_port": 17755,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇫🇷 专线VIP1|1x 法国",
+      "type": "trojan",
+      "server": "fr1.pptv-tv.store",
+      "server_port": 17759,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇻🇮 🇳🇱专线VIP1|1x 荷兰",
+      "type": "trojan",
+      "server": "nl1.pptv-tv.store",
+      "server_port": 17609,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇨🇭 专线VIP1|1x 瑞士",
+      "type": "trojan",
+      "server": "ch1.pptv-tv.store",
+      "server_port": 17725,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    },
+    {
+      "tag": "🇪🇸 专线VIP1|1x 西班牙",
+      "type": "trojan",
+      "server": "es1.pptv-tv.store",
+      "server_port": 17730,
+      "password": "5b1ad1a0-7234-4df3-bfed-1b019b821756",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "data.52daishu.life"
+      }
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "proxy",
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "proxy"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct"
+      }
+    ]
+  }
+}
