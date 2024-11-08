@@ -96,14 +96,38 @@
       "outbounds": [
         "auto",
         "direct",
-        "LD-z4ee97c3"
+        "Bangkok Pro 1",
+        "Manama Pro 1",
+        "cYq7jNk0_hysteria2",
+        "🇱🇺 SL9NLUZF_hysteria2",
+        "t2oyZr5T_hysteria2",
+        "Hw7nioZI_hysteria2",
+        "rthESXTo_hysteria2",
+        "🇸🇬 SG-A11",
+        "🇸🇬 SG-A12",
+        "e8W2A2eK_trojan",
+        "u1ccTkFM_trojan",
+        "1Y3OqoJT_trojan",
+        "🇸🇬 SG-A13"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "LD-z4ee97c3"
+        "Bangkok Pro 1",
+        "Manama Pro 1",
+        "cYq7jNk0_hysteria2",
+        "🇱🇺 SL9NLUZF_hysteria2",
+        "t2oyZr5T_hysteria2",
+        "Hw7nioZI_hysteria2",
+        "rthESXTo_hysteria2",
+        "🇸🇬 SG-A11",
+        "🇸🇬 SG-A12",
+        "e8W2A2eK_trojan",
+        "u1ccTkFM_trojan",
+        "1Y3OqoJT_trojan",
+        "🇸🇬 SG-A13"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -122,12 +146,192 @@
       "tag": "block"
     },
     {
-      "tag": "LD-z4ee97c3",
-      "type": "shadowsocks",
-      "server": "140.245.16.5",
-      "server_port": 17247,
-      "method": "aes-128-gcm",
-      "password": "LFebZyE/+h1ZodKWktDYi6DdHHh7ccmLvArdZ7w9EJk="
+      "tag": "Bangkok Pro 1",
+      "type": "trojan",
+      "server": "current-firefly.pig299.lat",
+      "server_port": 443,
+      "password": "3690911436885991424",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "Manama Pro 1",
+      "type": "trojan",
+      "server": "sound-ladybug.pig299.lat",
+      "server_port": 443,
+      "password": "3690911436885991424",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "cYq7jNk0_hysteria2",
+      "type": "hysteria2",
+      "server": "sg2.ddns-link-b5.uk",
+      "server_port": 3300,
+      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "sg2.ddns-link-b5.uk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇱🇺 SL9NLUZF_hysteria2",
+      "type": "hysteria2",
+      "server": "sg5.ddns-link-b5.uk",
+      "server_port": 9990,
+      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "sg5.ddns-link-b5.uk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "t2oyZr5T_hysteria2",
+      "type": "hysteria2",
+      "server": "sg4.ddns-link-b5.uk",
+      "server_port": 7415,
+      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "sg4.ddns-link-b5.uk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Hw7nioZI_hysteria2",
+      "type": "hysteria2",
+      "server": "jp3.ddns-link-b5.uk",
+      "server_port": 5385,
+      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "jp3.ddns-link-b5.uk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "rthESXTo_hysteria2",
+      "type": "hysteria2",
+      "server": "jp4.ddns-link-b5.uk",
+      "server_port": 7175,
+      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "jp4.ddns-link-b5.uk",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇸🇬 SG-A11",
+      "type": "hysteria2",
+      "server": "surfboard-sg.cloudlion.online",
+      "server_port": 51222,
+      "password": "e386791f-7a85-454c-b2d8-da143967e119",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇸🇬 SG-A12",
+      "type": "hysteria2",
+      "server": "surfboard-sg.cloudlion.online",
+      "server_port": 58424,
+      "password": "e386791f-7a85-454c-b2d8-da143967e119",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "e8W2A2eK_trojan",
+      "type": "trojan",
+      "server": "yhjp1130a.iamgone.top",
+      "server_port": 30052,
+      "password": "JyshlkwsEV",
+      "tls": {
+        "enabled": true,
+        "insecure": false
+      }
+    },
+    {
+      "tag": "u1ccTkFM_trojan",
+      "type": "trojan",
+      "server": "yjp1230a.iamback.top",
+      "server_port": 30023,
+      "password": "sXgOReSfZL",
+      "tls": {
+        "enabled": true,
+        "insecure": false
+      }
+    },
+    {
+      "tag": "1Y3OqoJT_trojan",
+      "type": "trojan",
+      "server": "yjp1230b.iamback.top",
+      "server_port": 30042,
+      "password": "H2bw4jcKuT",
+      "tls": {
+        "enabled": true,
+        "insecure": false
+      }
+    },
+    {
+      "tag": "🇸🇬 SG-A13",
+      "type": "trojan",
+      "server": "freesg01.jd0001.top",
+      "server_port": 15741,
+      "password": "f555db33-21cb-390f-9031-18ec7954e6a5",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "freesg01.jd0001.top"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "freesg01"
+      }
     }
   ],
   "route": {
