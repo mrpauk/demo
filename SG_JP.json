@@ -96,28 +96,60 @@
       "outbounds": [
         "auto",
         "direct",
-        "9LNqpgqL_hysteria2",
-        "1sCI1x4h_hysteria2",
-        "🇹🇼 CmTW251D_hysteria2",
-        "zfERvly6_hysteria2",
-        "TRTRJotK_hysteria2",
-        "dvkk5DHs_hysteria2",
-        "dVJmlBNU_hysteria2",
-        "JWD2tx6L_hysteria2"
+        "🇸🇬 SG",
+        "距离下次重置剩余：27 天",
+        "套餐到期：2027-11-11",
+        "🇸🇬 新加坡3 | 高速专线-hy2",
+        "🇦🇺 澳大利亚 | 高速专线-hy2",
+        "🇯🇵 日本 | 高速专线-hy2",
+        "🇧🇷 巴西 | 高速专线-hy2",
+        "🇧🇷 巴西2 | 高速专线-hy2",
+        "🇺🇸 美国阿什本 | 高速专线-hy2",
+        "🇺🇸 美国阿什本2 | 高速专线-hy2",
+        "🇺🇸 美国阿什本3 | 高速专线-hy2",
+        "🇪🇸 西班牙 | 高速专线-hy2",
+        "🇫🇷 法国马赛 | 高速专线-hy2",
+        "🇲🇽 墨西哥 | 高速专线-hy2",
+        "🇮🇳 印度 | 高速专线-hy2",
+        "🇮🇳 印度2 | 高速专线-hy2",
+        "🇺🇸 美国1 | 高速专线",
+        "🇺🇸 美国2 | 高速专线",
+        "🇩🇪 德国 | 高速专线",
+        "🇰🇷 韩国 | 高速专线",
+        "🇯🇵 日本2 | 高速专线",
+        "🇺🇸 美国圣何塞 | 高速专线",
+        "🇮🇳 印度 | 高速专线",
+        "🇺🇸 美国1 | 0.1倍"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "9LNqpgqL_hysteria2",
-        "1sCI1x4h_hysteria2",
-        "🇹🇼 CmTW251D_hysteria2",
-        "zfERvly6_hysteria2",
-        "TRTRJotK_hysteria2",
-        "dvkk5DHs_hysteria2",
-        "dVJmlBNU_hysteria2",
-        "JWD2tx6L_hysteria2"
+        "🇸🇬 SG",
+        "距离下次重置剩余：27 天",
+        "套餐到期：2027-11-11",
+        "🇸🇬 新加坡3 | 高速专线-hy2",
+        "🇦🇺 澳大利亚 | 高速专线-hy2",
+        "🇯🇵 日本 | 高速专线-hy2",
+        "🇧🇷 巴西 | 高速专线-hy2",
+        "🇧🇷 巴西2 | 高速专线-hy2",
+        "🇺🇸 美国阿什本 | 高速专线-hy2",
+        "🇺🇸 美国阿什本2 | 高速专线-hy2",
+        "🇺🇸 美国阿什本3 | 高速专线-hy2",
+        "🇪🇸 西班牙 | 高速专线-hy2",
+        "🇫🇷 法国马赛 | 高速专线-hy2",
+        "🇲🇽 墨西哥 | 高速专线-hy2",
+        "🇮🇳 印度 | 高速专线-hy2",
+        "🇮🇳 印度2 | 高速专线-hy2",
+        "🇺🇸 美国1 | 高速专线",
+        "🇺🇸 美国2 | 高速专线",
+        "🇩🇪 德国 | 高速专线",
+        "🇰🇷 韩国 | 高速专线",
+        "🇯🇵 日本2 | 高速专线",
+        "🇺🇸 美国圣何塞 | 高速专线",
+        "🇮🇳 印度 | 高速专线",
+        "🇺🇸 美国1 | 0.1倍"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -136,139 +168,393 @@
       "tag": "block"
     },
     {
-      "tag": "9LNqpgqL_hysteria2",
+      "tag": "🇸🇬 SG",
       "type": "hysteria2",
-      "server": "jp3.ddns-link-b5.uk",
-      "server_port": 5385,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "140.245.48.185",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "jp3.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "1sCI1x4h_hysteria2",
+      "tag": "距离下次重置剩余：27 天",
       "type": "hysteria2",
-      "server": "jp2.ddns-link-b5.uk",
-      "server_port": 3887,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "140.245.48.185",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "jp2.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "🇹🇼 CmTW251D_hysteria2",
+      "tag": "套餐到期：2027-11-11",
       "type": "hysteria2",
-      "server": "jp4.ddns-link-b5.uk",
-      "server_port": 7175,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "140.245.48.185",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "jp4.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "zfERvly6_hysteria2",
+      "tag": "🇸🇬 新加坡3 | 高速专线-hy2",
       "type": "hysteria2",
-      "server": "jp5.ddns-link-b5.uk",
-      "server_port": 9134,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "140.245.48.185",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "jp5.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "TRTRJotK_hysteria2",
+      "tag": "🇦🇺 澳大利亚 | 高速专线-hy2",
       "type": "hysteria2",
-      "server": "jp1.ddns-link-b5.uk",
-      "server_port": 1268,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "152.69.174.233",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "jp1.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "dvkk5DHs_hysteria2",
+      "tag": "🇯🇵 日本 | 高速专线-hy2",
       "type": "hysteria2",
-      "server": "sg2.ddns-link-b5.uk",
-      "server_port": 3300,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "158.179.178.233",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "sg2.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "dVJmlBNU_hysteria2",
+      "tag": "🇧🇷 巴西 | 高速专线-hy2",
       "type": "hysteria2",
-      "server": "sg4.ddns-link-b5.uk",
-      "server_port": 7415,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "167.234.251.78",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "sg4.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
       }
     },
     {
-      "tag": "JWD2tx6L_hysteria2",
+      "tag": "🇧🇷 巴西2 | 高速专线-hy2",
       "type": "hysteria2",
-      "server": "sg5.ddns-link-b5.uk",
-      "server_port": 9990,
-      "password": "C887162D-A20B-486A-90D1-3CF0F1D5392E",
+      "server": "150.230.89.61",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "sg5.ddns-link-b5.uk",
-        "insecure": false,
+        "server_name": "www.apple.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
+      }
+    },
+    {
+      "tag": "🇺🇸 美国阿什本 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "129.153.25.59",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇺🇸 美国阿什本2 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "129.80.10.13",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇺🇸 美国阿什本3 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "141.148.30.165",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇪🇸 西班牙 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "143.47.32.143",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇫🇷 法国马赛 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "129.151.251.122",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇲🇽 墨西哥 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "159.54.153.145",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇮🇳 印度 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "144.24.112.158",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇮🇳 印度2 | 高速专线-hy2",
+      "type": "hysteria2",
+      "server": "141.148.214.127",
+      "server_port": 443,
+      "password": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇺🇸 美国1 | 高速专线",
+      "type": "vless",
+      "server": "192.9.134.93",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbus.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇺🇸 美国2 | 高速专线",
+      "type": "vless",
+      "server": "108.181.23.99",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbus.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇩🇪 德国 | 高速专线",
+      "type": "vless",
+      "server": "130.162.220.137",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbde1.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇰🇷 韩国 | 高速专线",
+      "type": "vless",
+      "server": "193.122.120.203",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbkr.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇯🇵 日本2 | 高速专线",
+      "type": "vless",
+      "server": "140.83.87.185",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbjp.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇺🇸 美国圣何塞 | 高速专线",
+      "type": "vless",
+      "server": "152.70.125.53",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbus.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇮🇳 印度 | 高速专线",
+      "type": "vless",
+      "server": "144.24.102.184",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dckbin.xn--9vq57ocpoc50b.com"
+      }
+    },
+    {
+      "tag": "🇺🇸 美国1 | 0.1倍",
+      "type": "vless",
+      "server": "104.17.232.118",
+      "server_port": 443,
+      "uuid": "f592c431-cffb-4500-9cfb-70028cd7551f",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "us1-us1.aiopen.sbs"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/kbjc/us1",
+        "headers": {
+          "Host": "us1-us1.aiopen.sbs"
+        }
       }
     }
   ],
