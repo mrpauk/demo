@@ -96,42 +96,52 @@
       "outbounds": [
         "auto",
         "direct",
-        "🇧🇬 bc9GJBGc_hysteria2",
-        "5OOWftxW_hysteria2",
-        "Ig8Z3HM6_hysteria2",
-        "GY65D9Qd_hysteria2",
-        "kcdLz7pl_hysteria2",
-        "🇺🇿 XUWXSvUZ_hysteria2",
-        "O8zVmRQ9_hysteria2",
-        "🇰🇿 VKZfMZVj_hysteria2",
-        "aZuu1Fer_hysteria2",
-        "d2ig8hty_hysteria2",
-        "0iAWzWeR_hysteria2",
-        "bzfWlldb_hysteria2",
-        "JT2SH44l_hysteria2",
-        "J9S4eQFO_hysteria2",
-        "🇻🇬 fnrVGr8c_hysteria2"
+        "💎+17+-VLESS+-CleanIP+:443",
+        "💎+13+-Trojan+-CleanIP+:443",
+        "💎+1+-Trojan+-Domain+:443",
+        "💎+15+-VLESS+-CleanIP+:443",
+        "💎+3+-Trojan+-V4+:443",
+        "💎+16+-VLESS+-CleanIP+:443",
+        "💎+15+-Trojan+-CleanIP+:443",
+        "💎+11+-Trojan+-CleanIP+:443",
+        "💎+14+-Trojan+-CleanIP+:443",
+        "💎+17+-Trojan+-CleanIP+:443",
+        "💎+4+-Trojan+-CleanIP+:443",
+        "💎+9+-VLESS+-CleanIP+:443",
+        "💎+16+-Trojan+-CleanIP+:443",
+        "💎+4+-VLESS+-CleanIP+:443",
+        "💎+3+-VLESS+-V4+:443",
+        "💎+9+-Trojan+-CleanIP+:443",
+        "💎+11+-VLESS+-CleanIP+:443",
+        "💎+1+-VLESS+-Domain+:443",
+        "💎+14+-VLESS+-CleanIP+:443",
+        "💎+13+-VLESS+-CleanIP+:443"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇧🇬 bc9GJBGc_hysteria2",
-        "5OOWftxW_hysteria2",
-        "Ig8Z3HM6_hysteria2",
-        "GY65D9Qd_hysteria2",
-        "kcdLz7pl_hysteria2",
-        "🇺🇿 XUWXSvUZ_hysteria2",
-        "O8zVmRQ9_hysteria2",
-        "🇰🇿 VKZfMZVj_hysteria2",
-        "aZuu1Fer_hysteria2",
-        "d2ig8hty_hysteria2",
-        "0iAWzWeR_hysteria2",
-        "bzfWlldb_hysteria2",
-        "JT2SH44l_hysteria2",
-        "J9S4eQFO_hysteria2",
-        "🇻🇬 fnrVGr8c_hysteria2"
+        "💎+17+-VLESS+-CleanIP+:443",
+        "💎+13+-Trojan+-CleanIP+:443",
+        "💎+1+-Trojan+-Domain+:443",
+        "💎+15+-VLESS+-CleanIP+:443",
+        "💎+3+-Trojan+-V4+:443",
+        "💎+16+-VLESS+-CleanIP+:443",
+        "💎+15+-Trojan+-CleanIP+:443",
+        "💎+11+-Trojan+-CleanIP+:443",
+        "💎+14+-Trojan+-CleanIP+:443",
+        "💎+17+-Trojan+-CleanIP+:443",
+        "💎+4+-Trojan+-CleanIP+:443",
+        "💎+9+-VLESS+-CleanIP+:443",
+        "💎+16+-Trojan+-CleanIP+:443",
+        "💎+4+-VLESS+-CleanIP+:443",
+        "💎+3+-VLESS+-V4+:443",
+        "💎+9+-Trojan+-CleanIP+:443",
+        "💎+11+-VLESS+-CleanIP+:443",
+        "💎+1+-VLESS+-Domain+:443",
+        "💎+14+-VLESS+-CleanIP+:443",
+        "💎+13+-VLESS+-CleanIP+:443"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -150,258 +160,493 @@
       "tag": "block"
     },
     {
-      "tag": "🇧🇬 bc9GJBGc_hysteria2",
-      "type": "hysteria2",
-      "server": "frankfurt1-2500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 20133,
-      "password": "1628035c-ad1e-43cb-975a-f303ba13b4cf",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+17+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "104.21.24.15",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "noVEMbEr.nSCL.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/kxnKTB5sBInzqyFN",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
       }
     },
     {
-      "tag": "5OOWftxW_hysteria2",
-      "type": "hysteria2",
-      "server": "frankfurt1-2500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 20998,
-      "password": "7e6a1c50-764f-4028-a4af-fa551efee3ec",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+13+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "208.86.168.210",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "NovEmBer.NScl.Ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trgly7xFkZAhJFpPvA",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "Ig8Z3HM6_hysteria2",
-      "type": "hysteria2",
-      "server": "frankfurt2-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 24328,
-      "password": "7e6a1c50-764f-4028-a4af-fa551efee3ec",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+1+-Trojan+-Domain+:443",
+      "type": "trojan",
+      "server": "november.nscl.ir",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "199.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "nOVembeR.NSCL.Ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trq0g37kblTMKFIPwu",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "GY65D9Qd_hysteria2",
-      "type": "hysteria2",
-      "server": "frankfurt2-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 23383,
-      "password": "5fe0a310-bfa6-4cdc-8098-4d4a16838a09",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+15+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "199.34.228.184",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "199.nodes.yljc.online",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "noveMber.nsCL.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mfzypnNNx7rOv8HJ",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
       }
     },
     {
-      "tag": "kcdLz7pl_hysteria2",
-      "type": "hysteria2",
-      "server": "frankfurt2-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 21149,
-      "password": "1628035c-ad1e-43cb-975a-f303ba13b4cf",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+3+-Trojan+-V4+:443",
+      "type": "trojan",
+      "server": "172.67.216.73",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "199.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "noVEMBeR.nScl.iR",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trjhabuX3jJNU4vDMA",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "🇺🇿 XUWXSvUZ_hysteria2",
-      "type": "hysteria2",
-      "server": "frankfurt1-2500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 22056,
-      "password": "5fe0a310-bfa6-4cdc-8098-4d4a16838a09",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+16+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "172.66.41.97",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "NOvembEr.NScL.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gw4fYkiS2LZNnfN9",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
       }
     },
     {
-      "tag": "O8zVmRQ9_hysteria2",
-      "type": "hysteria2",
-      "server": "tokyo3-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 23575,
-      "password": "5fe0a310-bfa6-4cdc-8098-4d4a16838a09",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+15+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "199.34.228.184",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "2.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "noveMber.nsCL.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trmfzypnNNx7rOv8HJ",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "🇰🇿 VKZfMZVj_hysteria2",
-      "type": "hysteria2",
-      "server": "tokyo3-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 24675,
-      "password": "1628035c-ad1e-43cb-975a-f303ba13b4cf",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+11+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "206.238.236.36",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "2.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "NOvEMbeR.nscl.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trJIRxpHkGDQf4yxW3",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "aZuu1Fer_hysteria2",
-      "type": "hysteria2",
-      "server": "tokyo3-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 22159,
-      "password": "7e6a1c50-764f-4028-a4af-fa551efee3ec",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+14+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "206.238.236.36",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "2.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "NovEMbeR.nsCl.iR",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trGk8fmstcKuyOZDrC",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "d2ig8hty_hysteria2",
-      "type": "hysteria2",
-      "server": "seoul3-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 24221,
-      "password": "5fe0a310-bfa6-4cdc-8098-4d4a16838a09",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+17+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "104.21.24.15",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "noVEMbEr.nSCL.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trkxnKTB5sBInzqyFN",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "0iAWzWeR_hysteria2",
-      "type": "hysteria2",
-      "server": "seoul4-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 23230,
-      "password": "7e6a1c50-764f-4028-a4af-fa551efee3ec",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+4+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "104.21.24.15",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "NoVEmbER.nSCl.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr8AhGdi48Y1wC5TAp",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "bzfWlldb_hysteria2",
-      "type": "hysteria2",
-      "server": "seoul3-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 20286,
-      "password": "7e6a1c50-764f-4028-a4af-fa551efee3ec",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+9+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "www.wto.org",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "noveMbEr.Nscl.IR"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/GIwZzZKczfJL5cBO",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
       }
     },
     {
-      "tag": "JT2SH44l_hysteria2",
-      "type": "hysteria2",
-      "server": "seoul4-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 20415,
-      "password": "1628035c-ad1e-43cb-975a-f303ba13b4cf",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+16+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "172.66.41.97",
+      "server_port": 443,
+      "password": "REvilTime",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "NOvembEr.NScL.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trgw4fYkiS2LZNnfN9",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
       }
     },
     {
-      "tag": "J9S4eQFO_hysteria2",
-      "type": "hysteria2",
-      "server": "seoul4-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 21051,
-      "password": "5fe0a310-bfa6-4cdc-8098-4d4a16838a09",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+4+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "104.21.24.15",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
         "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "server_name": "NoVEmbER.nSCl.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/8AhGdi48Y1wC5TAp",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
       }
     },
     {
-      "tag": "🇻🇬 fnrVGr8c_hysteria2",
-      "type": "hysteria2",
-      "server": "seoul3-500m.node.xn--l6qx3lcvp58x.com",
-      "server_port": 22933,
-      "password": "1628035c-ad1e-43cb-975a-f303ba13b4cf",
-      "up_mbps": 10,
-      "down_mbps": 100,
+      "tag": "💎+3+-VLESS+-V4+:443",
+      "type": "vless",
+      "server": "172.67.216.73",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "1.nodes.yljc.online",
+        "insecure": false,
+        "server_name": "noVEMBeR.nScl.iR"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/jhabuX3jJNU4vDMA",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
+      }
+    },
+    {
+      "tag": "💎+9+-Trojan+-CleanIP+:443",
+      "type": "trojan",
+      "server": "www.wto.org",
+      "server_port": 443,
+      "password": "REvilTime",
+      "tls": {
+        "enabled": true,
         "insecure": false,
         "alpn": [
-          "h3"
-        ]
+          "h2",
+          "http/1.1"
+        ],
+        "server_name": "noveMbEr.Nscl.IR",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trGIwZzZKczfJL5cBO",
+        "headers": {
+          "Host": "november.nscl.ir"
+        }
+      }
+    },
+    {
+      "tag": "💎+11+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "206.238.236.36",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "NOvEMbeR.nscl.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/JIRxpHkGDQf4yxW3",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
+      }
+    },
+    {
+      "tag": "💎+1+-VLESS+-Domain+:443",
+      "type": "vless",
+      "server": "november.nscl.ir",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "nOVembeR.NSCL.Ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/q0g37kblTMKFIPwu",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
+      }
+    },
+    {
+      "tag": "💎+14+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "206.238.236.36",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "NovEMbeR.nsCl.iR"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Gk8fmstcKuyOZDrC",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
+      }
+    },
+    {
+      "tag": "💎+13+-VLESS+-CleanIP+:443",
+      "type": "vless",
+      "server": "208.86.168.210",
+      "server_port": 443,
+      "uuid": "c6d299d4-db0b-4444-8b56-b23bbdcbcd67",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "NovEmBer.NScl.Ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gly7xFkZAhJFpPvA",
+        "headers": {
+          "Host": "november.nscl.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2560
       }
     }
   ],
