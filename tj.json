@@ -23,7 +23,7 @@
       },
       {
         "tag": "dns_resolver",
-        "address": "223.5.5.5",
+        "address": 8.8.8.8",
         "detour": "DIRECT"
       },
       {
