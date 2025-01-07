@@ -1,16 +1,506 @@
-hy2://user1:Se7RAuFZ8Lzg@45.77.178.67:443/?insecure=1#JP
-vmess://eyJhZGQiOiJ0b2t5by4yMjU4MDAueHl6IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJ0b2t5by4yMjU4MDAueHl6IiwiaWQiOiI5OTVhMjQ1Ni04MGEzLTQzOGUtOTgyNi05ODZjNWIxYTJkNzkiLCJuZXQiOiJ3cyIsInBhdGgiOiIvc2NpZW5jZSIsInBvcnQiOiIxMDA4NiIsInBzIjoi8J+Hr/Cfh7UgQXp1cmUtVG9reW8iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-hy2://dd971935285d7fc1736bb11a00d984dc@jpg.infts.site:443/?mport=10000-15000&insecure=1&sni=jpg.infts.site#%F0%9F%87%AF%F0%9F%87%B5%20JP_04
-vmess://eyJhZGQiOiJjZG5jZG5jZG4uYWlrdW5hcHAuY29tIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6ImNocm9tZSIsImhvc3QiOiJjZG4tanAuc20tbm9kZS5jb20iLCJpZCI6Ijk2Y2FkMzc0LTc1NzMtNDQ2My04ODA0LTQ2NjVjMmMzZDkzMiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzc193cy9zbWpjL2luZGV4P2VkXHUwMDNkODE5MiIsInBvcnQiOiI0NDMiLCJwcyI6IlvkuInmr5tdLeaXpeacrCDpq5jpgJ8gY2RuIDEiLCJzY3kiOiJhdXRvIiwic25pIjoici12T3U2bUVLS2tWb2lNVXR4LnNtLW5vZGUuY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-hy2://96cad374-7573-4463-8804-4665c2c3d932@jp-oracle.aikunapp.com:5001/?insecure=1&sni=d1--cn-gotcha204-4.bilivideo.com#%5B%E4%B8%89%E6%AF%9B%5D-%E6%97%A5%E6%9C%AC%20Oracle%20%28%E7%A7%BB%E5%8A%A8%E4%BC%98%E5%8C%96%29
-hy2://a8cf0ebc-c305-4a15-9f8c-60297e7e238f@tk-007.xiaoxiaobujidao.xyz:443/?sni=tk-007.xiaoxiaobujidao.xyz#JP
-trojan://f555db33-21cb-390f-9031-18ec7954e6a5@zhuan.yifang100.win:13037/?type=grpc&serviceName=vip2jp03&security=tls&sni=zhuan.yifang100.win#%E6%97%A5%E6%9C%AC%20%E9%9D%92%E9%93%9C%E8%8A%82%E7%82%B903
-trojan://f555db33-21cb-390f-9031-18ec7954e6a5@freejp01.jd0001.top:34698/?type=grpc&serviceName=freejp01&security=tls&sni=freejp01.jd0001.top#%E6%97%A5%E6%9C%AC%20%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B901
-vmess://eyJhZGQiOiJsc2hoOS5jNnR1NXV3azkuYnV6eiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoianAwMy5lMDFkLTE1Y2U5OTBiZGUxYy5jZmQiLCJpZCI6ImQ1N2Y3YmQyLTgzNmEtNGU3Yy05NDAzLWJkNDQ1YzQ4ZWZiYiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh6/wn4e1IOaXpeacrCAtIDMiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-vmess://eyJhZGQiOiI3Y1JvbS5jNnR1NXV3azkuYnV6eiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoianAwMi5lMDFkLTE1Y2U5OTBiZGUxYy5jZmQiLCJpZCI6ImQ1N2Y3YmQyLTgzNmEtNGU3Yy05NDAzLWJkNDQ1YzQ4ZWZiYiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh6/wn4e1IOaXpeacrCAtIDIiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-trojan://3648425794742788096@fancy-mudfish.treefrog761.one:443/?type=tcp&security=tls&sni=fancy-mudfish.treefrog761.one#Tokyo%20%20Pro%206
-trojan://3648425794742788096@fun-ostrich.treefrog761.one:443/?type=tcp&security=tls&sni=fun-ostrich.treefrog761.one#Tokyo%20%20Pro%2012
-
-
-
-
+{
+  "log": {
+    "level": "debug",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "",
+      "default_mode": "rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": false
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "tls://8.8.8.8",
+        "detour": "proxy"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "server": "block"
+      },
+      {
+        "outbound": "any",
+        "server": "localDns",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "direct",
+        "server": "localDns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "endpoint_independent_nat": false,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true,
+      "users": []
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "direct",
+        "amd-tuic",
+        "arm1-tuic",
+        "Hy2-Tokyo-arm1",
+        "Hy2-Tokyo-amd2",
+        "🇯🇵 JP Vmess",
+        "rea-amd2",
+        "rea-arm1",
+        "🇯🇵 JP_04",
+        "Hy2-Tokyo-arm1 2",
+        "Hy2-Tokyo-amd2 2",
+        "🇯🇵 JP Hysteria2",
+        "🇯🇵 日本 青铜节点03",
+        "🇯🇵 JP日本001 两元店.com",
+        "🇯🇵 JP日本002",
+        "🇯🇵 JP日本003",
+        "Tokyo  Pro 3",
+        "Tokyo  3",
+        "Tokyo  13",
+        "Tokyo  Pro 4",
+        "🇯🇵 海外用户专用-日本"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "amd-tuic",
+        "arm1-tuic",
+        "Hy2-Tokyo-arm1",
+        "Hy2-Tokyo-amd2",
+        "🇯🇵 JP Vmess",
+        "rea-amd2",
+        "rea-arm1",
+        "🇯🇵 JP_04",
+        "Hy2-Tokyo-arm1 2",
+        "Hy2-Tokyo-amd2 2",
+        "🇯🇵 JP Hysteria2",
+        "🇯🇵 日本 青铜节点03",
+        "🇯🇵 JP日本001 两元店.com",
+        "🇯🇵 JP日本002",
+        "🇯🇵 JP日本003",
+        "Tokyo  Pro 3",
+        "Tokyo  3",
+        "Tokyo  13",
+        "Tokyo  Pro 4",
+        "🇯🇵 海外用户专用-日本"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "tag": "amd-tuic",
+      "type": "tuic",
+      "server": "amd22.870710.xyz",
+      "server_port": 39234,
+      "uuid": "19389f45-9b2f-4fb6-a63d-4821f0f5b0f7",
+      "password": "",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "zero_rtt_handshake": false,
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      }
+    },
+    {
+      "tag": "arm1-tuic",
+      "type": "tuic",
+      "server": "arm1.870710.xyz",
+      "server_port": 39234,
+      "uuid": "19389f45-9b2f-4fb6-a63d-4821f0f5b0f7",
+      "password": "",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "zero_rtt_handshake": false,
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      }
+    },
+    {
+      "tag": "Hy2-Tokyo-arm1",
+      "type": "hysteria2",
+      "server": "arm1.870710.xyz",
+      "server_port": 38787,
+      "password": "Hy2+3313033",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Hy2-Tokyo-amd2",
+      "type": "hysteria2",
+      "server": "amd22.870710.xyz",
+      "server_port": 38788,
+      "password": "Hy2+3313033",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇯🇵 JP Vmess",
+      "type": "vmess",
+      "server": "45.77.178.67",
+      "server_port": 80,
+      "uuid": "6df9e14c-46d6-4f73-b1ca-0837c90bf7d9",
+      "security": "auto",
+      "alter_id": 0,
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "rea-amd2",
+      "type": "vless",
+      "server": "amd22.870710.xyz",
+      "server_port": 35137,
+      "uuid": "fd72ce0f-bf8f-454f-b3e1-b75678fefd48",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "blog-rea.870710.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "VcqHivYGGoBkcxOI6cSSjQmneltstkb2OhvO53dyhEM",
+          "short_id": "6d82b586"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "rea-arm1",
+      "type": "vless",
+      "server": "arm1.870710.xyz",
+      "server_port": 39466,
+      "uuid": "dd0e0f67-919d-49db-c3a1-6e026420708b",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "blog-rea.870710.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "VcqHivYGGoBkcxOI6cSSjQmneltstkb2OhvO53dyhEM",
+          "short_id": "6d82b586"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇯🇵 JP_04",
+      "type": "hysteria2",
+      "server": "jpg.infts.site",
+      "server_port": 443,
+      "password": "dd971935285d7fc1736bb11a00d984dc",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "jpg.infts.site",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Hy2-Tokyo-arm1 2",
+      "type": "hysteria2",
+      "server": "arm1.870710.xyz",
+      "server_port": 38787,
+      "password": "Hy2+3313033",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Hy2-Tokyo-amd2 2",
+      "type": "hysteria2",
+      "server": "amd22.870710.xyz",
+      "server_port": 38788,
+      "password": "Hy2+3313033",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇯🇵 JP Hysteria2",
+      "type": "hysteria2",
+      "server": "45.77.178.67",
+      "server_port": 443,
+      "password": "crossxx",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇯🇵 日本 青铜节点03",
+      "type": "trojan",
+      "server": "zhuan.yifang100.win",
+      "server_port": 13037,
+      "password": "f555db33-21cb-390f-9031-18ec7954e6a5",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "zhuan.yifang100.win"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vip2jp03"
+      }
+    },
+    {
+      "tag": "🇯🇵 JP日本001 两元店.com",
+      "type": "trojan",
+      "server": "jp.lydurlclub.top",
+      "server_port": 443,
+      "password": "83c820e4-26b0-4a3a-9ffb-165d489219c5",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "🇯🇵 JP日本002",
+      "type": "trojan",
+      "server": "jp.lydurlclub.top",
+      "server_port": 443,
+      "password": "83c820e4-26b0-4a3a-9ffb-165d489219c5",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "🇯🇵 JP日本003",
+      "type": "trojan",
+      "server": "jp.lydurlclub.top",
+      "server_port": 443,
+      "password": "83c820e4-26b0-4a3a-9ffb-165d489219c5",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "Tokyo  Pro 3",
+      "type": "trojan",
+      "server": "open-kangaroo.boa152.lol",
+      "server_port": 443,
+      "password": "3747000095783264256",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "Tokyo  3",
+      "type": "trojan",
+      "server": "open-kangaroo.boa152.lol",
+      "server_port": 443,
+      "password": "3747000095783264256",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "Tokyo  13",
+      "type": "trojan",
+      "server": "ethical-falcon.boa152.lol",
+      "server_port": 443,
+      "password": "3747000095783264256",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "Tokyo  Pro 4",
+      "type": "trojan",
+      "server": "unbiased-manatee.boa152.lol",
+      "server_port": 443,
+      "password": "3747000095783264256",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "tag": "🇯🇵 海外用户专用-日本",
+      "type": "shadowsocks",
+      "server": "f-jp-01.ninjanode.pro",
+      "server_port": 63257,
+      "method": "rc4-md5",
+      "password": "RenzheCloudSS",
+      "plugin": "obfs-local",
+      "plugin_opts": "obfs=http;obfs-host=78fe8292462.microsoft.com;"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "proxy",
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "proxy"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct"
+      }
+    ]
+  }
+}
