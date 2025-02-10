@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "info",
+    "level": "debug",
     "timestamp": true
   },
   "experimental": {
@@ -8,8 +8,8 @@
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "secret": "",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "direct",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "",
       "default_mode": "rule"
     },
     "cache_file": {
@@ -22,30 +22,23 @@
       {
         "tag": "proxyDns",
         "address": "tls://8.8.8.8",
-        "detour": "Proxy"
+        "detour": "proxy"
       },
       {
         "tag": "localDns",
         "address": "https://223.5.5.5/dns-query",
         "detour": "direct"
-      },
-      {
-        "tag": "block",
-        "address": "rcode://success"
       }
     ],
     "rules": [
       {
-        "rule_set": "geosite-category-ads-all",
-        "server": "block"
+        "domain": [
+          "cdn.jsdelivr.net"
+        ],
+        "server": "proxyDns"
       },
       {
         "outbound": "any",
-        "server": "localDns",
-        "disable_cache": true
-      },
-      {
-        "rule_set": "geosite-cn",
         "server": "localDns"
       },
       {
@@ -55,24 +48,20 @@
       {
         "clash_mode": "global",
         "server": "proxyDns"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "proxyDns"
       }
     ],
-    "final": "localDns",
     "strategy": "ipv4_only"
   },
   "inbounds": [
     {
+      "tag": "tun-in",
       "type": "tun",
-      "address": "172.19.0.1/30",
+      "address": [
+        "172.19.0.0/30"
+      ],
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "sniff": true,
-      "endpoint_independent_nat": false,
       "stack": "system",
       "platform": {
         "http_proxy": {
@@ -83,337 +72,57 @@
       }
     },
     {
+      "tag": "mixed-in",
       "type": "mixed",
       "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true,
-      "users": []
+      "listen_port": 2080
     }
   ],
   "outbounds": [
     {
-      "tag": "Proxy",
+      "tag": "proxy",
       "type": "selector",
       "outbounds": [
         "auto",
         "direct",
-        "ðŸ‡ºðŸ‡¸ US,",
-        "ðŸ‡¸ðŸ‡¬ SG,",
-        "ðŸ‡­ðŸ‡° HK,",
-        "ðŸ‡¯ðŸ‡µ JP,",
-        "ðŸ‡ºðŸ‡¸ US, 2",
-        "ðŸ‡¹ðŸ‡¼ TW,",
-        "ðŸ‡­ðŸ‡° HK, 2",
-        "ðŸ‡¯ðŸ‡µ JP, 2",
-        "ðŸ‡°ðŸ‡· KR,",
-        "ðŸ‡¨ðŸ‡¦ CA,",
-        "ðŸ‡­ðŸ‡° HK, 3",
-        "ðŸ‡¯ðŸ‡µ JP, 3",
-        "ðŸ‡¯ðŸ‡µ JP, 4",
-        "ðŸ‡¹ðŸ‡¼ TW, 2",
-        "ðŸ‡­ðŸ‡° HK, 4",
-        "ðŸ‡¨ðŸ‡¦ CA, 2",
-        "ðŸ‡¯ðŸ‡µ JP, 5",
-        "ðŸ‡ºðŸ‡¸ US, 3",
-        "ðŸ‡­ðŸ‡° HK, 5",
-        "ðŸ‡¸ðŸ‡¬ SG, 2",
-        "ðŸ‡°ðŸ‡· KR, 2",
-        "ðŸ‡ºðŸ‡¸ US, 4",
-        "ðŸ‡­ðŸ‡° HK, 6"
-      ]
-    },
-    {
-      "tag": "OpenAI",
-      "type": "selector",
-      "outbounds": [
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ],
-      "default": "America"
-    },
-    {
-      "tag": "Google",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Telegram",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Twitter",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Facebook",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "BiliBili",
-      "type": "selector",
-      "outbounds": [
-        "direct",
-        "HongKong",
-        "TaiWan"
-      ]
-    },
-    {
-      "tag": "Bahamut",
-      "type": "selector",
-      "outbounds": [
-        "TaiWan",
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Spotify",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ],
-      "default": "America"
-    },
-    {
-      "tag": "TikTok",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America"
-      ],
-      "default": "Japan"
-    },
-    {
-      "tag": "Netflix",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Disney+",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Apple",
-      "type": "selector",
-      "outbounds": [
-        "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Microsoft",
-      "type": "selector",
-      "outbounds": [
-        "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Games",
-      "type": "selector",
-      "outbounds": [
-        "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Streaming",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag": "Global",
-      "type": "selector",
-      "outbounds": [
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
-        "direct"
-      ]
-    },
-    {
-      "tag": "China",
-      "type": "selector",
-      "outbounds": [
-        "direct",
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "AdBlock",
-      "type": "selector",
-      "outbounds": [
-        "block",
-        "direct"
-      ]
-    },
-    {
-      "tag": "HongKong",
-      "type": "selector",
-      "outbounds": [
-        "ðŸ‡­ðŸ‡° HK,",
-        "ðŸ‡­ðŸ‡° HK, 2",
-        "ðŸ‡­ðŸ‡° HK, 3",
-        "ðŸ‡­ðŸ‡° HK, 4",
-        "ðŸ‡­ðŸ‡° HK, 5",
-        "ðŸ‡­ðŸ‡° HK, 6"
-      ]
-    },
-    {
-      "tag": "TaiWan",
-      "type": "selector",
-      "outbounds": [
-        "ðŸ‡¹ðŸ‡¼ TW,",
-        "ðŸ‡¹ðŸ‡¼ TW, 2"
-      ]
-    },
-    {
-      "tag": "Singapore",
-      "type": "selector",
-      "outbounds": [
-        "ðŸ‡¸ðŸ‡¬ SG,",
-        "ðŸ‡¸ðŸ‡¬ SG, 2"
-      ]
-    },
-    {
-      "tag": "Japan",
-      "type": "selector",
-      "outbounds": [
-        "ðŸ‡¯ðŸ‡µ JP,",
-        "ðŸ‡¯ðŸ‡µ JP, 2",
-        "ðŸ‡¯ðŸ‡µ JP, 3",
-        "ðŸ‡¯ðŸ‡µ JP, 4",
-        "ðŸ‡¯ðŸ‡µ JP, 5"
-      ]
-    },
-    {
-      "tag": "America",
-      "type": "selector",
-      "outbounds": [
-        "ðŸ‡ºðŸ‡¸ US,",
-        "ðŸ‡ºðŸ‡¸ US, 2",
-        "ðŸ‡ºðŸ‡¸ US, 3",
-        "ðŸ‡ºðŸ‡¸ US, 4"
-      ]
-    },
-    {
-      "tag": "Others",
-      "type": "selector",
-      "outbounds": [
-        "ðŸ‡°ðŸ‡· KR,",
-        "ðŸ‡¨ðŸ‡¦ CA,",
-        "ðŸ‡¨ðŸ‡¦ CA, 2",
-        "ðŸ‡°ðŸ‡· KR, 2"
+        "🇵🇱 公益_波兰01",
+        "🇵🇱 公益_波兰05",
+        "🇵🇱 公益_波兰08",
+        "🇵🇱 公益_波兰10",
+        "🇵🇱 公益_波兰11",
+        "🇵🇱 公益_波兰12",
+        "🇵🇱 公益_波兰13",
+        "🇵🇱 公益_波兰14",
+        "🇵🇱 公益_波兰15",
+        "🇸🇬 新加坡(RT)",
+        "oraclehy2",
+        "armhy2",
+        "ca-加密-reality",
+        "arm-reality",
+        "kAsbmtDo_vmess",
+        "🇵🇱 hysteria2-PL-s1"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "ðŸ‡ºðŸ‡¸ US,",
-        "ðŸ‡¸ðŸ‡¬ SG,",
-        "ðŸ‡­ðŸ‡° HK,",
-        "ðŸ‡¯ðŸ‡µ JP,",
-        "ðŸ‡ºðŸ‡¸ US, 2",
-        "ðŸ‡¹ðŸ‡¼ TW,",
-        "ðŸ‡­ðŸ‡° HK, 2",
-        "ðŸ‡¯ðŸ‡µ JP, 2",
-        "ðŸ‡°ðŸ‡· KR,",
-        "ðŸ‡¨ðŸ‡¦ CA,",
-        "ðŸ‡­ðŸ‡° HK, 3",
-        "ðŸ‡¯ðŸ‡µ JP, 3",
-        "ðŸ‡¯ðŸ‡µ JP, 4",
-        "ðŸ‡¹ðŸ‡¼ TW, 2",
-        "ðŸ‡­ðŸ‡° HK, 4",
-        "ðŸ‡¨ðŸ‡¦ CA, 2",
-        "ðŸ‡¯ðŸ‡µ JP, 5",
-        "ðŸ‡ºðŸ‡¸ US, 3",
-        "ðŸ‡­ðŸ‡° HK, 5",
-        "ðŸ‡¸ðŸ‡¬ SG, 2",
-        "ðŸ‡°ðŸ‡· KR, 2",
-        "ðŸ‡ºðŸ‡¸ US, 4",
-        "ðŸ‡­ðŸ‡° HK, 6"
+        "🇵🇱 公益_波兰01",
+        "🇵🇱 公益_波兰05",
+        "🇵🇱 公益_波兰08",
+        "🇵🇱 公益_波兰10",
+        "🇵🇱 公益_波兰11",
+        "🇵🇱 公益_波兰12",
+        "🇵🇱 公益_波兰13",
+        "🇵🇱 公益_波兰14",
+        "🇵🇱 公益_波兰15",
+        "🇸🇬 新加坡(RT)",
+        "oraclehy2",
+        "armhy2",
+        "ca-加密-reality",
+        "arm-reality",
+        "kAsbmtDo_vmess",
+        "🇵🇱 hysteria2-PL-s1"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -424,202 +133,307 @@
       "tag": "direct"
     },
     {
-      "type": "dns",
-      "tag": "dns-out"
+      "tag": "🇵🇱 公益_波兰01",
+      "type": "hysteria2",
+      "server": "serv01.trevely.us.kg",
+      "server_port": 59350,
+      "password": "f988a84a-236a-4aae-8823-b84757769ea7",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "type": "block",
-      "tag": "block"
+      "tag": "🇵🇱 公益_波兰05",
+      "type": "hysteria2",
+      "server": "serv05.trevely.us.kg",
+      "server_port": 59350,
+      "password": "fc10a4d6-f946-478f-a3db-57f73cdb0407",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡ºðŸ‡¸ US,",
-      "type": "shadowsocks",
-      "server": "54.185.199.99",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰08",
+      "type": "hysteria2",
+      "server": "serv08.trevely.us.kg",
+      "server_port": 59350,
+      "password": "f00dd1c7-1636-4090-9f47-8448256386cc",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡¸ðŸ‡¬ SG,",
-      "type": "shadowsocks",
-      "server": "54.255.245.62",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰10",
+      "type": "hysteria2",
+      "server": "serv10.trevely.us.kg",
+      "server_port": 59350,
+      "password": "f7cf4765-5745-490b-8f8c-9f865901f971",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡­ðŸ‡° HK,",
-      "type": "shadowsocks",
-      "server": "54.200.148.115",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰11",
+      "type": "hysteria2",
+      "server": "serv11.trevely.us.kg",
+      "server_port": 59350,
+      "password": "fa8a0187-6011-4f1f-bdf4-bbf928259000",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡¯ðŸ‡µ JP,",
-      "type": "shadowsocks",
-      "server": "52.69.236.102",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰12",
+      "type": "hysteria2",
+      "server": "serv12.trevely.us.kg",
+      "server_port": 59350,
+      "password": "fb508d86-1679-4b22-8c09-0cd4cdbb887d",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡ºðŸ‡¸ US, 2",
-      "type": "shadowsocks",
-      "server": "35.86.117.124",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰13",
+      "type": "hysteria2",
+      "server": "serv13.trevely.us.kg",
+      "server_port": 59350,
+      "password": "f6f404b3-62f6-47aa-b4d8-93c5cdae1a0a",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡¹ðŸ‡¼ TW,",
-      "type": "shadowsocks",
-      "server": "13.215.208.195",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰14",
+      "type": "hysteria2",
+      "server": "serv14.trevely.us.kg",
+      "server_port": 59355,
+      "password": "fb765045-55d6-4b12-bfe6-3639fab3412f",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡­ðŸ‡° HK, 2",
-      "type": "shadowsocks",
-      "server": "47.129.174.107",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 公益_波兰15",
+      "type": "hysteria2",
+      "server": "serv15.trevely.us.kg",
+      "server_port": 59355,
+      "password": "f1243102-9c1e-4bf8-b3d6-abf773f49154",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡¯ðŸ‡µ JP, 2",
-      "type": "shadowsocks",
-      "server": "13.250.25.159",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇸🇬 新加坡(RT)",
+      "type": "vless",
+      "server": "ort.gecs.top",
+      "server_port": 7733,
+      "uuid": "0a3cd062-241a-43fc-9c50-eccacbbd5aae",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "addons.mozilla.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "bdVahzcZN694ebmTLvPE0nymHucaFWw6_h6cV5hvTlI",
+          "short_id": "335bfdfb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
     },
     {
-      "tag": "ðŸ‡°ðŸ‡· KR,",
-      "type": "shadowsocks",
-      "server": "18.136.197.165",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "oraclehy2",
+      "type": "hysteria2",
+      "server": "155.248.218.19",
+      "server_port": 54530,
+      "password": "862e90e1-2f26-4506-b8b9-0adf20da05fc",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡¨ðŸ‡¦ CA,",
-      "type": "shadowsocks",
-      "server": "35.87.185.248",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "armhy2",
+      "type": "hysteria2",
+      "server": "192.18.154.151",
+      "server_port": 65329,
+      "password": "d33d027a-02ca-42b3-b808-0aaa6fdf9ae4",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
-      "tag": "ðŸ‡­ðŸ‡° HK, 3",
-      "type": "shadowsocks",
-      "server": "57.181.42.181",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "ca-加密-reality",
+      "type": "vless",
+      "server": "155.248.218.19",
+      "server_port": 59303,
+      "uuid": "862e90e1-2f26-4506-b8b9-0adf20da05fc",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.yahoo.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "PCNS9OoyEiWCjEshEAq0nBb5rjaRwcxNJD6O6KV1dTY",
+          "short_id": "6f059416"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
-      "tag": "ðŸ‡¯ðŸ‡µ JP, 3",
-      "type": "shadowsocks",
-      "server": "54.254.7.5",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "arm-reality",
+      "type": "vless",
+      "server": "192.18.154.151",
+      "server_port": 18513,
+      "uuid": "d33d027a-02ca-42b3-b808-0aaa6fdf9ae4",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "www.yahoo.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "LBEfenT7b9hJPC8keGQv4tagi16yDTW1soebQhuPjmY",
+          "short_id": "f3da7931"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
-      "tag": "ðŸ‡¯ðŸ‡µ JP, 4",
-      "type": "shadowsocks",
-      "server": "43.201.254.74",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "kAsbmtDo_vmess",
+      "type": "vmess",
+      "server": "85.232.241.109",
+      "server_port": 53210,
+      "uuid": "862e90e1-2f26-4506-b8b9-0adf20da05fc",
+      "security": "auto",
+      "alter_id": 0,
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "ws",
+        "path": "/862e90e1-2f26-4506-b8b9-0adf20da05fc-vm",
+        "headers": {
+          "Host": ""
+        }
+      }
     },
     {
-      "tag": "ðŸ‡¹ðŸ‡¼ TW, 2",
-      "type": "shadowsocks",
-      "server": "54.169.135.226",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡­ðŸ‡° HK, 4",
-      "type": "shadowsocks",
-      "server": "54.95.5.168",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡¨ðŸ‡¦ CA, 2",
-      "type": "shadowsocks",
-      "server": "54.68.160.24",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡¯ðŸ‡µ JP, 5",
-      "type": "shadowsocks",
-      "server": "52.77.209.61",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡ºðŸ‡¸ US, 3",
-      "type": "shadowsocks",
-      "server": "34.209.103.254",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡­ðŸ‡° HK, 5",
-      "type": "shadowsocks",
-      "server": "52.43.127.109",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡¸ðŸ‡¬ SG, 2",
-      "type": "shadowsocks",
-      "server": "52.198.168.235",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡°ðŸ‡· KR, 2",
-      "type": "shadowsocks",
-      "server": "3.112.215.69",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡ºðŸ‡¸ US, 4",
-      "type": "shadowsocks",
-      "server": "18.236.95.86",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "tag": "ðŸ‡­ðŸ‡° HK, 6",
-      "type": "shadowsocks",
-      "server": "43.201.254.211",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "tag": "🇵🇱 hysteria2-PL-s1",
+      "type": "hysteria2",
+      "server": "85.232.241.109",
+      "server_port": 50280,
+      "password": "862e90e1-2f26-4506-b8b9-0adf20da05fc",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     }
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "Proxy",
+    "final": "proxy",
     "rules": [
+      {
+        "inbound": [
+          "tun-in",
+          "mixed-in"
+        ],
+        "action": "sniff"
+      },
       {
         "type": "logical",
         "mode": "or",
@@ -631,11 +445,17 @@
             "protocol": "dns"
           }
         ],
-        "outbound": "dns-out"
+        "action": "hijack-dns"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlock"
+        "clash_mode": "rule",
+        "action": "reject"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "clash_mode": "global",
+        "outbound": "proxy"
       },
       {
         "clash_mode": "direct",
@@ -643,7 +463,7 @@
       },
       {
         "clash_mode": "global",
-        "outbound": "Proxy"
+        "outbound": "proxy"
       },
       {
         "domain": [
@@ -653,108 +473,6 @@
           "d.metacubex.one"
         ],
         "outbound": "direct"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
-      },
-      {
-        "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
-      },
-      {
-        "rule_set": [
-          "geosite-youtube",
-          "geoip-google",
-          "geosite-google",
-          "geosite-github"
-        ],
-        "outbound": "Google"
-      },
-      {
-        "rule_set": [
-          "geoip-telegram",
-          "geosite-telegram"
-        ],
-        "outbound": "Telegram"
-      },
-      {
-        "rule_set": [
-          "geoip-twitter",
-          "geosite-twitter"
-        ],
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": [
-          "geoip-facebook",
-          "geosite-facebook"
-        ],
-        "outbound": "Facebook"
-      },
-      {
-        "rule_set": "geosite-bilibili",
-        "outbound": "BiliBili"
-      },
-      {
-        "rule_set": "geosite-bahamut",
-        "outbound": "Bahamut"
-      },
-      {
-        "rule_set": "geosite-spotify",
-        "outbound": "Spotify"
-      },
-      {
-        "rule_set": "geosite-tiktok",
-        "outbound": "TikTok"
-      },
-      {
-        "rule_set": [
-          "geoip-netflix",
-          "geosite-netflix"
-        ],
-        "outbound": "Netflix"
-      },
-      {
-        "rule_set": "geosite-disney",
-        "outbound": "Disney+"
-      },
-      {
-        "rule_set": [
-          "geoip-apple",
-          "geosite-apple",
-          "geosite-amazon"
-        ],
-        "outbound": "Apple"
-      },
-      {
-        "rule_set": "geosite-microsoft",
-        "outbound": "Microsoft"
-      },
-      {
-        "rule_set": [
-          "geosite-category-games",
-          "geosite-dmm"
-        ],
-        "outbound": "Games"
-      },
-      {
-        "rule_set": [
-          "geosite-hbo",
-          "geosite-primevideo"
-        ],
-        "outbound": "Streaming"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "outbound": "Global"
-      },
-      {
-        "rule_set": [
-          "geoip-cn",
-          "geosite-cn"
-        ],
-        "outbound": "China"
       }
     ],
     "rule_set": [
@@ -762,210 +480,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-openai",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Toperlock/sing-box-geosite/main/rule/OpenAI.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-youtube",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-google",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-google",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-github",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-telegram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-telegram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-twitter",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/twitter.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-twitter",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-facebook",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/facebook.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-facebook",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-bilibili",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bilibili.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-bahamut",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bahamut.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-spotify",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-tiktok",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-netflix",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-netflix",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-disney",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-amazon",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-microsoft",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-category-games",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-dmm",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/dmm.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-hbo",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-primevideo",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-geolocation-!cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geosite-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
         "download_detour": "direct"
       }
     ]
