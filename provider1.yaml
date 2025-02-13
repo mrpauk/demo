@@ -5,53 +5,56 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 剩余流量：142.05 GB, server: dg.laosijicc.top, port: 34564, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: dg.laosijicc.top, skip-cert-verify: true}
-  - {name: 距离下次重置剩余：17 天, server: dg.laosijicc.top, port: 34564, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: dg.laosijicc.top, skip-cert-verify: true}
-  - {name: 套餐到期：2025-03-10, server: dg.laosijicc.top, port: 34564, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: dg.laosijicc.top, skip-cert-verify: true}
-  - {name: 官网:laosijicc.top, server: dg.laosijicc.top, port: 34564, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: dg.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇭🇰 香港, server: xg.laosijicc.top, port: 34561, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: xg.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇺🇲 美国, server: mg.laosijicc.top, port: 34562, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: mg.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇬🇧 英国, server: yg.laosijicc.top, port: 34563, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: yg.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇩🇪 德国, server: dg.laosijicc.top, port: 34564, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: dg.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡, server: xjp.laosijicc.top, port: 34565, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: xjp.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇯🇵 日本, server: rb.laosijicc.top, port: 34566, type: hysteria2, password: c6f59c36-89d5-479b-95d6-6b8459ee2b92, auth: c6f59c36-89d5-479b-95d6-6b8459ee2b92, sni: rb.laosijicc.top, skip-cert-verify: true}
-  - {name: 🇭🇰 香港1, server: hk.legeth.cc, port: 20145, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇭🇰 香港2, server: hk.legeth.cc, port: 20128, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇭🇰 香港3, server: hk.legeth.cc, port: 20117, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇭🇰 香港4, server: hk.legeth.cc, port: 20136, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇺🇲 美国1, server: us.legeth.cc, port: 20153, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇺🇲 美国2, server: us.legeth.cc, port: 20103, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇺🇲 美国3, server: us.legeth.cc, port: 20186, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇺🇲 美国4, server: us.legeth.cc, port: 20121, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇯🇵 日本1, server: jp.legeth.cc, port: 20180, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇯🇵 日本2, server: jp.legeth.cc, port: 20123, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇯🇵 日本3, server: jp.legeth.cc, port: 20183, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇯🇵 日本4, server: jp.legeth.cc, port: 20119, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇸🇬 新加坡1, server: sg.legeth.cc, port: 20139, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇸🇬 新加坡2, server: sg.legeth.cc, port: 20178, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇸🇬 新加坡3, server: sg.legeth.cc, port: 20143, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 🇸🇬 新加坡4, server: sg.legeth.cc, port: 20113, type: hysteria2, password: a2a9eb3e-08af-43ec-9435-3b6367abda14, auth: a2a9eb3e-08af-43ec-9435-3b6367abda14}
-  - {name: 请保持经常更新订阅的习惯, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: sg3.youxuan.wiki}}}
-  - {name: 🇸🇬 新加坡 1, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: sg1.youxuan.wiki}}}
-  - {name: 🇸🇬 新加坡 2, server: sg6.youxuan.wiki, port: 33155, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: true, reality-opts: {public-key: OstL8i2vDibAu1T4j1I9UnySmrG-wloKWBVC-MhPUDw, short-id: "42241206" }, servername: www.microsoft.com, client-fingerprint: chrome, network: tcp}
-  - {name: 🇭🇰 香港 2, server: qrzv.youxuan.wiki, port: 2095, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /sssddd, headers: {Host: hk1.youxuan.wiki}}}
-  - {name: 🇭🇰 香港 5, server: vvzzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: hk9.7896543.xyz}}}
-  - {name: 🇭🇰 香港 6, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: hk3.youxuan.wiki}}}
-  - {name: 🇯🇵 日本 2, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: jp2.7896543.xyz}}}
-  - {name: 🇯🇵 日本 3, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: jp3.youxuan.wiki}}}
-  - {name: 🇨🇳 台湾 1, server: tw.youxuan.wiki, port: 20530, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _VV1HHy3iC9Q1GY0cu_oP9UffkvebWdRaVXWdPt3wls, short-id: "4777e889" }, servername: jellyfin.illya.tw, client-fingerprint: chrome, network: tcp}
-  - {name: 🇨🇳 台湾 2, server: tw2s.youxuan.wiki, port: 30182, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: P_PUED_zdQkKxnhk2u32O78SEfSmhyJaTK4kG5rspkA, short-id: "af9cdf47" }, servername: www.microsoft.com, client-fingerprint: ios, network: tcp}
-  - {name: 🇨🇳 台湾 4, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: tw3c.youxuan.wiki}}}
-  - {name: 🇰🇷 韩国 1, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: kr1.youxuan.wiki}}}
-  - {name: 🇺🇲 美国 1, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: us1.youxuan.wiki}}}
-  - {name: 🇺🇲 美国 4, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: us3.youxuan.wiki}}}
-  - {name: 🇩🇪 德国 2, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: de.youxuan.wiki}}}
-  - {name: 🇸🇪 瑞典, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: rd1.youxuan.wiki}}}
-  - {name: 🇮🇳 印度, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: in.youxuan.wiki}}}
-  - {name: 🇹🇷 土耳其, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: tr1.youxuan.wiki}}}
-  - {name: 🇫🇷 法国 1, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: fr1.youxuan.wiki}}}
-  - {name: 🇨🇭 瑞士, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: rs1.youxuan.wiki}}}
-  - {name: 🇬🇧 英国 1, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: bc083408-220d-477c-8f43-21289df60def, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: uk1.youxuan.wiki}}}
+  - {name: 🇭🇰 HK_01, server: 46.232.61.55, port: 59350, type: hysteria2, password: f5ce5e0d-f739-4a13-bbe9-054f7c1b1a58, auth: f5ce5e0d-f739-4a13-bbe9-054f7c1b1a58, sni: www.bing.com, skip-cert-verify: true, alpn: [h3]}
+  - {name: 🇭🇰 HK_02, server: 62.72.163.215, port: 80, type: hysteria2, password: a0605527-28e4-449c-80ee-5642cc16a8af, auth: a0605527-28e4-449c-80ee-5642cc16a8af, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_03, server: yd1.yiyuanlx.cc, port: 34560, type: hysteria2, password: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, auth: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, sni: yd1.yiyuanlx.cc, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_04, server: xg1.yiyuanlx.cc, port: 34560, type: hysteria2, password: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, auth: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, sni: xg1.yiyuanlx.cc, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_05, server: yg1.yiyuanlx.cc, port: 34560, type: hysteria2, password: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, auth: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, sni: yg1.yiyuanlx.cc, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_06, server: hk2.ddns-link-b5.uk, port: 3461, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_07, server: hk3.ddns-link-b5.uk, port: 5876, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_08, server: hk4.ddns-link-b5.uk, port: 7678, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_09, server: hk5.ddns-link-b5.uk, port: 9889, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK_10, server: alipay-api-hk-a-1.testred.xyz, port: 53499, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-sw-a-1.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇮🇳 IN_11, server: in4.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  - {name: 🇮🇳 IN_12, server: in5.bethebest.eu.org, port: 30102, type: hysteria2, password: d839f04d-3879-46f5-82fa-feb8b4162f9f, auth: d839f04d-3879-46f5-82fa-feb8b4162f9f, skip-cert-verify: true}
+  - {name: 🇯🇵 JP_13, server: 18.178.118.222, port: 8994, type: hysteria2, password: cCcbGVhTy9RsqgHY06vP7gUEBU, auth: cCcbGVhTy9RsqgHY06vP7gUEBU, sni: bing.com, skip-cert-verify: true}
+  - {name: 🇯🇵 JP_14, server: rb1.yiyuanlx.cc, port: 34560, type: hysteria2, password: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, auth: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, sni: rb1.yiyuanlx.cc, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP_15, server: tokyo.huafei888.site, port: 80, type: hysteria2, password: a0605527-28e4-449c-80ee-5642cc16a8af, auth: a0605527-28e4-449c-80ee-5642cc16a8af, skip-cert-verify: true}
+  - {name: 🇯🇵 JP_16, server: weilai-jp.sanguayun.com, port: 13352, type: hysteria2, password: 8a202253-5ec4-41b8-b236-783debdd28b3, auth: 8a202253-5ec4-41b8-b236-783debdd28b3, up: 1000, down: 1000, skip-cert-verify: true, ports: 13001-13999}
+  - {name: 🇯🇵 JP_17, server: weilai-jp.sanguayun.com, port: 13322, type: hysteria2, password: 8a202253-5ec4-41b8-b236-783debdd28b3, auth: 8a202253-5ec4-41b8-b236-783debdd28b3, up: 1000, down: 1000, skip-cert-verify: true, ports: 13001-13999}
+  - {name: 🇯🇵 JP_18, server: weilai-jp.sanguayun.com, port: 13548, type: hysteria2, password: 8a202253-5ec4-41b8-b236-783debdd28b3, auth: 8a202253-5ec4-41b8-b236-783debdd28b3, up: 1000, down: 1000, skip-cert-verify: true, ports: 13001-13999}
+  - {name: 🇯🇵 JP_19, server: weilai-jp.sanguayun.com, port: 13110, type: hysteria2, password: 8a202253-5ec4-41b8-b236-783debdd28b3, auth: 8a202253-5ec4-41b8-b236-783debdd28b3, up: 1000, down: 1000, skip-cert-verify: true, ports: 13001-13999}
+  - {name: 🇯🇵 JP_20, server: jp1.dexlos.com, port: 1283, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP_21, server: jp2.dexlos.com, port: 3532, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP_22, server: jp3.dexlos.com, port: 5920, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP_23, server: jp4.dexlos.com, port: 7069, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP_24, server: jp5.dexlos.com, port: 9355, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP_25, server: amdv4.870710.xyz, port: 38788, type: hysteria2, password: MyHy2+3313033, auth: MyHy2+3313033, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 🇯🇵 JP_26, server: alipay-api-jp-a-1.testred.xyz, port: 443, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-jp-a-1.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇸🇬 SG_27, server: 3.1.195.130, port: 28164, type: hysteria2, password: eF3nSfP8jlom3m9bAXvnmWpCs, auth: eF3nSfP8jlom3m9bAXvnmWpCs, sni: bing.com, skip-cert-verify: true}
+  - {name: 🇸🇬 SG_28, server: xjp1.yiyuanlx.cc, port: 34560, type: hysteria2, password: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, auth: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, sni: xjp1.yiyuanlx.cc, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG_29, server: sg1.dexlos.com, port: 1452, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG_30, server: sg3.dexlos.com, port: 5921, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG_31, server: sg5.dexlos.com, port: 9185, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG_32, server: doxjp.hssl8088.icu, port: 50000, type: hysteria2, password: e58a07cf-af33-463a-b10b-779c2a9bbd6f, auth: e58a07cf-af33-463a-b10b-779c2a9bbd6f, sni: doxjp.hssl8088.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG_33, server: alipay-api-sg-a-1.testred.xyz, port: 443, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-sg-a-1.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇺🇲 US_34, server: us3.dexlos.com, port: 5092, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇲 US_35, server: us4.dexlos.com, port: 7516, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇲 US_36, server: us5.dexlos.com, port: 9691, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇲 US_37, server: gy1.mlshu.top, port: 30001, type: hysteria2, password: 4d8d3bce-7875-4c74-99b5-3ddeebaf6344, auth: 4d8d3bce-7875-4c74-99b5-3ddeebaf6344, sni: gy1.mlshu.top, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇲 US_38, server: lsmg.hssl8088.icu, port: 50000, type: hysteria2, password: e58a07cf-af33-463a-b10b-779c2a9bbd6f, auth: e58a07cf-af33-463a-b10b-779c2a9bbd6f, sni: lsmg.hssl8088.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇲 US_39, server: rn.870710.xyz, port: 38788, type: hysteria2, password: MyHy2+3313033, auth: MyHy2+3313033, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 🇺🇲 US_40, server: alipay-api-us-a-1.testred.xyz, port: 443, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-us-a-1.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇺🇲 US_41, server: alipay-api-us-a-2.testred.xyz, port: 443, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-us-a-2.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇺🇲 US_42, server: alipay-api-us-a-3.testred.xyz, port: 443, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-us-a-3.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇺🇲 US_43, server: alipay-api-us-a-4.testred.xyz, port: 443, type: hysteria2, password: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, auth: d4d3a6ca-4da0-410a-9b8f-e37c023ae30c, sni: alipay-api-us-a-4.testred.xyz, up: 200, down: 200, skip-cert-verify: true}
+  - {name: 🇺🇲 US_44, server: px-002.xiaoxiaobujidao.xyz, port: 443, type: hysteria2, password: 114b9349-ef14-4f44-a70d-6fe36d3f3e59, auth: 114b9349-ef14-4f44-a70d-6fe36d3f3e59, skip-cert-verify: true}
+  - {name: 🇺🇲 US_45, server: 165.1.64.133, port: 27770, type: hysteria2, password: 8d052411-1bff-42da-81cc-3f1d81550dbd, auth: 8d052411-1bff-42da-81cc-3f1d81550dbd, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 🇺🇲 US_46, server: 45.76.0.86, port: 443, type: hysteria2, password: 1f17cdf0578a2860, auth: 1f17cdf0578a2860, sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc, skip-cert-verify: true, obfs: salamander, obfs-password: 4b817757}
+  - {name: 🇺🇲 US_47, server: 66.135.11.68, port: 443, type: hysteria2, password: 4e9ee29b39a28277, auth: 4e9ee29b39a28277, skip-cert-verify: true, obfs: salamander, obfs-password: 13f7ba5f}
+  - {name: 🇺🇲 US_48, server: us2.yiyuanlx.cc, port: 34560, type: hysteria2, password: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, auth: f6a6836a-d4d3-4d7b-b4ca-21a148a64ccd, sni: us2.yiyuanlx.cc, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇲 US_49, server: weilai-us.sanguayun.com, port: 13352, type: hysteria2, password: 8a202253-5ec4-41b8-b236-783debdd28b3, auth: 8a202253-5ec4-41b8-b236-783debdd28b3, up: 1000, down: 1000, skip-cert-verify: true, ports: 13001-13999}
+  - {name: 🇺🇲 US_50, server: us1.dexlos.com, port: 1209, type: hysteria2, password: A6879B57-95B9-415F-A18D-CF357EC08988, auth: A6879B57-95B9-415F-A18D-CF357EC08988, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: ☁️ Proxy
     type: select
@@ -61,105 +64,111 @@ proxy-groups:
   - name: ✏️ Select
     type: select
     proxies:
-      - 剩余流量：142.05 GB
-      - 距离下次重置剩余：17 天
-      - 套餐到期：2025-03-10
-      - 官网:laosijicc.top
-      - 🇭🇰 香港
-      - 🇺🇲 美国
-      - 🇬🇧 英国
-      - 🇩🇪 德国
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇭🇰 香港1
-      - 🇭🇰 香港2
-      - 🇭🇰 香港3
-      - 🇭🇰 香港4
-      - 🇺🇲 美国1
-      - 🇺🇲 美国2
-      - 🇺🇲 美国3
-      - 🇺🇲 美国4
-      - 🇯🇵 日本1
-      - 🇯🇵 日本2
-      - 🇯🇵 日本3
-      - 🇯🇵 日本4
-      - 🇸🇬 新加坡1
-      - 🇸🇬 新加坡2
-      - 🇸🇬 新加坡3
-      - 🇸🇬 新加坡4
-      - 请保持经常更新订阅的习惯
-      - 🇸🇬 新加坡 1
-      - 🇸🇬 新加坡 2
-      - 🇭🇰 香港 2
-      - 🇭🇰 香港 5
-      - 🇭🇰 香港 6
-      - 🇯🇵 日本 2
-      - 🇯🇵 日本 3
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾 2
-      - 🇨🇳 台湾 4
-      - 🇰🇷 韩国 1
-      - 🇺🇲 美国 1
-      - 🇺🇲 美国 4
-      - 🇩🇪 德国 2
-      - 🇸🇪 瑞典
-      - 🇮🇳 印度
-      - 🇹🇷 土耳其
-      - 🇫🇷 法国 1
-      - 🇨🇭 瑞士
-      - 🇬🇧 英国 1
+      - 🇭🇰 HK_01
+      - 🇭🇰 HK_02
+      - 🇭🇰 HK_03
+      - 🇭🇰 HK_04
+      - 🇭🇰 HK_05
+      - 🇭🇰 HK_06
+      - 🇭🇰 HK_07
+      - 🇭🇰 HK_08
+      - 🇭🇰 HK_09
+      - 🇭🇰 HK_10
+      - 🇮🇳 IN_11
+      - 🇮🇳 IN_12
+      - 🇯🇵 JP_13
+      - 🇯🇵 JP_14
+      - 🇯🇵 JP_15
+      - 🇯🇵 JP_16
+      - 🇯🇵 JP_17
+      - 🇯🇵 JP_18
+      - 🇯🇵 JP_19
+      - 🇯🇵 JP_20
+      - 🇯🇵 JP_21
+      - 🇯🇵 JP_22
+      - 🇯🇵 JP_23
+      - 🇯🇵 JP_24
+      - 🇯🇵 JP_25
+      - 🇯🇵 JP_26
+      - 🇸🇬 SG_27
+      - 🇸🇬 SG_28
+      - 🇸🇬 SG_29
+      - 🇸🇬 SG_30
+      - 🇸🇬 SG_31
+      - 🇸🇬 SG_32
+      - 🇸🇬 SG_33
+      - 🇺🇲 US_34
+      - 🇺🇲 US_35
+      - 🇺🇲 US_36
+      - 🇺🇲 US_37
+      - 🇺🇲 US_38
+      - 🇺🇲 US_39
+      - 🇺🇲 US_40
+      - 🇺🇲 US_41
+      - 🇺🇲 US_42
+      - 🇺🇲 US_43
+      - 🇺🇲 US_44
+      - 🇺🇲 US_45
+      - 🇺🇲 US_46
+      - 🇺🇲 US_47
+      - 🇺🇲 US_48
+      - 🇺🇲 US_49
+      - 🇺🇲 US_50
   - name: ⚡ Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 剩余流量：142.05 GB
-      - 距离下次重置剩余：17 天
-      - 套餐到期：2025-03-10
-      - 官网:laosijicc.top
-      - 🇭🇰 香港
-      - 🇺🇲 美国
-      - 🇬🇧 英国
-      - 🇩🇪 德国
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇭🇰 香港1
-      - 🇭🇰 香港2
-      - 🇭🇰 香港3
-      - 🇭🇰 香港4
-      - 🇺🇲 美国1
-      - 🇺🇲 美国2
-      - 🇺🇲 美国3
-      - 🇺🇲 美国4
-      - 🇯🇵 日本1
-      - 🇯🇵 日本2
-      - 🇯🇵 日本3
-      - 🇯🇵 日本4
-      - 🇸🇬 新加坡1
-      - 🇸🇬 新加坡2
-      - 🇸🇬 新加坡3
-      - 🇸🇬 新加坡4
-      - 请保持经常更新订阅的习惯
-      - 🇸🇬 新加坡 1
-      - 🇸🇬 新加坡 2
-      - 🇭🇰 香港 2
-      - 🇭🇰 香港 5
-      - 🇭🇰 香港 6
-      - 🇯🇵 日本 2
-      - 🇯🇵 日本 3
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾 2
-      - 🇨🇳 台湾 4
-      - 🇰🇷 韩国 1
-      - 🇺🇲 美国 1
-      - 🇺🇲 美国 4
-      - 🇩🇪 德国 2
-      - 🇸🇪 瑞典
-      - 🇮🇳 印度
-      - 🇹🇷 土耳其
-      - 🇫🇷 法国 1
-      - 🇨🇭 瑞士
-      - 🇬🇧 英国 1
+      - 🇭🇰 HK_01
+      - 🇭🇰 HK_02
+      - 🇭🇰 HK_03
+      - 🇭🇰 HK_04
+      - 🇭🇰 HK_05
+      - 🇭🇰 HK_06
+      - 🇭🇰 HK_07
+      - 🇭🇰 HK_08
+      - 🇭🇰 HK_09
+      - 🇭🇰 HK_10
+      - 🇮🇳 IN_11
+      - 🇮🇳 IN_12
+      - 🇯🇵 JP_13
+      - 🇯🇵 JP_14
+      - 🇯🇵 JP_15
+      - 🇯🇵 JP_16
+      - 🇯🇵 JP_17
+      - 🇯🇵 JP_18
+      - 🇯🇵 JP_19
+      - 🇯🇵 JP_20
+      - 🇯🇵 JP_21
+      - 🇯🇵 JP_22
+      - 🇯🇵 JP_23
+      - 🇯🇵 JP_24
+      - 🇯🇵 JP_25
+      - 🇯🇵 JP_26
+      - 🇸🇬 SG_27
+      - 🇸🇬 SG_28
+      - 🇸🇬 SG_29
+      - 🇸🇬 SG_30
+      - 🇸🇬 SG_31
+      - 🇸🇬 SG_32
+      - 🇸🇬 SG_33
+      - 🇺🇲 US_34
+      - 🇺🇲 US_35
+      - 🇺🇲 US_36
+      - 🇺🇲 US_37
+      - 🇺🇲 US_38
+      - 🇺🇲 US_39
+      - 🇺🇲 US_40
+      - 🇺🇲 US_41
+      - 🇺🇲 US_42
+      - 🇺🇲 US_43
+      - 🇺🇲 US_44
+      - 🇺🇲 US_45
+      - 🇺🇲 US_46
+      - 🇺🇲 US_47
+      - 🇺🇲 US_48
+      - 🇺🇲 US_49
+      - 🇺🇲 US_50
   - name: 🎈 Final
     type: select
     proxies:
