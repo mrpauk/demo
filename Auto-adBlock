@@ -61,7 +61,7 @@ proxy-providers:
 
   provider5:
     type: http
-    url: "https://share.lzf.email/proxy.php?uuid=b6f0183719&sid=all&target=clash"
+    url: "https://shz.al/~provider5"
     interval: 3600
     path: ./provider5.yaml
     health-check:
