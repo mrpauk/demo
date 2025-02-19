@@ -1,0 +1,154 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+  nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+
+proxy-providers:
+  provider1:
+    type: http
+    url: "https://shz.al/~provider1/"
+    interval: 3600
+    path: ./provider1.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  
+  provider2:
+    type: http
+    url: "https://git.0000002.best/https://raw.githubusercontent.com/mrpauk/ClashForge/refs/heads/main/clash_config.yaml"
+    interval: 3600
+    path: ./provider2.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  provider3:
+    type: http
+    url: "https://git.0000002.best/https://raw.githubusercontent.com/ripaojiedian/freenode/refs/heads/main/clash"
+    interval: 3600
+    path: ./provider3.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  
+  provider4:
+    type: http
+    url: "http://216.185.57.39/"
+    interval: 3600
+    path: ./provider4.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  provider5:
+    type: http
+    url: "https://share.lzf.email/proxy.php?uuid=b6f0183719&sid=all&target=clash"
+    interval: 3600
+    path: ./provider5.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+
+# 代理组配置
+proxy-groups:
+  - name: 🚀 Proxy
+    type: select
+    proxies:
+      - ♻️ Auto
+      - DIRECT
+    use:
+      - provider1
+      - provider2
+      - provider3
+      - provider4
+      - provider5
+
+  - name: ♻️ Auto
+    type: url-test
+    use:
+      - provider1
+      - provider2
+      - provider3
+      - provider4
+      - provider5
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🇲🇲 Myanmar
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🌍 Global
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - ♻️ Auto
+      - DIRECT
+      
+      
+  - name: 🚧 AdBlock
+    type: select
+    proxies: 
+      - REJECT
+      - DIRECT
+   
+  - name: 🛑 Reject
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      
+rule-providers:
+  adblock:
+    type: http
+    behavior: domain
+    url: "https://anti-ad.net/clash.yaml"
+    path: ./rules/adblock.yaml
+    interval: 86400     
+
+
+rules:
+  - RULE-SET,adblock,🚧 AdBlock
+  - PROCESS-NAME,network.kalock.myanmar2d,DIRECT
+  - PROCESS-NAME,qbittorrent.exe,DIRECT 
+  - PROCESS-NAME,qbittorrent,DIRECT 
+  - PROCESS-NAME,IDMan.exe,DIRECT
+  - GEOIP,MM,DIRECT
+  - IP-CIDR,103.16.120.0/22,DIRECT  
+  - IP-CIDR,103.227.176.0/22,DIRECT  
+  - IP-CIDR,103.251.160.0/22,DIRECT  
+  - IP-CIDR,103.253.96.0/22,DIRECT  
+  - IP-CIDR,110.74.128.0/18,DIRECT  
+  - IP-CIDR,116.206.0.0/16,DIRECT  
+  - IP-CIDR,175.100.64.0/18,DIRECT  
+  - IP-CIDR,202.53.144.0/22,DIRECT  
+  - IP-CIDR,202.74.56.0/24,DIRECT  
+  - IP-CIDR,203.81.0.0/19,DIRECT  
+  - IP-CIDR,203.83.224.0/20,DIRECT  
+  - IP-CIDR,203.99.240.0/21,DIRECT  
+  - IP-CIDR,210.4.80.0/20,DIRECT  
+  - IP-CIDR,223.25.240.0/21,DIRECT  
+    # Global rules
+  - MATCH,🌍 Global
