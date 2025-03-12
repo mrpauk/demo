@@ -113,12 +113,6 @@ proxy-groups:
     proxies: 
       - REJECT
       - DIRECT
-   
-  - name: 🛑 Reject
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
       
 rule-providers:
   adblock:
@@ -132,9 +126,6 @@ rule-providers:
 rules:
   - RULE-SET,adblock,🚧 AdBlock
   - PROCESS-NAME,network.kalock.myanmar2d,DIRECT
-  - PROCESS-NAME,qbittorrent.exe,DIRECT 
-  - PROCESS-NAME,qbittorrent,DIRECT 
-  - PROCESS-NAME,IDMan.exe,DIRECT
   - GEOIP,MM,DIRECT
   - IP-CIDR,103.16.120.0/22,DIRECT  
   - IP-CIDR,103.227.176.0/22,DIRECT  
