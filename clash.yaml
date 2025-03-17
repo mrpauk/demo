@@ -134,7 +134,7 @@ rules:
   - PROCESS-NAME,network.kalock.myanmar2d,DIRECT
   - PROCESS-NAME,qbittorrent.exe,DIRECT 
   - PROCESS-NAME,qbittorrent,DIRECT 
-  - PROCESS-NAME,IDMan.exe,DIRECT
+  - PROCESS-NAME,IDMan.exe,🚀 Proxy
   - GEOIP,MM,DIRECT
   - IP-CIDR,103.16.120.0/22,DIRECT  
   - IP-CIDR,103.227.176.0/22,DIRECT  
