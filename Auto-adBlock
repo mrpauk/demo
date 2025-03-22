@@ -5,6 +5,12 @@ mode: rule
 log-level: info
 external-controller: '127.0.0.1:9090'
 
+tun:
+  enable: true
+  stack: system
+  dns-hijack: [any:53]
+  udp: true  
+
 dns:
   enable: true
   listen: 0.0.0.0:53
@@ -15,21 +21,21 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
   nameserver:
-    - https://103.85.104.22/dns-qurey
-    - https://65.18.112.106/dns-qurey
+    - https://103.129.77.238/dns-query
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
 
 proxy-providers:
   provider1:
     type: http
-    url: "https://shz.al/~provider1"
-   interval: 3600
+    url: "https://shz.al/~provider1/"
+    interval: 3600
     path: ./provider1.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      lazy: true
   
   provider2:
     type: http
@@ -40,6 +46,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      lazy: true
 
   provider3:
     type: http
@@ -50,6 +57,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      lazy: true
   
   provider4:
     type: http
@@ -60,19 +68,20 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      lazy: true
 
   provider5:
     type: http
-    url: "https://git.0000002.best/https://raw.githubusercontent.com/mrpauk/demo/refs/heads/main/provider5.yaml"
+    url: "https://shz.al/~provider5"
     interval: 3600
     path: ./provider5.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      lazy: true
 
 
-# 代理组配置
 proxy-groups:
   - name: 🚀 Proxy
     type: select
@@ -96,6 +105,7 @@ proxy-groups:
       - provider5
     url: http://www.gstatic.com/generate_204
     interval: 300
+    tolerance: 50
 
   - name: 🇲🇲 Myanmar
     type: select
@@ -108,29 +118,19 @@ proxy-groups:
       - 🚀 Proxy
       - ♻️ Auto
       - DIRECT
-      
-      
-  - name: 🚧 AdBlock
+
+  - name: 🛑 Reject
     type: select
-    proxies: 
+    proxies:
       - REJECT
       - DIRECT
-
       
-rule-providers:
-  adblock:
-    type: http
-    behavior: domain
-    url: "https://anti-ad.net/clash.yaml"
-    path: ./rules/adblock.yaml
-    interval: 86400   
-
-
 rules:
-  - RULE-SET,adblock,🚧 AdBlock
-  
   # Applications
-  - PROCESS-NAME,network.kalock.myanmar2d,🇲🇲 Myanmar
+  - PROCESS-NAME,network.kalock.myanmar2d,DIRECT
+  - PROCESS-NAME,qbittorrent.exe,DIRECT 
+  - PROCESS-NAME,qbittorrent,DIRECT 
+  - PROCESS-NAME,IDMan.exe,DIRECT
   
   # Myanmar ISPs
   - DOMAIN-SUFFIX,mpt.com.mm,🇲🇲 Myanmar
@@ -151,6 +151,7 @@ rules:
   # Myanmar News & Media
   - DOMAIN-SUFFIX,elevenmyanmar.com,🇲🇲 Myanmar
   - DOMAIN-SUFFIX,myanmargazette.net,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,irrawaddy.com,🇲🇲 Myanmar
   - DOMAIN-SUFFIX,mmtimes.com,🇲🇲 Myanmar
   - DOMAIN-SUFFIX,mmbiztoday.com,🇲🇲 Myanmar
   - DOMAIN-SUFFIX,popularmyanmar.com,🇲🇲 Myanmar
