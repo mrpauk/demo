@@ -63,7 +63,7 @@ proxy-providers:
 
   provider5:
     type: http
-    url: "https://shz.al/~provider5"
+    url: "https://git.0000002.best/https://raw.githubusercontent.com/mrpauk/demo/refs/heads/main/provider5.yaml"
     interval: 3600
     path: ./provider5.yaml
     health-check:
