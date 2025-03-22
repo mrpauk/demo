@@ -31,7 +31,7 @@ proxy-providers:
   
   provider2:
     type: http
-    url: "https://shz.al/~provider2"
+    url: "https://git.0000002.best/https://raw.githubusercontent.com/mrpauk/demo/refs/heads/main/provider2.yaml"
     interval: 3600
     path: ./provider2.yaml
     health-check:
