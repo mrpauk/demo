@@ -15,13 +15,15 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
   nameserver:
+    - https://103.85.104.22/dns-qurey
+    - https://65.18.112.106/dns-qurey
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
 
 proxy-providers:
   provider1:
     type: http
-    url: "https://git.0000002.best/https://raw.githubusercontent.com/mrpauk/demo/refs/heads/main/provider1.yaml"
+    url: "https://shz.al/~provider1/"
     interval: 3600
     path: ./provider1.yaml
     health-check:
@@ -31,7 +33,7 @@ proxy-providers:
   
   provider2:
     type: http
-    url: "https://git.0000002.best/https://raw.githubusercontent.com/mrpauk/demo/refs/heads/main/provider2.yaml"
+    url: "https://shz.al/~provider2"
     interval: 3600
     path: ./provider2.yaml
     health-check:
@@ -113,6 +115,7 @@ proxy-groups:
     proxies: 
       - REJECT
       - DIRECT
+
       
 rule-providers:
   adblock:
@@ -120,7 +123,7 @@ rule-providers:
     behavior: domain
     url: "https://anti-ad.net/clash.yaml"
     path: ./rules/adblock.yaml
-    interval: 86400     
+    interval: 86400   
 
 
 rules:
