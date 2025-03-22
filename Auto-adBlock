@@ -125,8 +125,66 @@ rule-providers:
 
 rules:
   - RULE-SET,adblock,🚧 AdBlock
-  - PROCESS-NAME,network.kalock.myanmar2d,DIRECT
-  - GEOIP,MM,DIRECT
+  
+  # Applications
+  - PROCESS-NAME,network.kalock.myanmar2d,🇲🇲 Myanmar
+  
+  # Myanmar ISPs
+  - DOMAIN-SUFFIX,mpt.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,ooredoo.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,mytel.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,atom.com.mm,🇲🇲 Myanmar
+
+  # Myanmar Banking & Payment
+  - DOMAIN-SUFFIX,kbzpay.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,wavemoney.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,cbbank.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,ayabank.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,agdbank.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,uab.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,yomabank.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,meb.gov.mm,🇲🇲 Myanmar
+
+  # Myanmar News & Media
+  - DOMAIN-SUFFIX,elevenmyanmar.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,myanmargazette.net,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,mmtimes.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,mmbiztoday.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,popularmyanmar.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,mrtv.gov.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,myanmaryellowpages.biz,🇲🇲 Myanmar
+
+  # Myanmar Entertainment
+  - DOMAIN-SUFFIX,burmesesubtitles.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,myanmartvchannels.com,🇲🇲 Myanmar
+
+  # Myanmar E-commerce
+  - DOMAIN-SUFFIX,shop.com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,yangondirectory.com,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,myanmarmarketplace.com,🇲🇲 Myanmar
+
+  # Myanmar Education
+  - DOMAIN-SUFFIX,edu.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,yueco.edu.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,um1.edu.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,ytu.edu.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,moe.gov.mm,🇲🇲 Myanmar
+
+  # Myanmar Government
+  - DOMAIN-SUFFIX,gov.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,myanmar.gov.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,president.gov.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,mohs.gov.mm,🇲🇲 Myanmar
+
+  # General Myanmar Domain Suffixes
+  - DOMAIN-SUFFIX,com.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,org.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,net.mm,🇲🇲 Myanmar
+  - DOMAIN-SUFFIX,mil.mm,🇲🇲 Myanmar
+  - DOMAIN-KEYWORD,myanmar,🇲🇲 Myanmar
+  - DOMAIN-KEYWORD,burma,🇲🇲 Myanmar
+  
+  # Myanmar IP Ranges (example)
   - IP-CIDR,103.16.120.0/22,DIRECT  
   - IP-CIDR,103.227.176.0/22,DIRECT  
   - IP-CIDR,103.251.160.0/22,DIRECT  
@@ -140,6 +198,10 @@ rules:
   - IP-CIDR,203.83.224.0/20,DIRECT  
   - IP-CIDR,203.99.240.0/21,DIRECT  
   - IP-CIDR,210.4.80.0/20,DIRECT  
-  - IP-CIDR,223.25.240.0/21,DIRECT  
-    # Global rules
+  - IP-CIDR,223.25.240.0/21,DIRECT
+  
+  # Global rules
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - GEOIP,MM,🇲🇲 Myanmar
   - MATCH,🌍 Global
