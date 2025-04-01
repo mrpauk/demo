@@ -1,89 +1,82 @@
 mixed-port: 7890
 allow-lan: true
-bind-address: '*'
-mode: rule
+mode: Rule
 log-level: info
-external-controller: '127.0.0.1:9090'
+external-controller: 127.0.0.1:9090
 
+# DNS settings for better stability
 dns:
   enable: true
   listen: 0.0.0.0:53
-  ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+  fallback:
+    - tls://1.1.1.1:853
+    - tls://8.8.8.8:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
 
+# Proxy Providers
 proxy-providers:
   provider1:
     type: http
-    url: "https://shz.al/~provider1/"
+    url: https://drive.google.com/uc?export=download&id=1cSXF9gk8RoweylJMVugyOIsLOmCEbN1m
     interval: 3600
-    path: ./provider1.yaml
+    path: ./providers/provider1.yaml
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
       interval: 300
-  
+      url: http://www.gstatic.com/generate_204
+
   provider2:
     type: http
-    url: "https://shz.al/~provider2"
+    url: https://drive.google.com/uc?export=download&id=1pmFT6GX0WxslVRXNMq6Q2F_x_Zd1pGAv
     interval: 3600
-    path: ./provider2.yaml
+    path: ./providers/provider2.yaml
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
       interval: 300
+      url: http://www.gstatic.com/generate_204
 
   provider3:
     type: http
-    url: "https://shz.al/~provider3"
+    url: https://drive.google.com/uc?export=download&id=1qZo-BRlMu-kww0haTPPZE_IPjZJhSVod
     interval: 3600
-    path: ./provider3.yaml
+    path: ./providers/provider3.yaml
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
       interval: 300
-  
+      url: http://www.gstatic.com/generate_204
+
   provider4:
     type: http
-    url: "https://shz.al/~provider4"
+    url: https://drive.google.com/uc?export=download&id=1VSXz092wXqaJdMZQ4IPZyv1iW-n7qNkq
     interval: 3600
-    path: ./provider4.yaml
+    path: ./providers/provider4.yaml
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
       interval: 300
+      url: http://www.gstatic.com/generate_204
 
   provider5:
     type: http
-    url: "https://shz.al/~provider5"
+    url: https://drive.google.com/uc?export=download&id=1KRY7dwWhOoslI2KD4f6DaL19XFSBhyWc
     interval: 3600
-    path: ./provider5.yaml
+    path: ./providers/provider5.yaml
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
       interval: 300
+      url: http://www.gstatic.com/generate_204
 
-
+# Proxy Groups
 proxy-groups:
-  - name: 🚀 Proxy
-    type: select
-    proxies:
-      - ♻️ Auto
-      - DIRECT
-    use:
-      - provider1
-      - provider2
-      - provider3
-      - provider4
-      - provider5
-
-  - name: ♻️ Auto
+  - name: "🚀 Auto"
     type: url-test
     use:
       - provider1
@@ -92,111 +85,193 @@ proxy-groups:
       - provider4
       - provider5
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 60
+    tolerance: 50
+    lazy: true
+    filter: ".*"
 
-  - name: 🇲🇲 Myanmar
+
+  - name: "♻️ Manual"
     type: select
     proxies:
+      - "🚀 Auto"
       - DIRECT
+    use:
+      - provider1
+      - provider2
+      - provider3
+      - provider4
+      - provider5
 
-  - name: 🌍 Global
+  - name: "🤖 AI Services"
     type: select
     proxies:
-      - 🚀 Proxy
-      - ♻️ Auto
+      - "🚀 Auto"
+      - "♻️ Manual"
       - DIRECT
-      
-      
-  - name: 🚧 AdBlock
+
+  - name: "🛡️ AdBlock"
     type: select
-    proxies: 
+    proxies:
       - REJECT
       - DIRECT
-   
-  - name: 🛑 Reject
+
+  - name: "🇲🇲 Myanmar Sites"
     type: select
     proxies:
-      - REJECT
       - DIRECT
-      
+      - "🚀 Auto"
+      - "♻️ Manual"
+
+  - name: "🌍 Global Sites"
+    type: select
+    proxies:
+      - "🚀 Auto"
+      - "♻️ Manual"
+      - DIRECT
+
+  - name: "🎮 Gaming"
+    type: select
+    proxies:
+      - DIRECT
+      - "🚀 Auto"
+      - "♻️ Manual"
+
+  - name: "🎬 Streaming"
+    type: select
+    proxies:
+      - "🚀 Auto"
+      - "♻️ Manual"
+      - DIRECT
+
+# Rule Providers
 rule-providers:
-  adblock:
+  reject:
     type: http
     behavior: domain
-    url: "https://anti-ad.net/clash.yaml"
-    path: ./rules/adblock.yaml
-    interval: 86400 
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
 
+  myanmar:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml
+    path: ./ruleset/myanmar.yaml
+    interval: 86400
+
+# Rules
 rules:
-  - RULE-SET,adblock,🚧 AdBlock
+  # AI Services (Unlocked)
+  - DOMAIN-SUFFIX,openai.com,🤖 AI Services
+  - DOMAIN-SUFFIX,ai.com,🤖 AI Services
+  - DOMAIN-KEYWORD,openai,🤖 AI Services
+  - DOMAIN-SUFFIX,chat.openai.com,🤖 AI Services
+  - DOMAIN-SUFFIX,challenges.cloudflare.com,🤖 AI Services
+  - DOMAIN-SUFFIX,identrust.com,🤖 AI Services
+  - DOMAIN-SUFFIX,auth0.com,🤖 AI Services
+  - DOMAIN-SUFFIX,sentry.io,🤖 AI Services
+  - DOMAIN-SUFFIX,intercom.io,🤖 AI Services
+  - DOMAIN-SUFFIX,statsig.com,🤖 AI Services
+  - DOMAIN-SUFFIX,featuregates.org,🤖 AI Services
+  - DOMAIN-SUFFIX,intercomcdn.com,🤖 AI Services
+  - DOMAIN-SUFFIX,poe.com,🤖 AI Services
+  - DOMAIN-SUFFIX,anthropic.com,🤖 AI Services
+  - DOMAIN-SUFFIX,claude.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,bard.google.com,🤖 AI Services
+  - DOMAIN-SUFFIX,gemini.google.com,🤖 AI Services
+  - DOMAIN-SUFFIX,deepmind.google.com,🤖 AI Services
+  - DOMAIN-SUFFIX,bing.com,🤖 AI Services
+  - DOMAIN-SUFFIX,copilot.microsoft.com,🤖 AI Services
+  - DOMAIN-SUFFIX,perplexity.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,huggingface.co,🤖 AI Services
+  - DOMAIN-SUFFIX,replicate.com,🤖 AI Services
+  - DOMAIN-SUFFIX,cohere.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,stability.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,midjourney.com,🤖 AI Services
+  - DOMAIN-SUFFIX,character.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,inflection.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,pi.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,mistral.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,together.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,groq.com,🤖 AI Services
+  - DOMAIN-SUFFIX,fireworks.ai,🤖 AI Services
+  - DOMAIN-SUFFIX,forefront.ai,🤖 AI Services
+
+  # Myanmar Domains
+  - DOMAIN-SUFFIX,com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,org.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,edu.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,net.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,gov.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,mm,🇲🇲 Myanmar Sites
   
-  # Applications
-  - PROCESS-NAME,network.kalock.myanmar2d,🇲🇲 Myanmar
+    # Applications
+  - PROCESS-NAME,network.kalock.myanmar2d,🇲🇲 Myanmar Sites
   
-  # Myanmar ISPs
-  - DOMAIN-SUFFIX,mpt.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,ooredoo.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,mytel.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,atom.com.mm,🇲🇲 Myanmar
-
-  # Myanmar Banking & Payment
-  - DOMAIN-SUFFIX,kbzpay.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,wavemoney.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,cbbank.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,ayabank.com,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,agdbank.com,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,uab.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,yomabank.com,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,meb.gov.mm,🇲🇲 Myanmar
-
-  # Myanmar Entertainment
-  - DOMAIN-SUFFIX,burmesesubtitles.com,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,myanmartvchannels.com,🇲🇲 Myanmar
-
-  # Myanmar E-commerce
-  - DOMAIN-SUFFIX,shop.com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,yangondirectory.com,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,myanmarmarketplace.com,🇲🇲 Myanmar
-
-  # Myanmar Education
-  - DOMAIN-SUFFIX,edu.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,yueco.edu.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,um1.edu.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,ytu.edu.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,moe.gov.mm,🇲🇲 Myanmar
-
-  # Myanmar Government
-  - DOMAIN-SUFFIX,gov.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,myanmar.gov.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,president.gov.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,mohs.gov.mm,🇲🇲 Myanmar
-
-  # General Myanmar Domain Suffixes
-  - DOMAIN-SUFFIX,com.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,org.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,net.mm,🇲🇲 Myanmar
-  - DOMAIN-SUFFIX,mil.mm,🇲🇲 Myanmar
-  - DOMAIN-KEYWORD,myanmar,🇲🇲 Myanmar
-  - DOMAIN-KEYWORD,burma,🇲🇲 Myanmar
+  # Popular Myanmar Sites
+  - DOMAIN-KEYWORD,myanmars,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,mpt.com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,mytel.com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,ooredoo.com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,atom.com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,wavemoney.com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,kbzbank.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,cbbank.com.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,ayabank.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,myanmareconomicbank.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,myanmarnews.net,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,mmtimes.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,moi.gov.mm,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,myanmars.net,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,frontiermyanmar.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,yangon.com,🇲🇲 Myanmar Sites
   
-  # Myanmar IP Ranges (example)
-  - IP-CIDR,103.16.120.0/22,DIRECT  
-  - IP-CIDR,103.227.176.0/22,DIRECT  
-  - IP-CIDR,103.251.160.0/22,DIRECT  
-  - IP-CIDR,103.253.96.0/22,DIRECT  
-  - IP-CIDR,110.74.128.0/18,DIRECT  
-  - IP-CIDR,116.206.0.0/16,DIRECT  
-  - IP-CIDR,175.100.64.0/18,DIRECT  
-  - IP-CIDR,202.53.144.0/22,DIRECT  
-  - IP-CIDR,202.74.56.0/24,DIRECT  
-  - IP-CIDR,203.81.0.0/19,DIRECT  
-  - IP-CIDR,203.83.224.0/20,DIRECT  
-  - IP-CIDR,203.99.240.0/21,DIRECT  
-  - IP-CIDR,210.4.80.0/20,DIRECT  
-  - IP-CIDR,223.25.240.0/21,DIRECT
+  # Ad blocking
+  - RULE-SET,reject,🛡️ AdBlock
   
-  # Global rules
-  - DOMAIN-KEYWORD,adservice,🚧 AdBlock
-  - DOMAIN-SUFFIX,ad.com,🚧 AdBlock
-  - GEOIP,MM,🇲🇲 Myanmar
-  - MATCH,🌍 Global
+  # Streaming Services
+  - DOMAIN-SUFFIX,netflix.com,🎬 Streaming
+  - DOMAIN-SUFFIX,netflix.net,🎬 Streaming
+  - DOMAIN-SUFFIX,nflximg.com,🎬 Streaming
+  - DOMAIN-SUFFIX,nflximg.net,🎬 Streaming
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 Streaming
+  - DOMAIN-SUFFIX,nflxso.net,🎬 Streaming
+  - DOMAIN-SUFFIX,nflxext.com,🎬 Streaming
+  - DOMAIN-SUFFIX,youtube.com,🎬 Streaming
+  - DOMAIN-SUFFIX,ytimg.com,🎬 Streaming
+  - DOMAIN-SUFFIX,googlevideo.com,🎬 Streaming
+  - DOMAIN-SUFFIX,hulu.com,🎬 Streaming
+  - DOMAIN-SUFFIX,hulustream.com,🎬 Streaming
+  - DOMAIN-SUFFIX,disney-plus.net,🎬 Streaming
+  - DOMAIN-SUFFIX,disneyplus.com,🎬 Streaming
+  - DOMAIN-SUFFIX,dssott.com,🎬 Streaming
+  - DOMAIN-SUFFIX,bamgrid.com,🎬 Streaming
+  
+  # Gaming
+  - DOMAIN-SUFFIX,playstation.com,🎮 Gaming
+  - DOMAIN-SUFFIX,playstation.net,🎮 Gaming
+  - DOMAIN-SUFFIX,playstationnetwork.com,🎮 Gaming
+  - DOMAIN-SUFFIX,sony.com,🎮 Gaming
+  - DOMAIN-SUFFIX,xbox.com,🎮 Gaming
+  - DOMAIN-SUFFIX,xboxlive.com,🎮 Gaming
+  - DOMAIN-SUFFIX,steamcontent.com,🎮 Gaming
+  - DOMAIN-SUFFIX,steampowered.com,🎮 Gaming
+  - DOMAIN-SUFFIX,steamgames.com,🎮 Gaming
+  - DOMAIN-SUFFIX,steamusercontent.com,🎮 Gaming
+  - DOMAIN-SUFFIX,epicgames.com,🎮 Gaming
+  - DOMAIN-SUFFIX,unrealengine.com,🎮 Gaming
+  - DOMAIN-SUFFIX,pubg.com,🎮 Gaming
+  - DOMAIN-SUFFIX,pubgmobile.com,🎮 Gaming
+  - DOMAIN-SUFFIX,mobilelegends.com,🎮 Gaming
+  - DOMAIN-SUFFIX,garena.com,🎮 Gaming
+  
+  # Connection stability rules
+  - DOMAIN-SUFFIX,googlevideo.com,🚀 Auto
+  - DOMAIN-SUFFIX,gstatic.com,🚀 Auto
+  - DOMAIN-SUFFIX,googleapis.com,🚀 Auto
+  - DOMAIN-SUFFIX,google.com,🚀 Auto
+  
+  # Final rules
+  - GEOIP,MM,🇲🇲 Myanmar Sites
+  - MATCH,🌍 Global Sites
