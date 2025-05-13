@@ -9,66 +9,50 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
-  nameserver:
+nameserver:
+  - https://dns.alidns.com/dns-query  
+  - tls://223.5.5.5:853              
+  - 223.5.5.5                        
+  - 114.114.114.114                
+  - https://1.1.1.1/dns-query        
+  - tls://dns.google:853             
+  - dhcp://en0
+
+fallback:
+  - https://doh.dns.sb/dns-query      
+  - tls://1.0.0.1:853                
+  - 8.8.8.8                         
+  - tcp://208.67.222.222:443        
+
+fallback-filter:
+  geoip: true
+  geoip-code: MM                     
+  ipcidr:
+    - 240.0.0.0/4                    
+  domain:
+    - '+.google.com'
+    - '+.facebook.com'
+    - '+.youtube.com'
+    - '+.twitter.com'
+
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 223.5.5.5
     - 8.8.8.8
-    - 8.8.4.4
     - 1.1.1.1
-    - 1.0.0.1
-  fallback:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
 
 # Proxy Providers
 proxy-providers:
-  provider1:
+  provider:
     type: http
-    url: https://drive.google.com/uc?export=download&id=1cSXF9gk8RoweylJMVugyOIsLOmCEbN1m
+    url: https://drive.google.com/uc?export=download&id=1rKIaOSbfqoD4FEUnn1CA4KtFnrIzocs0
     interval: 3600
-    path: ./providers/provider1.yaml
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-
-  provider2:
-    type: http
-    url: https://drive.google.com/uc?export=download&id=1pmFT6GX0WxslVRXNMq6Q2F_x_Zd1pGAv
-    interval: 3600
-    path: ./providers/provider2.yaml
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-
-  provider3:
-    type: http
-    url: https://drive.google.com/uc?export=download&id=1qZo-BRlMu-kww0haTPPZE_IPjZJhSVod
-    interval: 3600
-    path: ./providers/provider3.yaml
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-
-  provider4:
-    type: http
-    url: https://drive.google.com/uc?export=download&id=1VSXz092wXqaJdMZQ4IPZyv1iW-n7qNkq
-    interval: 3600
-    path: ./providers/provider4.yaml
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-
-  provider5:
-    type: http
-    url: https://drive.google.com/uc?export=download&id=1KRY7dwWhOoslI2KD4f6DaL19XFSBhyWc
-    interval: 3600
-    path: ./providers/provider5.yaml
+    path: ./providers/provider.yaml
     health-check:
       enable: true
       interval: 300
@@ -76,38 +60,31 @@ proxy-providers:
 
 # Proxy Groups
 proxy-groups:
-  - name: "🚀 Auto"
-    type: url-test
-    use:
-      - provider1
-      - provider2
-      - provider3
-      - provider4
-      - provider5
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-    filter: ".*"
-
-
-  - name: "♻️ Manual"
+  - name: "☁️ Proxy"
     type: select
     proxies:
-      - "🚀 Auto"
-      - DIRECT
+      - ⚡ Auto
+      - ✏️ Select
+
+
+  - name: "✏️ Select"
+    type: select
+    proxies:
     use:
-      - provider1
-      - provider2
-      - provider3
-      - provider4
-      - provider5
+      - provider
+  - name: "⚡ Auto"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+    use:
+      - provider
 
   - name: "🤖 AI Services"
     type: select
     proxies:
-      - "🚀 Auto"
-      - "♻️ Manual"
+      - "⚡ Auto"
+      - "✏️ Select"
       - DIRECT
 
   - name: "🛡️ AdBlock"
@@ -120,28 +97,28 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - "🚀 Auto"
-      - "♻️ Manual"
+      - "⚡ Auto"
+      - "✏️ Select"
 
   - name: "🌍 Global Sites"
     type: select
     proxies:
-      - "🚀 Auto"
-      - "♻️ Manual"
+      - "⚡ Auto"
+      - "✏️ Select"
       - DIRECT
 
   - name: "🎮 Gaming"
     type: select
     proxies:
       - DIRECT
-      - "🚀 Auto"
-      - "♻️ Manual"
+      - "⚡ Auto"
+      - "✏️ Select"
 
   - name: "🎬 Streaming"
     type: select
     proxies:
-      - "🚀 Auto"
-      - "♻️ Manual"
+      - "⚡ Auto"
+      - "✏️ Select"
       - DIRECT
 
 # Rule Providers
@@ -201,7 +178,11 @@ rules:
   
     # Applications
   - PROCESS-NAME,network.kalock.myanmar2d,🇲🇲 Myanmar Sites
-  
+  - PROCESS-NAME,com.kbzbank.kpaycustomer,🇲🇲 Myanmar Sites
+  - PROCESS-NAME,com.ayaplus.subscriber,🇲🇲 Myanmar Sites
+  - PROCESS-NAME,qbittorrent.exe,🇲🇲 Myanmar Sites
+  - PROCESS-NAME,qbittorrent,🇲🇲 Myanmar Sites
+  - PROCESS-NAME,com.tencent.mm,🇲🇲 Myanmar Sites
   # Popular Myanmar Sites
   - DOMAIN-KEYWORD,myanmars,🇲🇲 Myanmar Sites
   - DOMAIN-SUFFIX,mpt.com.mm,🇲🇲 Myanmar Sites
@@ -220,6 +201,7 @@ rules:
   - DOMAIN-SUFFIX,frontiermyanmar.com,🇲🇲 Myanmar Sites
   - DOMAIN-SUFFIX,yangon.com,🇲🇲 Myanmar Sites
   
+  
   # Ad blocking
   - RULE-SET,reject,🛡️ AdBlock
   
@@ -231,9 +213,6 @@ rules:
   - DOMAIN-SUFFIX,nflxvideo.net,🎬 Streaming
   - DOMAIN-SUFFIX,nflxso.net,🎬 Streaming
   - DOMAIN-SUFFIX,nflxext.com,🎬 Streaming
-  - DOMAIN-SUFFIX,youtube.com,🎬 Streaming
-  - DOMAIN-SUFFIX,ytimg.com,🎬 Streaming
-  - DOMAIN-SUFFIX,googlevideo.com,🎬 Streaming
   - DOMAIN-SUFFIX,hulu.com,🎬 Streaming
   - DOMAIN-SUFFIX,hulustream.com,🎬 Streaming
   - DOMAIN-SUFFIX,disney-plus.net,🎬 Streaming
@@ -260,10 +239,14 @@ rules:
   - DOMAIN-SUFFIX,garena.com,🎮 Gaming
   
   # Connection stability rules
-  - DOMAIN-SUFFIX,googlevideo.com,🚀 Auto
-  - DOMAIN-SUFFIX,gstatic.com,🚀 Auto
-  - DOMAIN-SUFFIX,googleapis.com,🚀 Auto
-  - DOMAIN-SUFFIX,google.com,🚀 Auto
+  - DOMAIN-KEYWORD,youtube,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,googlevideo.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,gstatic.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,googleapis.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,google.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,ytimg.com,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,idope.se,🇲🇲 Myanmar Sites
+  - DOMAIN-SUFFIX,idope.lol,🇲🇲 Myanmar Sites
   
   # Final rules
   - GEOIP,MM,🇲🇲 Myanmar Sites
