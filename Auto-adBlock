@@ -28,7 +28,9 @@ fallback-filter:
   geoip: true
   geoip-code: MM                     
   ipcidr:
-    - 240.0.0.0/4                    
+    - 45.248.72.0/21
+    - 103.199.160.0/22
+    - 103.47.204.0/22               
   domain:
     - '+.google.com'
     - '+.facebook.com'
