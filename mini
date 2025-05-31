@@ -7,9 +7,9 @@ ruelset=DIRECT,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/applicatio
 ruleset=DIRECT,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/google.txt
 ruleset=DIRECT,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/ai.txt
 
-custom_proxy_group=☁️ Proxy `select`[]🔮 Load balancing`[]⚡ Lowest latency`[]✏️ Manual `
+custom_proxy_group=☁️ Proxy `select`[]🔮 Load Balance`[]⚡ Fast`[]✏️ Manual `
 custom_proxy_group=✏️ Manual `select`.*
-custom_proxy_group=⚡ Lowest latency `url-test`.*`http://www.gstatic.com/generate_204` 300
+custom_proxy_group=⚡ Fast `url-test`.*`http://www.gstatic.com/generate_204` 300
 custom_proxy_group=🔮 Load Balance`load-balance``http://www.gstatic.com/generate_204`300,,50
 ruleset=☁️ Proxy,[]MATCH
 
