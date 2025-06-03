@@ -6,16 +6,16 @@ external-controller: 127.0.0.1:9090
 
 dns:
   enable: true
-  listen: 0.0.0.0:53
-  enhanced-mode: fake-ip
+  listen: :1053
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
     - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
   fallback:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-    - https://doh.opendns.com/dns-query
-    - tcp://208.67.222.222:443
+    - tls://1.1.1.1
+  enhanced-mode: fake-ip
   fallback-filter:
     geoip: true
     geoip-code: MM
