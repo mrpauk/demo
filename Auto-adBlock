@@ -90,7 +90,7 @@ rule-providers:
   adblock:
     type: http
     behavior: domain
-    url: "https://anti-ad.net/clash.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
     path: ./rules/adblock.yaml
     interval: 86400 
     
