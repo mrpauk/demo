@@ -83,14 +83,14 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/PoeMyintzu/Demo/main/reject.txt
+    url: https://git.0000002.best/https://raw.githubusercontent.com/PoeMyintzu/Demo/main/reject.txt
     path: ./ruleset/reject.yaml
     interval: 86400
    
   adblock:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/PoeMyintzu/Demo/main/adblock.txt
+    url: https://git.0000002.best/https://raw.githubusercontent.com/PoeMyintzu/Demo/main/adblock.txt
     path: ./ruleset/adblock.yaml
     interval: 86400
     
