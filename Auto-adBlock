@@ -42,7 +42,7 @@ tun:
 proxy-providers:
   provider:
     type: http
-    url: https://drive.google.com/uc?export=download&id=1rKIaOSbfqoD4FEUnn1CA4KtFnrIzocs0
+    url: "https://drive.google.com/uc?export=download&id=1rKIaOSbfqoD4FEUnn1CA4KtFnrIzocs0"
     interval: 3600
     path: ./providers/provider.yaml
     health-check:
@@ -83,16 +83,16 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: https://git.0000002.best/https://raw.githubusercontent.com/PoeMyintzu/Demo/main/reject.txt
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/PoeMyintzu/Demo/main/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
    
   adblock:
     type: http
     behavior: domain
-    url: https://git.0000002.best/https://raw.githubusercontent.com/PoeMyintzu/Demo/main/adblock.txt
-    path: ./ruleset/adblock.yaml
-    interval: 86400
+    url: "https://anti-ad.net/clash.yaml"
+    path: ./rules/adblock.yaml
+    interval: 86400 
     
 rules:
 - RULE-SET,reject,REJECT
