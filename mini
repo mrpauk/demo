@@ -1,6 +1,5 @@
 ruleset=REJECT,https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
 ruleset=☁️ Proxy,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/facebook.txt
-ruleset=DIRECT,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/mm-ip.list
 ruleset=DIRECT,[]GEOIP,MM
 ruleset=DIRECT,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/private.txt
 ruelset=DIRECT,https://raw.githubusercontent.com/PoeMyintzu/Demo/main/application.txt
