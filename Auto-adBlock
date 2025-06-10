@@ -32,12 +32,9 @@ dns:
 
 tun:
   enable: true
-  stack: system
+  stack: mixed
   auto-route: true
   auto-detect-interface: true
-  dns-hijack:
-    - 1.1.1.1
-    - 8.8.8.8
 
 proxy-providers:
   provider:
