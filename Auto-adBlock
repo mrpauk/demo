@@ -13,16 +13,16 @@ dns:
   nameserver:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard-dns.com/dns-query
   fallback:
     - tls://1.1.1.1
+    - tls://8.8.8.8
+    - https://dns.quad9.net/dns-query
   enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   fallback-filter:
     geoip: true
     geoip-code: MM
-    ipcidr:
-      - 45.248.72.0/21
-      - 103.199.160.0/22
-      - 103.47.204.0/22
     domain:
       - '+.google.com'
       - '+.facebook.com'
