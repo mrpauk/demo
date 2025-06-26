@@ -1,0 +1,17 @@
+payload:
+  - # Facebook Core
+  - DOMAIN-KEYWORD,facebook
+  - DOMAIN-KEYWORD,fb
+  - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,fbcdn.net
+  - DOMAIN-SUFFIX,fb.com
+  - # Meta Services
+  - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-SUFFIX,whatsapp.com
+  - DOMAIN-SUFFIX,messenger.com
+  - # CDN & Assets
+  - DOMAIN-SUFFIX,xx.fbcdn.net
+  - DOMAIN-SUFFIX,xy.fbcdn.net
+  - DOMAIN-SUFFIX,fzxx.net
+  - # Seedr.cc
+  - DOMAIN-SUFFIX,seedr.cc
