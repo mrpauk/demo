@@ -1,0 +1,98 @@
+payload:
+  - #Apps
+  - PROCESS-NAME,network.kalock.myanmar2d
+  - PROCESS-NAME,com.kbzbank.kpaycustomer
+  - PROCESS-NAME,com.ayaplus.subscriber
+  - PROCESS-NAME,org.telegram.messenger
+  - PROCESS-NAME,com.tencent.mm
+  - PROCESS-NAME,com.openai.chatgpt
+  - PROCESS-NAME,com.google.android.youtube
+  - PROCESS-NAME,com.google.android.apps.maps
+  - PROCESS-NAME,com.google.android.apps.docs
+  - PROCESS-NAME,com.ooredoo.selfcare
+  - PROCESS-NAME,com.mytel.myid
+  - PROCESS-NAME,mm.com.mptvas
+  - PROCESS-NAME,com.ofss.digx.mab
+  - PROCESS-NAME,mm.com.wavemoney.wavepay
+  - PROCESS-NAME,com.ascend.money.rewards.app.mm
+  - PROCESS-NAME,com.com.jits.mbanking.aya
+  - PROCESS-NAME,mm.com.atom.store
+  - PROCESS-NAME,com.deepseek.chat
+  - PROCESS-NAME,us.zoom.videomeetings
+  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,com.ezviz
+  - PROCESS-NAME,com.mytel.viettech.abl.eu.v2.android
+  - PROCESS-NAME,com.mm.android.smartlifeiot
+  - # Google Core Services
+  - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,google.net
+  - DOMAIN-SUFFIX,google.org
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,google-analytics.com
+  - DOMAIN-SUFFIX,gmail.com
+  - DOMAIN-SUFFIX,googlemail.com
+  - DOMAIN-SUFFIX,googleadservices.com
+  - DOMAIN-SUFFIX,googleplex.com
+  - DOMAIN-SUFFIX,goog
+  - # Google AI Services
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,ai.google.dev
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
+  - DOMAIN-SUFFIX,vertexai.google.com
+  - DOMAIN-SUFFIX,aihub.google.com
+  - DOMAIN-SUFFIX,deepmind.google
+  - #Private
+  - # Government (gov.mm) Domains
+  - DOMAIN,idope.se
+  - DOMAIN-SUFFIX,gov.mm
+  - DOMAIN-SUFFIX,com.mm
+  - DOMAIN-SUFFIX,org.mm
+  - DOMAIN-SUFFIX,edu.mm
+  - DOMAIN-SUFFIX,net.mm
+  - # Banks
+  - DOMAIN-SUFFIX,ayabank.com
+  - DOMAIN-SUFFIX,kbzbank.com
+  - DOMAIN-SUFFIX,cbbank.com.mm
+  - DOMAIN-SUFFIX,agdbank.com
+  - DOMAIN-SUFFIX,mabbank.com
+  - DOMAIN-SUFFIX,yomabank.com
+  - DOMAIN-SUFFIX,wavemoney.com.mm
+  - DOMAIN-SUFFIX,truemoney.com.mm
+  - # Telecom Operators
+  - DOMAIN-SUFFIX,mpt.com.mm
+  - DOMAIN-SUFFIX,telenor.com.mm
+  - DOMAIN-SUFFIX,ooredoo.com.mm
+  - DOMAIN-SUFFIX,mytel.com.mm
+  - # DeepSeek
+  - DOMAIN-SUFFIX,chat.deepseek.com
+  - DOMAIN-SUFFIX,deepseek.com
+  - DOMAIN-SUFFIX,api.deepseek.com
+  - # OpenAI
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chat.openai.com
+  - DOMAIN-SUFFIX,platform.openai.com
+  - DOMAIN-SUFFIX,api.openai.com
+  - # Claude
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,console.anthropic.com
+  - # Cloudflare AI
+  - DOMAIN-SUFFIX,ai.cloudflare.com
+  - DOMAIN-SUFFIX,workers.ai
+  - # FFA.chat
+  - DOMAIN-SUFFIX,ffa.chat
+  - # Perplexity AI
+  - DOMAIN-SUFFIX,perplexity.ai
+  - # General AI Keywords
+  - DOMAIN-KEYWORD,ai
+  - DOMAIN-KEYWORD,gpt
+  - DOMAIN-KEYWORD,deepseek
+  - #QWEN-ai
+  - DOMAIN-SUFFIX,qwen.ai
+  - DOMAIN-SUFFIX,chat.qwen.ai
