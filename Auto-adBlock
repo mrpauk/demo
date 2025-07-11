@@ -1292,25 +1292,26 @@ dns:
 rule-providers:
   🛑 BanAD:
     type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    path: ./rules/🛑_BanAD.yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanAD.yaml
+    path: ./rules/BanAD.yaml
     interval: 86400
   🍃 BanProgramAD:
     type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
-    path: ./rules/🍃_BanProgramAD.yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanProgramAD.yaml
+    path: ./rules/BanProgramAD.yaml
     interval: 86400
   🆎 AdBlock:
     type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
-    path: ./rules/🆎_AdBlock.yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanEasyList.yaml
+    path: ./rules/AdBlock.yaml
     interval: 86400
   🆎 AdBlock Privacy:
     type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
-    path: ./rules/🆎_AdBlock_Privacy.yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanEasyPrivacy.yaml
+    path: ./rules/AdBlock_Privacy.yaml
     interval: 86400
+
