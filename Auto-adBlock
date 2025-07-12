@@ -5,753 +5,177 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: 🇭🇰 香港-A01
-  server: fa.fxlcn.com
-  port: 45207
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇭🇰 香港-A09
-  server: fa.fxlcn.com
-  port: 45290
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇳 台湾-A01
-  server: fa.fxlcn.com
-  port: 45261
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇳 台湾-A02
-  server: g0.fxlcn.com
-  port: 45214
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇳 台湾-A05
-  server: fa.fxlcn.com
-  port: 45407
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇳 台湾-A06
-  server: fa.fxlcn.com
-  port: 45242
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇳 台湾-A07
-  server: g0.fxlcn.com
-  port: 45414
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇳 台湾-A09
-  server: fa.fxlcn.com
-  port: 45411
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸 美国-D04
-  server: ys.fxlcn.com
-  port: 45257
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸 美国-D07
-  server: fa.fxlcn.com
-  port: 45409
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 日本-A01
-  server: ye.fxlcn.com
-  port: 45205
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 日本-A03
-  server: fa.fxlcn.com
-  port: 45232
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 日本-A04
-  server: fa.fxlcn.com
-  port: 45212
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 日本-A06
-  server: fa.fxlcn.com
-  port: 45259
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇸🇬 新加坡-B01
-  server: ys.fxlcn.com
-  port: 45224
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇸🇬 新加坡-B05
-  server: ys.fxlcn.com
-  port: 45293
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇸🇬 新加坡-B07
-  server: fa.fxlcn.com
-  port: 45408
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇻🇳 越南-B03
-  server: ys.fxlcn.com
-  port: 45248
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇹🇭 泰国-B01
-  server: ys.fxlcn.com
-  port: 45223
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇹🇭 泰国-B02
-  server: fa.fxlcn.com
-  port: 45406
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇵🇭 菲律宾-B01
-  server: fa.fxlcn.com
-  port: 45220
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇰🇭 柬埔寨-B01
-  server: ys.fxlcn.com
-  port: 45215
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇰🇷 韩国-A04
-  server: ye.fxlcn.com
-  port: 45203
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇳 印度-A01
-  server: ys.fxlcn.com
-  port: 45226
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇳 印度-A02
-  server: ys.fxlcn.com
-  port: 45238
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇦🇺 澳大利亚-G01
-  server: fa.fxlcn.com
-  port: 45208
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇦🇺 澳大利亚-G02
-  server: fa.fxlcn.com
-  port: 45237
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇬🇧 英国-E01
-  server: lt.fxlcn.com
-  port: 45210
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇫🇷 法国-E02
-  server: lt.fxlcn.com
-  port: 45417
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇩🇪 德国-E02
-  server: lt.fxlcn.com
-  port: 45228
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇳🇱 荷兰-E01
-  server: lt.fxlcn.com
-  port: 45235
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇹🇷 土耳其-E01
-  server: lt.fxlcn.com
-  port: 45233
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇦 乌克兰-E01
-  server: ys.fxlcn.com
-  port: 45229
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇦 乌克兰-E02
-  server: lt.fxlcn.com
-  port: 45284
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇵🇱 波兰-E01
-  server: ys.fxlcn.com
-  port: 45250
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇧🇬 保加利亚-E01
-  server: lt.fxlcn.com
-  port: 45258
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇹 罗马尼亚-E01
-  server: ys.fxlcn.com
-  port: 45236
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇪🇸 西班牙-E01
-  server: fa.fxlcn.com
-  port: 45266
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇹 意大利-E01
-  server: fa.fxlcn.com
-  port: 45230
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇹 意大利-E02
-  server: lt.fxlcn.com
-  port: 45419
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇿 捷克-E01
-  server: lt.fxlcn.com
-  port: 45291
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇭🇺 匈牙利-E01
-  server: lt.fxlcn.com
-  port: 45271
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇵🇹 葡萄牙-E01
-  server: lt.fxlcn.com
-  port: 45268
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇬🇷 希腊-E01
-  server: lt.fxlcn.com
-  port: 45297
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇭 瑞士-E01
-  server: lt.fxlcn.com
-  port: 45288
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇱🇹 立陶宛-E01
-  server: lt.fxlcn.com
-  port: 45287
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇪 爱尔兰-E01
-  server: lt.fxlcn.com
-  port: 45294
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇦🇹 奥地利-E01
-  server: lt.fxlcn.com
-  port: 45270
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇧🇪 比利时-E01
-  server: lt.fxlcn.com
-  port: 45276
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇷🇸 塞尔维亚-E01
-  server: fa.fxlcn.com
-  port: 45272
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇸🇦 沙特阿拉伯-C01
-  server: ys.fxlcn.com
-  port: 45249
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇱 以色列-C01
-  server: ys.fxlcn.com
-  port: 45262
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇦🇪 阿联酋-C01
-  server: ys.fxlcn.com
-  port: 45225
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇮🇶 伊拉克-C01
-  server: ys.fxlcn.com
-  port: 45281
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇳🇵 尼泊尔-A01
-  server: fa.fxlcn.com
-  port: 45280
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇶🇦 卡塔尔-A01
-  server: ys.fxlcn.com
-  port: 45279
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇱 智利-D01
-  server: ye.fxlcn.com
-  port: 45282
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇨🇴 哥伦比亚-D01
-  server: ye.fxlcn.com
-  port: 45263
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇵🇪 秘鲁-D01
-  server: ye.fxlcn.com
-  port: 45273
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇿🇦 南非-F01
-  server: ye.fxlcn.com
-  port: 45246
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇲🇦 摩洛哥-F01
-  server: fa.fxlcn.com
-  port: 45278
-  type: vmess
-  uuid: 3bb7e826-6bc8-43ec-a22b-c65d8f30c4e5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
+- name: 🇸🇬 新加坡
+  server: 167.253.158.214
+  port: 23333
+  type: hysteria2
+  password: qq102030
+  auth: qq102030
+  sni: weinan.eu.org
+  skip-cert-verify: true
+- name: ': mglwinoo : 318.41GB📊 : 9Days⏳'
+  server: sg.googlecloud.lwinoo.site
+  port: 8080
+  type: vless
+  uuid: e13d22e4-0158-4f10-a6d8-11afeb4f6e21
+  tls: true
+  reality-opts:
+    public-key: gw3lv_6a-gDWrgdpLXnCRJrTq5ZEiVNH8Y1CuzOjsHU
+    short-id: 5e469b7c
+  servername: yahoo.com
+  client-fingerprint: firefox
+  network: tcp
+- name: 22151-sing-box-reality
+  server: 45.149.156.151
+  port: 16670
+  type: vless
+  uuid: 7828e04b-37ec-45bd-88bc-a762b7617faa
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lk3pZgHR-BXXn98Wbm1WL4nZVk87pTqv5DQUJhKOnHs
+    short-id: 2c262d078a2523e1
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: tcp
+- name: JP_09
+  server: 45.149.156.151
+  port: 10634
+  type: hysteria2
+  password: 8e1cd2aa0e413470
+  auth: 8e1cd2aa0e413470
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港01
+  server: 149.104.22.201
+  port: 25511
+  type: vless
+  uuid: 9bea4d65-aa80-4c08-85ab-22c49724beab
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: FH6_9znQZ8kTXbWFWV1xgYzOEaJI7orlfxDNPguYGHQ
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+  network: tcp
+- name: chatou
+  server: admin.pirped.com
+  port: 57546
+  type: vless
+  uuid: 4aae04fa-f390-44bb-9558-a344c8baed36
+  tls: true
+  reality-opts:
+    public-key: G4WqyBonyjuo6n6pIL_yLN33T9e8BNHIUlrVnqZPpTY
+    short-id: e9da
+  servername: ratp.fr
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: probrain-etl
+- name: 不要暴露sub
+  server: admin.pirped.com
+  port: 57546
+  type: vless
+  uuid: 4aae04fa-f390-44bb-9558-a344c8baed36
+  tls: true
+  reality-opts:
+    public-key: G4WqyBonyjuo6n6pIL_yLN33T9e8BNHIUlrVnqZPpTY
+    short-id: e9da
+  servername: ratp.fr
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: probrain-etl
+- name: 🇯🇵 JP-Dci
+  server: 45.192.242.224
+  port: 443
+  type: vless
+  uuid: 10fb09fd-221e-4db2-aa27-3e64f96a0978
+  tls: true
+  reality-opts:
+    public-key: j3b4JZRqnj8IGWelvLev2zU5lJnVBVdEdTjy7ru_oHw
+    short-id: 9fc55b47f3569534
+  servername: cdn.jsdelivr.net
+  client-fingerprint: chrome
+  network: tcp
+- name: laz
+  server: 103.12.77.78
+  port: 34045
+  type: vless
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+  tls: true
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  client-fingerprint: firefox
+  network: tcp
 proxy-groups:
 - name: ☁️ Proxy
   type: select
   proxies:
+  - 🛡 Auto
   - ⚡ Fast
+  - 📶 Balance
   - ✏️ Manual
   - DIRECT
-- name: ✏️ Manual
-  type: select
+- name: 🛡 Auto
+  type: fallback
+  url: http://www.gstatic.com/generate_204
+  interval: 300
   proxies:
-  - 🇭🇰 香港-A01
-  - 🇭🇰 香港-A09
-  - 🇨🇳 台湾-A01
-  - 🇨🇳 台湾-A02
-  - 🇨🇳 台湾-A05
-  - 🇨🇳 台湾-A06
-  - 🇨🇳 台湾-A07
-  - 🇨🇳 台湾-A09
-  - 🇺🇸 美国-D04
-  - 🇺🇸 美国-D07
-  - 🇯🇵 日本-A01
-  - 🇯🇵 日本-A03
-  - 🇯🇵 日本-A04
-  - 🇯🇵 日本-A06
-  - 🇸🇬 新加坡-B01
-  - 🇸🇬 新加坡-B05
-  - 🇸🇬 新加坡-B07
-  - 🇻🇳 越南-B03
-  - 🇹🇭 泰国-B01
-  - 🇹🇭 泰国-B02
-  - 🇵🇭 菲律宾-B01
-  - 🇰🇭 柬埔寨-B01
-  - 🇰🇷 韩国-A04
-  - 🇮🇳 印度-A01
-  - 🇮🇳 印度-A02
-  - 🇦🇺 澳大利亚-G01
-  - 🇦🇺 澳大利亚-G02
-  - 🇬🇧 英国-E01
-  - 🇫🇷 法国-E02
-  - 🇩🇪 德国-E02
-  - 🇳🇱 荷兰-E01
-  - 🇹🇷 土耳其-E01
-  - 🇺🇦 乌克兰-E01
-  - 🇺🇦 乌克兰-E02
-  - 🇵🇱 波兰-E01
-  - 🇧🇬 保加利亚-E01
-  - 🇮🇹 罗马尼亚-E01
-  - 🇪🇸 西班牙-E01
-  - 🇮🇹 意大利-E01
-  - 🇮🇹 意大利-E02
-  - 🇨🇿 捷克-E01
-  - 🇭🇺 匈牙利-E01
-  - 🇵🇹 葡萄牙-E01
-  - 🇬🇷 希腊-E01
-  - 🇨🇭 瑞士-E01
-  - 🇱🇹 立陶宛-E01
-  - 🇮🇪 爱尔兰-E01
-  - 🇦🇹 奥地利-E01
-  - 🇧🇪 比利时-E01
-  - 🇷🇸 塞尔维亚-E01
-  - 🇸🇦 沙特阿拉伯-C01
-  - 🇮🇱 以色列-C01
-  - 🇦🇪 阿联酋-C01
-  - 🇮🇶 伊拉克-C01
-  - 🇳🇵 尼泊尔-A01
-  - 🇶🇦 卡塔尔-A01
-  - 🇨🇱 智利-D01
-  - 🇨🇴 哥伦比亚-D01
-  - 🇵🇪 秘鲁-D01
-  - 🇿🇦 南非-F01
-  - 🇲🇦 摩洛哥-F01
+  - 🇸🇬 新加坡
+  - ': mglwinoo : 318.41GB📊 : 9Days⏳'
+  - 22151-sing-box-reality
+  - JP_09
+  - 🇭🇰 香港01
+  - chatou
+  - 不要暴露sub
+  - 🇯🇵 JP-Dci
+  - laz
 - name: ⚡ Fast
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 120
   proxies:
-  - 🇭🇰 香港-A01
-  - 🇭🇰 香港-A09
-  - 🇨🇳 台湾-A01
-  - 🇨🇳 台湾-A02
-  - 🇨🇳 台湾-A05
-  - 🇨🇳 台湾-A06
-  - 🇨🇳 台湾-A07
-  - 🇨🇳 台湾-A09
-  - 🇺🇸 美国-D04
-  - 🇺🇸 美国-D07
-  - 🇯🇵 日本-A01
-  - 🇯🇵 日本-A03
-  - 🇯🇵 日本-A04
-  - 🇯🇵 日本-A06
-  - 🇸🇬 新加坡-B01
-  - 🇸🇬 新加坡-B05
-  - 🇸🇬 新加坡-B07
-  - 🇻🇳 越南-B03
-  - 🇹🇭 泰国-B01
-  - 🇹🇭 泰国-B02
-  - 🇵🇭 菲律宾-B01
-  - 🇰🇭 柬埔寨-B01
-  - 🇰🇷 韩国-A04
-  - 🇮🇳 印度-A01
-  - 🇮🇳 印度-A02
-  - 🇦🇺 澳大利亚-G01
-  - 🇦🇺 澳大利亚-G02
-  - 🇬🇧 英国-E01
-  - 🇫🇷 法国-E02
-  - 🇩🇪 德国-E02
-  - 🇳🇱 荷兰-E01
-  - 🇹🇷 土耳其-E01
-  - 🇺🇦 乌克兰-E01
-  - 🇺🇦 乌克兰-E02
-  - 🇵🇱 波兰-E01
-  - 🇧🇬 保加利亚-E01
-  - 🇮🇹 罗马尼亚-E01
-  - 🇪🇸 西班牙-E01
-  - 🇮🇹 意大利-E01
-  - 🇮🇹 意大利-E02
-  - 🇨🇿 捷克-E01
-  - 🇭🇺 匈牙利-E01
-  - 🇵🇹 葡萄牙-E01
-  - 🇬🇷 希腊-E01
-  - 🇨🇭 瑞士-E01
-  - 🇱🇹 立陶宛-E01
-  - 🇮🇪 爱尔兰-E01
-  - 🇦🇹 奥地利-E01
-  - 🇧🇪 比利时-E01
-  - 🇷🇸 塞尔维亚-E01
-  - 🇸🇦 沙特阿拉伯-C01
-  - 🇮🇱 以色列-C01
-  - 🇦🇪 阿联酋-C01
-  - 🇮🇶 伊拉克-C01
-  - 🇳🇵 尼泊尔-A01
-  - 🇶🇦 卡塔尔-A01
-  - 🇨🇱 智利-D01
-  - 🇨🇴 哥伦比亚-D01
-  - 🇵🇪 秘鲁-D01
-  - 🇿🇦 南非-F01
-  - 🇲🇦 摩洛哥-F01
+  - 🇸🇬 新加坡
+  - ': mglwinoo : 318.41GB📊 : 9Days⏳'
+  - 22151-sing-box-reality
+  - JP_09
+  - 🇭🇰 香港01
+  - chatou
+  - 不要暴露sub
+  - 🇯🇵 JP-Dci
+  - laz
+- name: 📶 Balance
+  type: load-balance
+  strategy: consistent-hashing
+  url: http://www.gstatic.com/generate_204
+  interval: 120
+  proxies:
+  - 🇸🇬 新加坡
+  - ': mglwinoo : 318.41GB📊 : 9Days⏳'
+  - 22151-sing-box-reality
+  - JP_09
+  - 🇭🇰 香港01
+  - chatou
+  - 不要暴露sub
+  - 🇯🇵 JP-Dci
+  - laz
+- name: ✏️ Manual
+  type: select
+  proxies:
+  - 🇸🇬 新加坡
+  - ': mglwinoo : 318.41GB📊 : 9Days⏳'
+  - 22151-sing-box-reality
+  - JP_09
+  - 🇭🇰 香港01
+  - chatou
+  - 不要暴露sub
+  - 🇯🇵 JP-Dci
+  - laz
 - name: 🎈 Others
   type: select
   proxies:
@@ -762,6 +186,7 @@ rules:
 - RULE-SET,🍃 BanProgramAD,REJECT
 - RULE-SET,🆎 AdBlock,REJECT
 - RULE-SET,🆎 AdBlock Privacy,REJECT
+- RULE-SET,🌐 IP_CIDR-MM,DIRECT
 - DOMAIN-KEYWORD,facebook,☁️ Proxy
 - DOMAIN-KEYWORD,fb,☁️ Proxy
 - DOMAIN-SUFFIX,facebook.com,☁️ Proxy
@@ -794,421 +219,7 @@ rules:
 - DOMAIN-SUFFIX,vertexai.google.com,DIRECT
 - DOMAIN-SUFFIX,aihub.google.com,DIRECT
 - DOMAIN-SUFFIX,deepmind.google,DIRECT
-- IP-CIDR,23.199.72.0/24,DIRECT
-- IP-CIDR,23.203.174.0/24,DIRECT
-- IP-CIDR,31.56.212.0/24,DIRECT
-- IP-CIDR,34.98.230.0/23,DIRECT
-- IP-CIDR,34.98.246.0/23,DIRECT
-- IP-CIDR,34.103.6.0/23,DIRECT
-- IP-CIDR,37.111.0.0/17,DIRECT
-- IP-CIDR,38.47.40.0/21,DIRECT
-- IP-CIDR,38.51.128.0/22,DIRECT
-- IP-CIDR,38.52.120.0/21,DIRECT
-- IP-CIDR,38.83.17.0/24,DIRECT
-- IP-CIDR,38.83.18.0/23,DIRECT
-- IP-CIDR,38.158.204.0/22,DIRECT
-- IP-CIDR,38.225.238.0/23,DIRECT
-- IP-CIDR,42.156.32.0/22,DIRECT
-- IP-CIDR,43.175.126.0/24,DIRECT
-- IP-CIDR,43.224.40.0/22,DIRECT
-- IP-CIDR,43.224.84.0/25,DIRECT
-- IP-CIDR,43.224.84.128/29,DIRECT
-- IP-CIDR,43.224.84.136/31,DIRECT
-- IP-CIDR,43.224.84.139/32,DIRECT
-- IP-CIDR,43.224.84.140/30,DIRECT
-- IP-CIDR,43.224.84.144/28,DIRECT
-- IP-CIDR,43.224.84.160/27,DIRECT
-- IP-CIDR,43.224.84.192/26,DIRECT
-- IP-CIDR,43.224.85.0/24,DIRECT
-- IP-CIDR,43.224.86.0/23,DIRECT
-- IP-CIDR,43.227.12.0/22,DIRECT
-- IP-CIDR,43.239.206.0/23,DIRECT
-- IP-CIDR,43.242.134.0/23,DIRECT
-- IP-CIDR,43.245.44.0/22,DIRECT
-- IP-CIDR,43.252.80.0/22,DIRECT
-- IP-CIDR,45.41.96.0/19,DIRECT
-- IP-CIDR,45.64.72.0/23,DIRECT
-- IP-CIDR,45.95.242.0/24,DIRECT
-- IP-CIDR,45.112.44.0/22,DIRECT
-- IP-CIDR,45.112.176.0/22,DIRECT
-- IP-CIDR,45.120.84.0/22,DIRECT
-- IP-CIDR,45.125.4.0/22,DIRECT
-- IP-CIDR,45.195.81.0/24,DIRECT
-- IP-CIDR,45.195.128.0/24,DIRECT
-- IP-CIDR,45.199.180.0/24,DIRECT
-- IP-CIDR,45.250.200.0/22,DIRECT
-- IP-CIDR,45.250.240.0/22,DIRECT
-- IP-CIDR,57.72.72.0/22,DIRECT
-- IP-CIDR,57.92.64.0/20,DIRECT
-- IP-CIDR,59.153.88.0/22,DIRECT
-- IP-CIDR,59.153.108.0/22,DIRECT
-- IP-CIDR,61.4.64.0/20,DIRECT
-- IP-CIDR,61.7.229.128/26,DIRECT
-- IP-CIDR,61.19.112.72/29,DIRECT
-- IP-CIDR,61.19.113.112/28,DIRECT
-- IP-CIDR,61.19.189.0/24,DIRECT
-- IP-CIDR,61.19.191.0/24,DIRECT
-- IP-CIDR,61.29.251.0/24,DIRECT
-- IP-CIDR,65.18.112.0/20,DIRECT
-- IP-CIDR,66.159.197.128/25,DIRECT
-- IP-CIDR,69.160.0.0/19,DIRECT
-- IP-CIDR,72.14.201.163/32,DIRECT
-- IP-CIDR,74.50.208.0/21,DIRECT
-- IP-CIDR,74.118.124.152/29,DIRECT
-- IP-CIDR,77.70.135.128/28,DIRECT
-- IP-CIDR,81.199.114.0/24,DIRECT
-- IP-CIDR,82.197.77.0/24,DIRECT
-- IP-CIDR,94.190.195.144/29,DIRECT
-- IP-CIDR,98.159.41.0/24,DIRECT
-- IP-CIDR,103.5.120.0/23,DIRECT
-- IP-CIDR,103.13.32.0/22,DIRECT
-- IP-CIDR,103.25.12.0/22,DIRECT
-- IP-CIDR,103.25.76.0/22,DIRECT
-- IP-CIDR,103.25.240.0/22,DIRECT
-- IP-CIDR,103.26.30.0/23,DIRECT
-- IP-CIDR,103.27.116.0/22,DIRECT
-- IP-CIDR,103.29.90.0/23,DIRECT
-- IP-CIDR,103.31.222.0/23,DIRECT
-- IP-CIDR,103.38.8.0/24,DIRECT
-- IP-CIDR,103.42.115.0/24,DIRECT
-- IP-CIDR,103.42.216.0/22,DIRECT
-- IP-CIDR,103.47.184.0/23,DIRECT
-- IP-CIDR,103.52.12.0/22,DIRECT
-- IP-CIDR,103.52.228.0/22,DIRECT
-- IP-CIDR,103.55.0.0/24,DIRECT
-- IP-CIDR,103.55.3.0/24,DIRECT
-- IP-CIDR,103.57.204.0/22,DIRECT
-- IP-CIDR,103.59.162.0/23,DIRECT
-- IP-CIDR,103.61.8.0/22,DIRECT
-- IP-CIDR,103.65.242.0/23,DIRECT
-- IP-CIDR,103.67.50.0/23,DIRECT
-- IP-CIDR,103.67.76.0/23,DIRECT
-- IP-CIDR,103.68.234.0/23,DIRECT
-- IP-CIDR,103.70.216.0/22,DIRECT
-- IP-CIDR,103.70.249.0/24,DIRECT
-- IP-CIDR,103.71.248.0/22,DIRECT
-- IP-CIDR,103.73.236.0/22,DIRECT
-- IP-CIDR,103.76.179.0/24,DIRECT
-- IP-CIDR,103.76.184.0/23,DIRECT
-- IP-CIDR,103.77.216.0/23,DIRECT
-- IP-CIDR,103.81.113.0/24,DIRECT
-- IP-CIDR,103.81.114.0/23,DIRECT
-- IP-CIDR,103.82.232.0/24,DIRECT
-- IP-CIDR,103.83.34.0/23,DIRECT
-- IP-CIDR,103.83.188.0/22,DIRECT
-- IP-CIDR,103.84.100.0/23,DIRECT
-- IP-CIDR,103.85.104.0/22,DIRECT
-- IP-CIDR,103.88.48.0/22,DIRECT
-- IP-CIDR,103.89.48.0/22,DIRECT
-- IP-CIDR,103.89.176.0/21,DIRECT
-- IP-CIDR,103.94.52.0/22,DIRECT
-- IP-CIDR,103.94.68.0/22,DIRECT
-- IP-CIDR,103.94.144.0/22,DIRECT
-- IP-CIDR,103.95.4.0/23,DIRECT
-- IP-CIDR,103.96.230.0/23,DIRECT
-- IP-CIDR,103.96.232.0/24,DIRECT
-- IP-CIDR,103.97.110.0/24,DIRECT
-- IP-CIDR,103.99.28.0/22,DIRECT
-- IP-CIDR,103.101.16.0/22,DIRECT
-- IP-CIDR,103.103.173.0/24,DIRECT
-- IP-CIDR,103.103.194.0/24,DIRECT
-- IP-CIDR,103.105.172.0/22,DIRECT
-- IP-CIDR,103.108.104.0/22,DIRECT
-- IP-CIDR,103.109.8.0/23,DIRECT
-- IP-CIDR,103.110.182.0/23,DIRECT
-- IP-CIDR,103.110.196.0/22,DIRECT
-- IP-CIDR,103.112.61.0/24,DIRECT
-- IP-CIDR,103.113.84.0/22,DIRECT
-- IP-CIDR,103.115.4.0/23,DIRECT
-- IP-CIDR,103.115.6.0/24,DIRECT
-- IP-CIDR,103.115.23.0/24,DIRECT
-- IP-CIDR,103.115.214.0/23,DIRECT
-- IP-CIDR,103.116.12.0/24,DIRECT
-- IP-CIDR,103.116.56.0/22,DIRECT
-- IP-CIDR,103.116.159.0/24,DIRECT
-- IP-CIDR,103.116.190.0/23,DIRECT
-- IP-CIDR,103.116.192.0/23,DIRECT
-- IP-CIDR,103.116.194.0/24,DIRECT
-- IP-CIDR,103.121.158.0/24,DIRECT
-- IP-CIDR,103.121.224.0/21,DIRECT
-- IP-CIDR,103.124.184.0/23,DIRECT
-- IP-CIDR,103.129.76.0/22,DIRECT
-- IP-CIDR,103.131.86.0/23,DIRECT
-- IP-CIDR,103.132.102.0/23,DIRECT
-- IP-CIDR,103.133.242.0/23,DIRECT
-- IP-CIDR,103.134.204.0/22,DIRECT
-- IP-CIDR,103.135.37.0/24,DIRECT
-- IP-CIDR,103.135.216.0/22,DIRECT
-- IP-CIDR,103.136.132.0/22,DIRECT
-- IP-CIDR,103.138.252.0/23,DIRECT
-- IP-CIDR,103.139.100.0/23,DIRECT
-- IP-CIDR,103.139.194.0/24,DIRECT
-- IP-CIDR,103.139.206.0/24,DIRECT
-- IP-CIDR,103.139.208.0/23,DIRECT
-- IP-CIDR,103.142.39.0/24,DIRECT
-- IP-CIDR,103.142.144.0/23,DIRECT
-- IP-CIDR,103.143.246.0/23,DIRECT
-- IP-CIDR,103.144.8.0/23,DIRECT
-- IP-CIDR,103.144.224.0/23,DIRECT
-- IP-CIDR,103.145.120.0/23,DIRECT
-- IP-CIDR,103.145.186.0/24,DIRECT
-- IP-CIDR,103.146.66.0/23,DIRECT
-- IP-CIDR,103.148.104.0/24,DIRECT
-- IP-CIDR,103.149.50.0/23,DIRECT
-- IP-CIDR,103.150.58.0/24,DIRECT
-- IP-CIDR,103.150.78.0/23,DIRECT
-- IP-CIDR,103.151.8.0/23,DIRECT
-- IP-CIDR,103.153.13.0/24,DIRECT
-- IP-CIDR,103.153.202.0/24,DIRECT
-- IP-CIDR,103.154.240.0/23,DIRECT
-- IP-CIDR,103.155.10.0/23,DIRECT
-- IP-CIDR,103.156.154.0/23,DIRECT
-- IP-CIDR,103.157.0.0/23,DIRECT
-- IP-CIDR,103.160.146.0/24,DIRECT
-- IP-CIDR,103.162.83.0/24,DIRECT
-- IP-CIDR,103.163.159.0/24,DIRECT
-- IP-CIDR,103.164.145.0/24,DIRECT
-- IP-CIDR,103.168.220.0/23,DIRECT
-- IP-CIDR,103.171.14.0/24,DIRECT
-- IP-CIDR,103.171.212.0/23,DIRECT
-- IP-CIDR,103.172.180.0/23,DIRECT
-- IP-CIDR,103.177.86.0/23,DIRECT
-- IP-CIDR,103.182.118.0/23,DIRECT
-- IP-CIDR,103.183.194.0/23,DIRECT
-- IP-CIDR,103.185.222.0/23,DIRECT
-- IP-CIDR,103.186.104.0/23,DIRECT
-- IP-CIDR,103.186.122.0/23,DIRECT
-- IP-CIDR,103.186.240.0/23,DIRECT
-- IP-CIDR,103.188.90.0/24,DIRECT
-- IP-CIDR,103.197.156.0/23,DIRECT
-- IP-CIDR,103.197.196.0/22,DIRECT
-- IP-CIDR,103.198.148.0/22,DIRECT
-- IP-CIDR,103.200.132.0/22,DIRECT
-- IP-CIDR,103.203.132.0/22,DIRECT
-- IP-CIDR,103.204.16.0/22,DIRECT
-- IP-CIDR,103.204.100.0/22,DIRECT
-- IP-CIDR,103.204.178.0/23,DIRECT
-- IP-CIDR,103.206.173.0/24,DIRECT
-- IP-CIDR,103.213.30.0/24,DIRECT
-- IP-CIDR,103.213.228.0/24,DIRECT
-- IP-CIDR,103.215.192.0/22,DIRECT
-- IP-CIDR,103.217.68.0/23,DIRECT
-- IP-CIDR,103.217.156.0/22,DIRECT
-- IP-CIDR,103.219.108.0/22,DIRECT
-- IP-CIDR,103.219.146.0/24,DIRECT
-- IP-CIDR,103.219.156.0/22,DIRECT
-- IP-CIDR,103.226.26.0/23,DIRECT
-- IP-CIDR,103.227.26.0/23,DIRECT
-- IP-CIDR,103.230.130.0/23,DIRECT
-- IP-CIDR,103.231.92.0/22,DIRECT
-- IP-CIDR,103.233.204.0/22,DIRECT
-- IP-CIDR,103.237.112.0/22,DIRECT
-- IP-CIDR,103.238.66.0/23,DIRECT
-- IP-CIDR,103.239.105.0/24,DIRECT
-- IP-CIDR,103.242.96.0/22,DIRECT
-- IP-CIDR,103.244.188.0/23,DIRECT
-- IP-CIDR,103.250.76.0/24,DIRECT
-- IP-CIDR,103.250.220.0/23,DIRECT
-- IP-CIDR,103.251.10.0/23,DIRECT
-- IP-CIDR,103.255.172.0/22,DIRECT
-- IP-CIDR,104.28.11.219/32,DIRECT
-- IP-CIDR,104.28.11.220/31,DIRECT
-- IP-CIDR,104.28.11.222/32,DIRECT
-- IP-CIDR,104.28.37.27/32,DIRECT
-- IP-CIDR,104.28.37.28/32,DIRECT
-- IP-CIDR,104.28.43.19/32,DIRECT
-- IP-CIDR,104.28.43.20/32,DIRECT
-- IP-CIDR,104.28.66.13/32,DIRECT
-- IP-CIDR,104.28.66.14/32,DIRECT
-- IP-CIDR,104.28.69.13/32,DIRECT
-- IP-CIDR,104.28.69.14/32,DIRECT
-- IP-CIDR,104.28.117.15/32,DIRECT
-- IP-CIDR,104.28.117.16/32,DIRECT
-- IP-CIDR,104.28.120.15/32,DIRECT
-- IP-CIDR,104.28.120.16/32,DIRECT
-- IP-CIDR,104.28.148.183/32,DIRECT
-- IP-CIDR,104.28.148.184/31,DIRECT
-- IP-CIDR,104.28.156.183/32,DIRECT
-- IP-CIDR,104.28.156.184/31,DIRECT
-- IP-CIDR,104.28.219.149/32,DIRECT
-- IP-CIDR,104.28.219.150/31,DIRECT
-- IP-CIDR,104.28.219.152/30,DIRECT
-- IP-CIDR,104.28.219.156/32,DIRECT
-- IP-CIDR,104.28.251.149/32,DIRECT
-- IP-CIDR,104.28.251.150/31,DIRECT
-- IP-CIDR,104.28.251.152/30,DIRECT
-- IP-CIDR,104.28.251.156/32,DIRECT
-- IP-CIDR,108.171.110.128/26,DIRECT
-- IP-CIDR,116.206.136.0/22,DIRECT
-- IP-CIDR,116.206.192.0/22,DIRECT
-- IP-CIDR,117.18.228.0/22,DIRECT
-- IP-CIDR,117.55.248.0/22,DIRECT
-- IP-CIDR,117.55.252.0/23,DIRECT
-- IP-CIDR,120.88.32.0/20,DIRECT
-- IP-CIDR,121.46.71.0/24,DIRECT
-- IP-CIDR,121.54.164.0/22,DIRECT
-- IP-CIDR,122.10.248.0/23,DIRECT
-- IP-CIDR,122.154.242.0/23,DIRECT
-- IP-CIDR,122.248.96.0/19,DIRECT
-- IP-CIDR,123.253.20.0/22,DIRECT
-- IP-CIDR,123.253.228.0/22,DIRECT
-- IP-CIDR,128.1.124.0/24,DIRECT
-- IP-CIDR,128.77.23.128/26,DIRECT
-- IP-CIDR,128.77.101.224/27,DIRECT
-- IP-CIDR,129.224.202.0/23,DIRECT
-- IP-CIDR,130.41.154.224/27,DIRECT
-- IP-CIDR,131.125.102.111/32,DIRECT
-- IP-CIDR,131.125.102.112/31,DIRECT
-- IP-CIDR,134.231.196.128/26,DIRECT
-- IP-CIDR,134.238.33.0/24,DIRECT
-- IP-CIDR,134.238.227.0/25,DIRECT
-- IP-CIDR,136.227.140.192/30,DIRECT
-- IP-CIDR,136.227.140.196/31,DIRECT
-- IP-CIDR,136.228.160.0/20,DIRECT
-- IP-CIDR,138.113.122.0/24,DIRECT
-- IP-CIDR,140.150.15.0/24,DIRECT
-- IP-CIDR,140.209.250.0/25,DIRECT
-- IP-CIDR,140.248.16.4/31,DIRECT
-- IP-CIDR,140.248.48.20/31,DIRECT
-- IP-CIDR,143.105.55.0/24,DIRECT
-- IP-CIDR,144.125.16.96/27,DIRECT
-- IP-CIDR,146.75.160.80/31,DIRECT
-- IP-CIDR,146.75.166.112/31,DIRECT
-- IP-CIDR,146.88.41.0/24,DIRECT
-- IP-CIDR,146.103.67.0/24,DIRECT
-- IP-CIDR,150.48.166.32/27,DIRECT
-- IP-CIDR,150.48.166.64/27,DIRECT
-- IP-CIDR,150.48.166.96/31,DIRECT
-- IP-CIDR,150.48.175.206/31,DIRECT
-- IP-CIDR,150.48.175.208/28,DIRECT
-- IP-CIDR,150.48.175.224/29,DIRECT
-- IP-CIDR,150.48.175.232/30,DIRECT
-- IP-CIDR,150.48.177.148/31,DIRECT
-- IP-CIDR,154.30.30.0/26,DIRECT
-- IP-CIDR,154.84.165.0/24,DIRECT
-- IP-CIDR,154.93.50.0/23,DIRECT
-- IP-CIDR,154.94.117.0/24,DIRECT
-- IP-CIDR,154.203.168.0/24,DIRECT
-- IP-CIDR,156.227.200.0/24,DIRECT
-- IP-CIDR,156.236.2.0/23,DIRECT
-- IP-CIDR,156.237.68.0/23,DIRECT
-- IP-CIDR,156.244.36.0/23,DIRECT
-- IP-CIDR,156.252.230.0/24,DIRECT
-- IP-CIDR,157.5.113.142/31,DIRECT
-- IP-CIDR,157.5.113.144/32,DIRECT
-- IP-CIDR,157.10.224.0/23,DIRECT
-- IP-CIDR,157.15.52.0/23,DIRECT
-- IP-CIDR,157.15.142.0/23,DIRECT
-- IP-CIDR,157.15.190.0/24,DIRECT
-- IP-CIDR,157.20.40.0/23,DIRECT
-- IP-CIDR,157.119.76.0/22,DIRECT
-- IP-CIDR,157.167.35.0/24,DIRECT
-- IP-CIDR,160.25.32.0/24,DIRECT
-- IP-CIDR,160.30.66.0/23,DIRECT
-- IP-CIDR,160.30.133.0/24,DIRECT
-- IP-CIDR,160.30.186.0/23,DIRECT
-- IP-CIDR,160.30.212.0/23,DIRECT
-- IP-CIDR,161.248.234.0/23,DIRECT
-- IP-CIDR,162.120.184.55/32,DIRECT
-- IP-CIDR,162.120.184.119/32,DIRECT
-- IP-CIDR,162.120.184.183/32,DIRECT
-- IP-CIDR,162.120.184.247/32,DIRECT
-- IP-CIDR,162.120.185.55/32,DIRECT
-- IP-CIDR,162.120.185.119/32,DIRECT
-- IP-CIDR,162.128.18.0/23,DIRECT
-- IP-CIDR,162.219.83.1/32,DIRECT
-- IP-CIDR,162.219.83.2/31,DIRECT
-- IP-CIDR,162.219.83.4/30,DIRECT
-- IP-CIDR,162.219.83.8/29,DIRECT
-- IP-CIDR,162.219.83.16/28,DIRECT
-- IP-CIDR,162.219.83.32/27,DIRECT
-- IP-CIDR,162.219.83.64/26,DIRECT
-- IP-CIDR,162.219.83.128/26,DIRECT
-- IP-CIDR,162.219.83.192/27,DIRECT
-- IP-CIDR,162.219.83.224/28,DIRECT
-- IP-CIDR,162.219.83.240/29,DIRECT
-- IP-CIDR,162.219.83.248/30,DIRECT
-- IP-CIDR,162.219.83.252/31,DIRECT
-- IP-CIDR,162.219.83.254/32,DIRECT
-- IP-CIDR,162.245.127.0/24,DIRECT
-- IP-CIDR,163.116.200.107/32,DIRECT
-- IP-CIDR,163.116.200.108/32,DIRECT
-- IP-CIDR,163.116.204.113/32,DIRECT
-- IP-CIDR,163.116.204.114/32,DIRECT
-- IP-CIDR,163.171.190.0/24,DIRECT
-- IP-CIDR,163.227.60.0/23,DIRECT
-- IP-CIDR,163.227.90.0/23,DIRECT
-- IP-CIDR,164.137.164.0/24,DIRECT
-- IP-CIDR,164.137.188.0/24,DIRECT
-- IP-CIDR,165.85.6.64/27,DIRECT
-- IP-CIDR,165.85.191.192/27,DIRECT
-- IP-CIDR,165.85.216.224/27,DIRECT
-- IP-CIDR,165.85.252.160/28,DIRECT
-- IP-CIDR,172.224.229.96/28,DIRECT
-- IP-CIDR,172.225.200.160/28,DIRECT
-- IP-CIDR,172.225.221.32/28,DIRECT
-- IP-CIDR,178.171.68.0/24,DIRECT
-- IP-CIDR,180.235.116.0/22,DIRECT
-- IP-CIDR,182.255.52.0/22,DIRECT
-- IP-CIDR,185.112.134.14/32,DIRECT
-- IP-CIDR,185.133.212.0/22,DIRECT
-- IP-CIDR,185.205.140.0/22,DIRECT
-- IP-CIDR,188.240.216.0/23,DIRECT
-- IP-CIDR,192.3.105.0/24,DIRECT
-- IP-CIDR,192.109.41.72/29,DIRECT
-- IP-CIDR,192.169.116.0/24,DIRECT
-- IP-CIDR,193.186.4.163/32,DIRECT
-- IP-CIDR,193.220.38.248/32,DIRECT
-- IP-CIDR,193.220.123.128/29,DIRECT
-- IP-CIDR,202.36.116.0/23,DIRECT
-- IP-CIDR,202.53.156.0/22,DIRECT
-- IP-CIDR,202.133.84.0/22,DIRECT
-- IP-CIDR,202.157.190.0/23,DIRECT
-- IP-CIDR,202.165.80.0/20,DIRECT
-- IP-CIDR,202.181.128.144/29,DIRECT
-- IP-CIDR,202.191.96.0/20,DIRECT
-- IP-CIDR,203.34.160.0/24,DIRECT
-- IP-CIDR,203.81.64.0/19,DIRECT
-- IP-CIDR,203.81.160.0/20,DIRECT
-- IP-CIDR,203.86.98.0/23,DIRECT
-- IP-CIDR,203.86.101.0/24,DIRECT
-- IP-CIDR,203.89.10.0/24,DIRECT
-- IP-CIDR,203.96.240.0/22,DIRECT
-- IP-CIDR,203.109.36.0/22,DIRECT
-- IP-CIDR,203.109.48.0/22,DIRECT
-- IP-CIDR,203.166.158.0/23,DIRECT
-- IP-CIDR,203.215.60.0/22,DIRECT
-- IP-CIDR,204.157.168.0/21,DIRECT
-- IP-CIDR,208.127.168.224/27,DIRECT
-- IP-CIDR,208.127.212.0/24,DIRECT
-- IP-CIDR,208.127.221.129/32,DIRECT
-- IP-CIDR,208.127.221.130/31,DIRECT
-- IP-CIDR,208.127.221.132/30,DIRECT
-- IP-CIDR,208.127.221.136/29,DIRECT
-- IP-CIDR,208.127.221.144/28,DIRECT
-- IP-CIDR,208.127.221.160/27,DIRECT
-- IP-CIDR,208.127.221.192/27,DIRECT
-- IP-CIDR,208.127.221.224/28,DIRECT
-- IP-CIDR,208.127.221.240/29,DIRECT
-- IP-CIDR,208.127.221.248/30,DIRECT
-- IP-CIDR,208.127.221.252/31,DIRECT
-- IP-CIDR,208.127.221.254/32,DIRECT
-- IP-CIDR,208.127.223.193/32,DIRECT
-- IP-CIDR,208.127.223.194/31,DIRECT
-- IP-CIDR,208.127.223.196/30,DIRECT
-- IP-CIDR,208.127.223.200/29,DIRECT
-- IP-CIDR,208.127.223.208/28,DIRECT
-- IP-CIDR,208.127.223.224/28,DIRECT
-- IP-CIDR,208.127.223.240/29,DIRECT
-- IP-CIDR,208.127.223.248/30,DIRECT
-- IP-CIDR,208.127.223.252/31,DIRECT
-- IP-CIDR,208.127.223.254/32,DIRECT
-- IP-CIDR,209.130.175.69/32,DIRECT
-- IP-CIDR,209.130.175.237/32,DIRECT
-- IP-CIDR,210.14.96.0/20,DIRECT
-- IP-CIDR,210.87.126.0/23,DIRECT
-- IP-CIDR,212.30.60.0/24,DIRECT
-- GEOIP,MM,DIRECT
+- GEOIP,MM,DIRECT,no-resolve
 - DOMAIN,idope.se,DIRECT
 - DOMAIN-SUFFIX,gov.mm,DIRECT
 - DOMAIN-SUFFIX,com.mm,DIRECT
@@ -1292,26 +303,31 @@ dns:
 rule-providers:
   🛑 BanAD:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanAD.yaml
-    path: ./rules/BanAD.yaml
+    path: ./rules/🛑_BanAD.yaml
     interval: 86400
   🍃 BanProgramAD:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanProgramAD.yaml
-    path: ./rules/BanProgramAD.yaml
+    path: ./rules/🍃_BanProgramAD.yaml
     interval: 86400
   🆎 AdBlock:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanEasyList.yaml
-    path: ./rules/AdBlock.yaml
+    path: ./rules/🆎_AdBlock.yaml
     interval: 86400
   🆎 AdBlock Privacy:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanEasyPrivacy.yaml
-    path: ./rules/AdBlock_Privacy.yaml
+    path: ./rules/🆎_AdBlock_Privacy.yaml
     interval: 86400
-
+  🌐 IP_CIDR-MM:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/mrpauk/demo@master/mm-cidr.txt"
+    path: ./rules/mm-cidr.yaml
+    interval: 86400
