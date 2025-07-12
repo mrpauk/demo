@@ -17,18 +17,6 @@ proxies:
   servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
   client-fingerprint: firefox
   network: tcp
-- name: ': mglwinoo : 303.17GB📊 : 19Days⏳'
-  server: sg.googlecloud.lwinoo.site
-  port: 8080
-  type: vless
-  uuid: e13d22e4-0158-4f10-a6d8-11afeb4f6e21
-  tls: true
-  reality-opts:
-    public-key: gw3lv_6a-gDWrgdpLXnCRJrTq5ZEiVNH8Y1CuzOjsHU
-    short-id: 5e469b7c
-  servername: yahoo.com
-  client-fingerprint: firefox
-  network: tcp
 - name: 🇸🇬 Lv2 新加坡 00 [1.5]
   server: tlbasic.com
   port: 443
@@ -70,14 +58,6 @@ proxies:
     path: /r6PSatuYdS9gZH6L/c2pjLm8wMG8ub29v
     headers:
       Host: bp.singbox.ggff.net
-- name: 🇸🇬 SG-50M-去广告
-  server: hy.vax2568.ggff.net
-  port: 443
-  type: hysteria2
-  password: a53b4f10-7454-4c6e-9280-afa53b64a0ef
-  auth: a53b4f10-7454-4c6e-9280-afa53b64a0ef
-  sni: hy.vax2568.ggff.net
-  skip-cert-verify: false
 - name: 🇸🇬 新加坡
   server: 167.253.158.214
   port: 23333
@@ -123,19 +103,6 @@ proxies:
     path: /lzj6666
     headers:
       Host: rs-sg1-1.lzjnb.shop
-- name: 🇺🇸 美国14 | ⬇️ 1.4MB/s
-  server: 104.16.64.110
-  port: 443
-  type: vless
-  uuid: 8b5cf811-af1f-475a-9e61-28b93c38d309
-  tls: true
-  servername: vpn.6662221.xyz
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vpn.6662221.xyz
 - name: 🇳🇱 江江荷兰 IEPL｜公益 41
   server: 188.114.98.184
   port: 2053
@@ -302,37 +269,6 @@ proxies:
     path: /?ed=2560
     headers:
       Host: bycf.lzjnb.shop
-- name: Joy-SN-Hy2@Freedom
-  server: pub.csjoy.online
-  port: 443
-  type: hysteria2
-  password: Freedom.fdb2024
-  auth: Freedom.fdb2024
-  skip-cert-verify: false
-- name: 云机录-🇨🇦CA_1 | ⬇️ 2.2MB/s|48%|Netflix|Disney
-  server: 154.83.2.61
-  port: 8443
-  type: trojan
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  sni: vle.amclubdns.dpdns.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560&PROT_TYPE=trojan
-    headers:
-      Host: vle.amclubdns.dpdns.org
-- name: 🇺🇸 美国32 | ⬇️ 5.1MB/s
-  server: 154.197.80.251
-  port: 8880
-  type: vless
-  uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
-  tls: false
-  servername: Telegram-channel-WangCai2
-  network: ws
-  ws-opts:
-    path: /Telegram🇨🇳 @WangCai2 /?ed=2560
-    headers:
-      Host: Telegram-channel-WangCai2
 - name: 🇺🇸 江江美国 IEPL｜公益 353
   server: 172.66.40.87
   port: 2083
@@ -370,19 +306,6 @@ proxies:
     path: /?ed=2560&PROT_TYPE=trojan
     headers:
       Host: vle.amclubdns.dpdns.org
-- name: 🇺🇸 美国27 | ⬇️ 1.3MB/s
-  server: 104.16.21.197
-  port: 443
-  type: vless
-  uuid: 34c01e61-f4f3-4afb-a83b-406caf8caa33
-  tls: true
-  servername: yg.bantony199.top
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: yg.bantony199.top
 - name: 🇸🇬 SG-Rs 3
   server: 66.179.48.243
   port: 443
@@ -409,19 +332,6 @@ proxies:
     path: /yaml7.ggff.net/
     headers:
       Host: xz.fanoravpn.web.id
-- name: 🇺🇸 美国4 | ⬇️ 2.2MB/s
-  server: 104.24.189.93
-  port: 443
-  type: vless
-  uuid: 8b5cf811-af1f-475a-9e61-28b93c38d309
-  tls: true
-  servername: vpn.6662221.xyz
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vpn.6662221.xyz
 - name: Node-c2.validbv3528.eu.org
   server: 172.67.149.26
   port: 443
@@ -450,20 +360,6 @@ proxies:
     path: /c2.validbv3528.eu.org
     headers:
       Host: xz.fanoravpn.web.id
-- name: 其他1-TR | ⬇️ 2.4MB/s
-  server: 104.16.243.59
-  port: 443
-  type: vless
-  uuid: 75fde681-ec64-4654-86fa-30732e8e179c
-  tls: true
-  alpn:
-  - h3
-  servername: NGINX.NSCl.IR
-  network: ws
-  ws-opts:
-    path: /assets
-    headers:
-      Host: NGINX.NSCl.IR
 - name: TG@lzjjjjjjjjjjj 2
   server: 104.17.128.1
   port: 2096
@@ -476,19 +372,6 @@ proxies:
     path: /?ed=2560&PROT_TYPE=trojan
     headers:
       Host: vle.amclubdns.dpdns.org
-- name: 🇳🇱 荷兰2 | ⬇️ 1.0MB/s
-  server: 104.18.156.119
-  port: 443
-  type: vless
-  uuid: 8b946375-b205-46a2-bf77-ecf0350eab5e
-  tls: true
-  servername: rayan-top.negar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: rayan-top.negar.dpdns.org
 - name: 🇸🇬 SG HY2
   server: sg.71111111.xyz
   port: 48793
@@ -496,25 +379,6 @@ proxies:
   password: e1986eed-b311-4dd6-b037-2c4f1c3eaf0e
   auth: e1986eed-b311-4dd6-b037-2c4f1c3eaf0e
   sni: sg.71111111.xyz
-  skip-cert-verify: false
-- name: 其他4-未识别 | ⬇️ 4.3MB/s
-  server: 88.216.69.177
-  port: 8880
-  type: vless
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  tls: false
-  network: ws
-  ws-opts:
-    path: /Telegram@WangCai2/?ed=2560
-    headers:
-      Host: ip.langmanshanxi.top
-- name: 【h2-KW】🛶
-  server: kw.111142.xyz
-  port: 19588
-  type: hysteria2
-  password: pwd5921
-  auth: pwd5921
-  sni: kw.111142.xyz
   skip-cert-verify: false
 - name: 【h2-MG】🏂
   server: mg.111142.xyz
@@ -549,30 +413,6 @@ proxies:
   servername: addons.mozilla.org
   client-fingerprint: firefox
   network: tcp
-- name: 🇭🇰 GPT专线03(香港用户)
-  server: 103.127.218.115
-  port: 50126
-  type: vless
-  uuid: 13f0acfa-38c1-4e82-a758-583aa31740df
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇸🇬 海外或者新疆用户2
-  server: xinjiang02.dynu.net
-  port: 50126
-  type: vless
-  uuid: 13f0acfa-38c1-4e82-a758-583aa31740df
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-  network: tcp
 - name: Xray_HK
   server: home.851004.xyz
   port: 443
@@ -591,18 +431,6 @@ proxies:
   port: 443
   type: vless
   uuid: 3a5409a5-a520-4e6c-8812-3f98b64c576d
-  tls: true
-  servername: ff.sobadxr.online
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: ff.sobadxr.online
-- name: XRAY_VLESS_TLS_Sobadxr
-  server: ff.sobadxr.online
-  port: 443
-  type: vless
-  uuid: 81b8c771-bc09-4b65-9ada-ccf2baae2203
   tls: true
   servername: ff.sobadxr.online
   network: ws
@@ -635,30 +463,6 @@ proxies:
     path: /lzjjjjj666
     headers:
       Host: rs-sg2.lzjnb.shop
-- name: XRAY_VLESS_TLS_ios
-  server: voh.panser.web.id
-  port: 443
-  type: vless
-  uuid: 815f0c54-2ba1-4b62-83c6-1df6372bf4c9
-  tls: true
-  servername: voh.panser.web.id
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: voh.panser.web.id
-- name: XRAY_VLESS_TLS_abhizzz
-  server: gaming.abhizzz.net
-  port: 443
-  type: vless
-  uuid: c76b1c63-9881-416c-ae7c-9c334775e2b5
-  tls: true
-  servername: gaming.abhizzz.net
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: gaming.abhizzz.net
 - name: JP_09
   server: 45.149.156.151
   port: 10634
@@ -667,18 +471,6 @@ proxies:
   auth: 8e1cd2aa0e413470
   sni: bing.com
   skip-cert-verify: true
-- name: Xray_ArmJP
-  server: armjp.851004.xyz
-  port: 8443
-  type: vless
-  uuid: f9865e56-fb9b-4c47-b6de-7c7477bc1aa6
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9rx7JwMO-KRZZEM9TQBO19BOAmmGjJyjN86ll2J7uVc
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  network: tcp
 - name: 🇭🇰 香港_Dmit_1 2
   server: 103.135.249.16
   port: 11001
@@ -730,130 +522,94 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - ': mglwinoo : 303.17GB📊 : 19Days⏳'
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 SG-50M-去广告
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇺🇸 美国14 | ⬇️ 1.4MB/s
   - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - Joy-SN-Hy2@Freedom
-  - 云机录-🇨🇦CA_1 | ⬇️ 2.2MB/s|48%|Netflix|Disney
-  - 🇺🇸 美国32 | ⬇️ 5.1MB/s
   - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇺🇸 美国27 | ⬇️ 1.3MB/s
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - 🇺🇸 美国4 | ⬇️ 2.2MB/s
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - 其他1-TR | ⬇️ 2.4MB/s
-  - TG@lzjjjjjjjjjjj 2
-  - 🇳🇱 荷兰2 | ⬇️ 1.0MB/s
-  - 🇸🇬 SG HY2
-  - 其他4-未识别 | ⬇️ 4.3MB/s
-  - 【h2-KW】🛶
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - 🇭🇰 GPT专线03(香港用户)
-  - 🇸🇬 海外或者新疆用户2
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
-  - XRAY_VLESS_TLS_Sobadxr
-  - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - XRAY_VLESS_TLS_ios
-  - XRAY_VLESS_TLS_abhizzz
-  - JP_09
-  - Xray_ArmJP
-  - 🇭🇰 香港_Dmit_1 2
   - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - Node-ocost-dy.wmlefl.cc
+  - Node-inviNcIble.fafa20.ShOp
+  - 🇸🇬 SG-Rs 2
+  - 🇸🇬 SG-Rs
+  - 🇸🇬 SG-Rs 3
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj
+  - JP_09
+  - Node-vpn.stupidworld.web.id
+  - TG@lzjjjjjjjjjjj 2
+  - 🇭🇰 香港01
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
+  - 22151-sing-box-reality
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇭🇰 香港_Dmit_1
+  - 🇸🇬 SG-Rs 4
+  - Node-yaml7.ggff.net
   - 🇭🇰 HK-Rs
+  - 保底防失联CF
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG HY2
+  - 🇸🇬 Legendvps-SG
+  - Node-ttfang.fange.me
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-c2.validbv3528.eu.org
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 Lv2 新加坡 00 [1.5]
+  - XRAY_VLESS_TLS_realme12x
+  - XRAY_VLESS_TLS_vivo19
+  - Xray_HK
+  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - XRAY_VLESS_TLS_pindangYes
+  - 【h2-MG】🏂
+  - XRAY_VLESS_TLS_ais
 - name: ⚡ Fast
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 120
   proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - ': mglwinoo : 303.17GB📊 : 19Days⏳'
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 SG-50M-去广告
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇺🇸 美国14 | ⬇️ 1.4MB/s
   - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - Joy-SN-Hy2@Freedom
-  - 云机录-🇨🇦CA_1 | ⬇️ 2.2MB/s|48%|Netflix|Disney
-  - 🇺🇸 美国32 | ⬇️ 5.1MB/s
   - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇺🇸 美国27 | ⬇️ 1.3MB/s
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - 🇺🇸 美国4 | ⬇️ 2.2MB/s
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - 其他1-TR | ⬇️ 2.4MB/s
-  - TG@lzjjjjjjjjjjj 2
-  - 🇳🇱 荷兰2 | ⬇️ 1.0MB/s
-  - 🇸🇬 SG HY2
-  - 其他4-未识别 | ⬇️ 4.3MB/s
-  - 【h2-KW】🛶
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - 🇭🇰 GPT专线03(香港用户)
-  - 🇸🇬 海外或者新疆用户2
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
-  - XRAY_VLESS_TLS_Sobadxr
-  - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - XRAY_VLESS_TLS_ios
-  - XRAY_VLESS_TLS_abhizzz
-  - JP_09
-  - Xray_ArmJP
-  - 🇭🇰 香港_Dmit_1 2
   - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - Node-ocost-dy.wmlefl.cc
+  - Node-inviNcIble.fafa20.ShOp
+  - 🇸🇬 SG-Rs 2
+  - 🇸🇬 SG-Rs
+  - 🇸🇬 SG-Rs 3
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj
+  - JP_09
+  - Node-vpn.stupidworld.web.id
+  - TG@lzjjjjjjjjjjj 2
+  - 🇭🇰 香港01
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
+  - 22151-sing-box-reality
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇭🇰 香港_Dmit_1
+  - 🇸🇬 SG-Rs 4
+  - Node-yaml7.ggff.net
   - 🇭🇰 HK-Rs
+  - 保底防失联CF
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG HY2
+  - 🇸🇬 Legendvps-SG
+  - Node-ttfang.fange.me
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-c2.validbv3528.eu.org
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 Lv2 新加坡 00 [1.5]
+  - XRAY_VLESS_TLS_realme12x
+  - XRAY_VLESS_TLS_vivo19
+  - Xray_HK
+  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - XRAY_VLESS_TLS_pindangYes
+  - 【h2-MG】🏂
+  - XRAY_VLESS_TLS_ais
 - name: 📶 Balance
   type: load-balance
   strategy: consistent-hashing
@@ -861,133 +617,137 @@ proxy-groups:
   interval: 120
   proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - ': mglwinoo : 303.17GB📊 : 19Days⏳'
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 SG-50M-去广告
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇺🇸 美国14 | ⬇️ 1.4MB/s
   - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - Joy-SN-Hy2@Freedom
-  - 云机录-🇨🇦CA_1 | ⬇️ 2.2MB/s|48%|Netflix|Disney
-  - 🇺🇸 美国32 | ⬇️ 5.1MB/s
   - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇺🇸 美国27 | ⬇️ 1.3MB/s
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - 🇺🇸 美国4 | ⬇️ 2.2MB/s
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - 其他1-TR | ⬇️ 2.4MB/s
-  - TG@lzjjjjjjjjjjj 2
-  - 🇳🇱 荷兰2 | ⬇️ 1.0MB/s
-  - 🇸🇬 SG HY2
-  - 其他4-未识别 | ⬇️ 4.3MB/s
-  - 【h2-KW】🛶
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - 🇭🇰 GPT专线03(香港用户)
-  - 🇸🇬 海外或者新疆用户2
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
-  - XRAY_VLESS_TLS_Sobadxr
-  - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - XRAY_VLESS_TLS_ios
-  - XRAY_VLESS_TLS_abhizzz
-  - JP_09
-  - Xray_ArmJP
-  - 🇭🇰 香港_Dmit_1 2
   - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - Node-ocost-dy.wmlefl.cc
+  - Node-inviNcIble.fafa20.ShOp
+  - 🇸🇬 SG-Rs 2
+  - 🇸🇬 SG-Rs
+  - 🇸🇬 SG-Rs 3
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj
+  - JP_09
+  - Node-vpn.stupidworld.web.id
+  - TG@lzjjjjjjjjjjj 2
+  - 🇭🇰 香港01
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
+  - 22151-sing-box-reality
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇭🇰 香港_Dmit_1
+  - 🇸🇬 SG-Rs 4
+  - Node-yaml7.ggff.net
   - 🇭🇰 HK-Rs
+  - 保底防失联CF
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG HY2
+  - 🇸🇬 Legendvps-SG
+  - Node-ttfang.fange.me
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-c2.validbv3528.eu.org
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 Lv2 新加坡 00 [1.5]
+  - XRAY_VLESS_TLS_realme12x
+  - XRAY_VLESS_TLS_vivo19
+  - Xray_HK
+  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - XRAY_VLESS_TLS_pindangYes
+  - 【h2-MG】🏂
+  - XRAY_VLESS_TLS_ais
 - name: ✏️ Manual
   type: select
   proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - ': mglwinoo : 303.17GB📊 : 19Days⏳'
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 SG-50M-去广告
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇺🇸 美国14 | ⬇️ 1.4MB/s
   - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - Joy-SN-Hy2@Freedom
-  - 云机录-🇨🇦CA_1 | ⬇️ 2.2MB/s|48%|Netflix|Disney
-  - 🇺🇸 美国32 | ⬇️ 5.1MB/s
   - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇺🇸 美国27 | ⬇️ 1.3MB/s
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - 🇺🇸 美国4 | ⬇️ 2.2MB/s
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - 其他1-TR | ⬇️ 2.4MB/s
-  - TG@lzjjjjjjjjjjj 2
-  - 🇳🇱 荷兰2 | ⬇️ 1.0MB/s
-  - 🇸🇬 SG HY2
-  - 其他4-未识别 | ⬇️ 4.3MB/s
-  - 【h2-KW】🛶
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - 🇭🇰 GPT专线03(香港用户)
-  - 🇸🇬 海外或者新疆用户2
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
-  - XRAY_VLESS_TLS_Sobadxr
-  - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - XRAY_VLESS_TLS_ios
-  - XRAY_VLESS_TLS_abhizzz
-  - JP_09
-  - Xray_ArmJP
-  - 🇭🇰 香港_Dmit_1 2
   - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - Node-ocost-dy.wmlefl.cc
+  - Node-inviNcIble.fafa20.ShOp
+  - 🇸🇬 SG-Rs 2
+  - 🇸🇬 SG-Rs
+  - 🇸🇬 SG-Rs 3
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj
+  - JP_09
+  - Node-vpn.stupidworld.web.id
+  - TG@lzjjjjjjjjjjj 2
+  - 🇭🇰 香港01
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
+  - 22151-sing-box-reality
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇭🇰 香港_Dmit_1
+  - 🇸🇬 SG-Rs 4
+  - Node-yaml7.ggff.net
   - 🇭🇰 HK-Rs
+  - 保底防失联CF
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG HY2
+  - 🇸🇬 Legendvps-SG
+  - Node-ttfang.fange.me
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-c2.validbv3528.eu.org
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 Lv2 新加坡 00 [1.5]
+  - XRAY_VLESS_TLS_realme12x
+  - XRAY_VLESS_TLS_vivo19
+  - Xray_HK
+  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - XRAY_VLESS_TLS_pindangYes
+  - 【h2-MG】🏂
+  - XRAY_VLESS_TLS_ais
 - name: 🎈 Others
   type: select
   proxies:
-  - ☁️ Proxy
-  - DIRECT
+  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
+  - 🇳🇱 江江荷兰 IEPL｜公益 41
+  - 🇺🇸 江江美国 IEPL｜公益 353
+  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - Node-ocost-dy.wmlefl.cc
+  - Node-inviNcIble.fafa20.ShOp
+  - 🇸🇬 SG-Rs 2
+  - 🇸🇬 SG-Rs
+  - 🇸🇬 SG-Rs 3
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj
+  - JP_09
+  - Node-vpn.stupidworld.web.id
+  - TG@lzjjjjjjjjjjj 2
+  - 🇭🇰 香港01
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
+  - 22151-sing-box-reality
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇭🇰 香港_Dmit_1
+  - 🇸🇬 SG-Rs 4
+  - Node-yaml7.ggff.net
+  - 🇭🇰 HK-Rs
+  - 保底防失联CF
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG HY2
+  - 🇸🇬 Legendvps-SG
+  - Node-ttfang.fange.me
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-c2.validbv3528.eu.org
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 Lv2 新加坡 00 [1.5]
+  - XRAY_VLESS_TLS_realme12x
+  - XRAY_VLESS_TLS_vivo19
+  - Xray_HK
+  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - XRAY_VLESS_TLS_pindangYes
+  - 【h2-MG】🏂
+  - XRAY_VLESS_TLS_ais
 rules:
 - RULE-SET,🛑 BanAD,REJECT
 - RULE-SET,🍃 BanProgramAD,REJECT
