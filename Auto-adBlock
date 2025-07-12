@@ -21,7 +21,7 @@ proxies:
   server: tlbasic.com
   port: 443
   type: trojan
-  password: '@40csjTL8517'
+  password: '@@40csjTL8517'
   skip-cert-verify: true
 - name: 🇸🇬 新加坡｜03｜aws
   server: sgaws.ccwink.cc
