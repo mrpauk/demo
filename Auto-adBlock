@@ -516,385 +516,383 @@ proxy-groups:
   - 📶 Balance
   - ✏️ Manual
   - DIRECT
-- name: 🛡 Auto
-  type: fallback
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  proxies:
-  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - Node-ocost-dy.wmlefl.cc
-  - Node-inviNcIble.fafa20.ShOp
-  - 🇸🇬 SG-Rs 2
-  - 🇸🇬 SG-Rs
-  - 🇸🇬 SG-Rs 3
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj
-  - JP_09
-  - Node-vpn.stupidworld.web.id
-  - TG@lzjjjjjjjjjjj 2
-  - 🇭🇰 香港01
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - 22151-sing-box-reality
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇭🇰 香港_Dmit_1
-  - 🇸🇬 SG-Rs 4
-  - Node-yaml7.ggff.net
-  - 🇭🇰 HK-Rs
-  - 保底防失联CF
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG HY2
-  - 🇸🇬 Legendvps-SG
-  - Node-ttfang.fange.me
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-c2.validbv3528.eu.org
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - XRAY_VLESS_TLS_realme12x
-  - XRAY_VLESS_TLS_vivo19
-  - Xray_HK
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - XRAY_VLESS_TLS_pindangYes
-  - 【h2-MG】🏂
-  - XRAY_VLESS_TLS_ais
 - name: ⚡ Fast
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 120
   proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - Node-ocost-dy.wmlefl.cc
-  - Node-inviNcIble.fafa20.ShOp
-  - 🇸🇬 SG-Rs 2
-  - 🇸🇬 SG-Rs
-  - 🇸🇬 SG-Rs 3
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj
-  - JP_09
-  - Node-vpn.stupidworld.web.id
-  - TG@lzjjjjjjjjjjj 2
-  - 🇭🇰 香港01
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - 22151-sing-box-reality
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇭🇰 香港_Dmit_1
-  - 🇸🇬 SG-Rs 4
-  - Node-yaml7.ggff.net
-  - 🇭🇰 HK-Rs
-  - 保底防失联CF
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG HY2
-  - 🇸🇬 Legendvps-SG
-  - Node-ttfang.fange.me
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-c2.validbv3528.eu.org
-  - 🇮🇳 印度+V2CROSS.COM
   - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - XRAY_VLESS_TLS_realme12x
-  - XRAY_VLESS_TLS_vivo19
-  - Xray_HK
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - XRAY_VLESS_TLS_pindangYes
-  - 【h2-MG】🏂
-  - XRAY_VLESS_TLS_ais
-- name: 📶 Balance
-  type: load-balance
-  strategy: consistent-hashing
-  url: http://www.gstatic.com/generate_204
-  interval: 120
-  proxies:
-  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - Node-ocost-dy.wmlefl.cc
-  - Node-inviNcIble.fafa20.ShOp
-  - 🇸🇬 SG-Rs 2
-  - 🇸🇬 SG-Rs
-  - 🇸🇬 SG-Rs 3
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj
-  - JP_09
-  - Node-vpn.stupidworld.web.id
-  - TG@lzjjjjjjjjjjj 2
-  - 🇭🇰 香港01
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - 22151-sing-box-reality
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇭🇰 香港_Dmit_1
-  - 🇸🇬 SG-Rs 4
-  - Node-yaml7.ggff.net
-  - 🇭🇰 HK-Rs
-  - 保底防失联CF
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG HY2
-  - 🇸🇬 Legendvps-SG
-  - Node-ttfang.fange.me
   - 🇸🇬 新加坡｜03｜aws
-  - Node-c2.validbv3528.eu.org
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - XRAY_VLESS_TLS_realme12x
-  - XRAY_VLESS_TLS_vivo19
-  - Xray_HK
+  - Node-vpn.stupidworld.web.id
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG-Rs
+  - 🇳🇱 江江荷兰 IEPL｜公益 41
   - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - Node-ttfang.fange.me
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇸🇬 Legendvps-SG
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
   - XRAY_VLESS_TLS_pindangYes
+  - Node-inviNcIble.fafa20.ShOp
+  - Node-ocost-dy.wmlefl.cc
+  - XRAY_VLESS_TLS_vivo19
+  - XRAY_VLESS_TLS_realme12x
+  - 保底防失联CF
+  - 🇺🇸 江江美国 IEPL｜公益 353
+  - 🇸🇬 SG-Rs 2
+  - TG@lzjjjjjjjjjjj
+  - 🇸🇬 SG-Rs 3
+  - Node-yaml7.ggff.net
+  - Node-c2.validbv3528.eu.org
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj 2
+  - 🇸🇬 SG HY2
   - 【h2-MG】🏂
+  - 🇭🇰 香港01
+  - 🇭🇰 香港_Dmit_1
+  - Xray_HK
   - XRAY_VLESS_TLS_ais
+  - 22151-sing-box-reality
+  - 🇸🇬 SG-Rs 4
+  - JP_09
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇭🇰 HK-Rs
 - name: ✏️ Manual
   type: select
   proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - Node-ocost-dy.wmlefl.cc
-  - Node-inviNcIble.fafa20.ShOp
-  - 🇸🇬 SG-Rs 2
-  - 🇸🇬 SG-Rs
-  - 🇸🇬 SG-Rs 3
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj
-  - JP_09
-  - Node-vpn.stupidworld.web.id
-  - TG@lzjjjjjjjjjjj 2
-  - 🇭🇰 香港01
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - 22151-sing-box-reality
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇭🇰 香港_Dmit_1
-  - 🇸🇬 SG-Rs 4
-  - Node-yaml7.ggff.net
-  - 🇭🇰 HK-Rs
-  - 保底防失联CF
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG HY2
-  - 🇸🇬 Legendvps-SG
-  - Node-ttfang.fange.me
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-c2.validbv3528.eu.org
-  - 🇮🇳 印度+V2CROSS.COM
   - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - XRAY_VLESS_TLS_realme12x
-  - XRAY_VLESS_TLS_vivo19
-  - Xray_HK
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-vpn.stupidworld.web.id
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG-Rs
+  - 🇳🇱 江江荷兰 IEPL｜公益 41
   - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - Node-ttfang.fange.me
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇸🇬 Legendvps-SG
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
   - XRAY_VLESS_TLS_pindangYes
+  - Node-inviNcIble.fafa20.ShOp
+  - Node-ocost-dy.wmlefl.cc
+  - XRAY_VLESS_TLS_vivo19
+  - XRAY_VLESS_TLS_realme12x
+  - 保底防失联CF
+  - 🇺🇸 江江美国 IEPL｜公益 353
+  - 🇸🇬 SG-Rs 2
+  - TG@lzjjjjjjjjjjj
+  - 🇸🇬 SG-Rs 3
+  - Node-yaml7.ggff.net
+  - Node-c2.validbv3528.eu.org
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj 2
+  - 🇸🇬 SG HY2
   - 【h2-MG】🏂
+  - 🇭🇰 香港01
+  - 🇭🇰 香港_Dmit_1
+  - Xray_HK
   - XRAY_VLESS_TLS_ais
+  - 22151-sing-box-reality
+  - 🇸🇬 SG-Rs 4
+  - JP_09
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇭🇰 HK-Rs
 - name: 🎈 Others
   type: select
   proxies:
+  - ☁️ Proxy
+  - DIRECT
+- name: 📶 Balance
+  type: load-balance
+  strategy: round-robin
+  url: http://www.gstatic.com/generate_204
+  interval: 120
+  proxies:
   - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - Node-ocost-dy.wmlefl.cc
-  - Node-inviNcIble.fafa20.ShOp
-  - 🇸🇬 SG-Rs 2
-  - 🇸🇬 SG-Rs
-  - 🇸🇬 SG-Rs 3
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj
-  - JP_09
-  - Node-vpn.stupidworld.web.id
-  - TG@lzjjjjjjjjjjj 2
-  - 🇭🇰 香港01
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - 22151-sing-box-reality
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇭🇰 香港_Dmit_1
-  - 🇸🇬 SG-Rs 4
-  - Node-yaml7.ggff.net
-  - 🇭🇰 HK-Rs
-  - 保底防失联CF
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG HY2
-  - 🇸🇬 Legendvps-SG
-  - Node-ttfang.fange.me
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-c2.validbv3528.eu.org
-  - 🇮🇳 印度+V2CROSS.COM
   - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - XRAY_VLESS_TLS_realme12x
-  - XRAY_VLESS_TLS_vivo19
-  - Xray_HK
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-vpn.stupidworld.web.id
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG-Rs
+  - 🇳🇱 江江荷兰 IEPL｜公益 41
   - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - Node-ttfang.fange.me
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇸🇬 Legendvps-SG
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
   - XRAY_VLESS_TLS_pindangYes
+  - Node-inviNcIble.fafa20.ShOp
+  - Node-ocost-dy.wmlefl.cc
+  - XRAY_VLESS_TLS_vivo19
+  - XRAY_VLESS_TLS_realme12x
+  - 保底防失联CF
+  - 🇺🇸 江江美国 IEPL｜公益 353
+  - 🇸🇬 SG-Rs 2
+  - TG@lzjjjjjjjjjjj
+  - 🇸🇬 SG-Rs 3
+  - Node-yaml7.ggff.net
+  - Node-c2.validbv3528.eu.org
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj 2
+  - 🇸🇬 SG HY2
   - 【h2-MG】🏂
+  - 🇭🇰 香港01
+  - 🇭🇰 香港_Dmit_1
+  - Xray_HK
   - XRAY_VLESS_TLS_ais
+  - 22151-sing-box-reality
+  - 🇸🇬 SG-Rs 4
+  - JP_09
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇭🇰 HK-Rs
+- name: 🛡 Auto
+  type: fallback
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
+  - 🇸🇬 Lv2 新加坡 00 [1.5]
+  - 🇸🇬 新加坡｜03｜aws
+  - Node-vpn.stupidworld.web.id
+  - 🇺🇸 江江美国 IEPL｜公益 256
+  - 🇸🇬 新加坡
+  - 🇺🇸 江江美国 IEPL｜公益 319
+  - qg.lqiang.link-domain
+  - 🇸🇬 SG-Rs
+  - 🇳🇱 江江荷兰 IEPL｜公益 41
+  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
+  - Node-ttfang.fange.me
+  - Node-torjan.xn--xhq44j.eu.org
+  - 🇸🇬 Legendvps-SG
+  - 🇮🇳 印度+V2CROSS.COM
+  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
+  - XRAY_VLESS_TLS_pindangYes
+  - Node-inviNcIble.fafa20.ShOp
+  - Node-ocost-dy.wmlefl.cc
+  - XRAY_VLESS_TLS_vivo19
+  - XRAY_VLESS_TLS_realme12x
+  - 保底防失联CF
+  - 🇺🇸 江江美国 IEPL｜公益 353
+  - 🇸🇬 SG-Rs 2
+  - TG@lzjjjjjjjjjjj
+  - 🇸🇬 SG-Rs 3
+  - Node-yaml7.ggff.net
+  - Node-c2.validbv3528.eu.org
+  - Node-c2.validbv3528.eu.org 2
+  - TG@lzjjjjjjjjjjj 2
+  - 🇸🇬 SG HY2
+  - 【h2-MG】🏂
+  - 🇭🇰 香港01
+  - 🇭🇰 香港_Dmit_1
+  - Xray_HK
+  - XRAY_VLESS_TLS_ais
+  - 22151-sing-box-reality
+  - 🇸🇬 SG-Rs 4
+  - JP_09
+  - 🇭🇰 香港_Dmit_1 2
+  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
+  - 🇭🇰 HK-Rs
 rules:
-- RULE-SET,🛑 BanAD,REJECT
-- RULE-SET,🍃 BanProgramAD,REJECT
-- RULE-SET,🆎 AdBlock,REJECT
-- RULE-SET,🆎 AdBlock Privacy,REJECT
-- RULE-SET,🌐 IP_CIDR-MM,REJECT
+- DOMAIN-KEYWORD,ai,DIRECT
+- DOMAIN-KEYWORD,deepseek,DIRECT
 - DOMAIN-KEYWORD,facebook,☁️ Proxy
 - DOMAIN-KEYWORD,fb,☁️ Proxy
+- DOMAIN-KEYWORD,gpt,DIRECT
+- DOMAIN-SUFFIX,agdbank.com,DIRECT
+- DOMAIN-SUFFIX,ai.cloudflare.com,DIRECT
+- DOMAIN-SUFFIX,ai.google.dev,DIRECT
+- DOMAIN-SUFFIX,aihub.google.com,DIRECT
+- DOMAIN-SUFFIX,anthropic.com,DIRECT
+- DOMAIN-SUFFIX,api.deepseek.com,DIRECT
+- DOMAIN-SUFFIX,api.openai.com,DIRECT
+- DOMAIN-SUFFIX,ayabank.com,DIRECT
+- DOMAIN-SUFFIX,cbbank.com.mm,DIRECT
+- DOMAIN-SUFFIX,chat.deepseek.com,DIRECT
+- DOMAIN-SUFFIX,chat.openai.com,DIRECT
+- DOMAIN-SUFFIX,chat.qwen.ai,DIRECT
+- DOMAIN-SUFFIX,claude.ai,DIRECT
+- DOMAIN-SUFFIX,com.mm,DIRECT
+- DOMAIN-SUFFIX,console.anthropic.com,DIRECT
+- DOMAIN-SUFFIX,deepmind.google,DIRECT
+- DOMAIN-SUFFIX,deepseek.com,DIRECT
+- DOMAIN-SUFFIX,edu.mm,DIRECT
 - DOMAIN-SUFFIX,facebook.com,☁️ Proxy
-- DOMAIN-SUFFIX,fbcdn.net,☁️ Proxy
 - DOMAIN-SUFFIX,fb.com,☁️ Proxy
-- DOMAIN-SUFFIX,instagram.com,☁️ Proxy
-- DOMAIN-SUFFIX,whatsapp.com,☁️ Proxy
-- DOMAIN-SUFFIX,messenger.com,☁️ Proxy
-- DOMAIN-SUFFIX,xx.fbcdn.net,☁️ Proxy
-- DOMAIN-SUFFIX,xy.fbcdn.net,☁️ Proxy
+- DOMAIN-SUFFIX,fbcdn.net,☁️ Proxy
+- DOMAIN-SUFFIX,ffa.chat,DIRECT
 - DOMAIN-SUFFIX,fzxx.net,☁️ Proxy
+- DOMAIN-SUFFIX,gemini.google.com,DIRECT
+- DOMAIN-SUFFIX,generativelanguage.googleapis.com,DIRECT
+- DOMAIN-SUFFIX,ggpht.com,DIRECT
+- DOMAIN-SUFFIX,gmail.com,DIRECT
+- DOMAIN-SUFFIX,goog,DIRECT
+- DOMAIN-SUFFIX,google-analytics.com,DIRECT
 - DOMAIN-SUFFIX,google.com,DIRECT
 - DOMAIN-SUFFIX,google.net,DIRECT
 - DOMAIN-SUFFIX,google.org,DIRECT
 - DOMAIN-SUFFIX,googleapis.com,DIRECT
-- DOMAIN-SUFFIX,gstatic.com,DIRECT
-- DOMAIN-SUFFIX,youtube.com,DIRECT
-- DOMAIN-SUFFIX,ytimg.com,DIRECT
-- DOMAIN-SUFFIX,googlevideo.com,DIRECT
-- DOMAIN-SUFFIX,googleusercontent.com,DIRECT
-- DOMAIN-SUFFIX,ggpht.com,DIRECT
-- DOMAIN-SUFFIX,google-analytics.com,DIRECT
-- DOMAIN-SUFFIX,gmail.com,DIRECT
 - DOMAIN-SUFFIX,googlemail.com,DIRECT
 - DOMAIN-SUFFIX,googleplex.com,DIRECT
-- DOMAIN-SUFFIX,goog,DIRECT
-- DOMAIN-SUFFIX,gemini.google.com,DIRECT
-- DOMAIN-SUFFIX,ai.google.dev,DIRECT
-- DOMAIN-SUFFIX,generativelanguage.googleapis.com,DIRECT
-- DOMAIN-SUFFIX,vertexai.google.com,DIRECT
-- DOMAIN-SUFFIX,aihub.google.com,DIRECT
-- DOMAIN-SUFFIX,deepmind.google,DIRECT
-- GEOIP,MM,DIRECT,no-resolve
-- DOMAIN,idope.se,DIRECT
+- DOMAIN-SUFFIX,googleusercontent.com,DIRECT
+- DOMAIN-SUFFIX,googlevideo.com,DIRECT
 - DOMAIN-SUFFIX,gov.mm,DIRECT
-- DOMAIN-SUFFIX,com.mm,DIRECT
-- DOMAIN-SUFFIX,org.mm,DIRECT
-- DOMAIN-SUFFIX,edu.mm,DIRECT
-- DOMAIN-SUFFIX,net.mm,DIRECT
-- DOMAIN-SUFFIX,ayabank.com,DIRECT
+- DOMAIN-SUFFIX,gstatic.com,DIRECT
+- DOMAIN-SUFFIX,instagram.com,☁️ Proxy
 - DOMAIN-SUFFIX,kbzbank.com,DIRECT
-- DOMAIN-SUFFIX,cbbank.com.mm,DIRECT
-- DOMAIN-SUFFIX,agdbank.com,DIRECT
 - DOMAIN-SUFFIX,mabbank.com,DIRECT
-- DOMAIN-SUFFIX,yomabank.com,DIRECT
-- DOMAIN-SUFFIX,wavemoney.com.mm,DIRECT
-- DOMAIN-SUFFIX,truemoney.com.mm,DIRECT
+- DOMAIN-SUFFIX,messenger.com,☁️ Proxy
 - DOMAIN-SUFFIX,mpt.com.mm,DIRECT
-- DOMAIN-SUFFIX,telenor.com.mm,DIRECT
-- DOMAIN-SUFFIX,ooredoo.com.mm,DIRECT
 - DOMAIN-SUFFIX,mytel.com.mm,DIRECT
-- PROCESS-NAME,network.kalock.myanmar2d,DIRECT
-- PROCESS-NAME,com.kbzbank.kpaycustomer,DIRECT
-- PROCESS-NAME,com.ayaplus.subscriber,DIRECT
-- PROCESS-NAME,org.telegram.messenger,DIRECT
-- PROCESS-NAME,com.tencent.mm,DIRECT
-- PROCESS-NAME,com.openai.chatgpt,DIRECT
-- PROCESS-NAME,com.google.android.youtube,DIRECT
-- PROCESS-NAME,com.google.android.apps.maps,DIRECT
-- PROCESS-NAME,com.google.android.apps.docs,DIRECT
-- PROCESS-NAME,com.ooredoo.selfcare,DIRECT
-- PROCESS-NAME,com.mytel.myid,DIRECT
-- PROCESS-NAME,mm.com.mptvas,DIRECT
-- PROCESS-NAME,com.ofss.digx.mab,DIRECT
-- PROCESS-NAME,mm.com.wavemoney.wavepay,DIRECT
-- PROCESS-NAME,com.ascend.money.rewards.app.mm,DIRECT
-- PROCESS-NAME,com.com.jits.mbanking.aya,DIRECT
-- PROCESS-NAME,mm.com.atom.store,DIRECT
-- PROCESS-NAME,com.deepseek.chat,DIRECT
-- PROCESS-NAME,us.zoom.videomeetings,DIRECT
-- PROCESS-NAME,qbittorrent.exe,DIRECT
-- PROCESS-NAME,com.ezviz,DIRECT
-- PROCESS-NAME,com.mytel.viettech.abl.eu.v2.android,DIRECT
-- PROCESS-NAME,com.mm.android.smartlifeiot,DIRECT
-- DOMAIN-SUFFIX,chat.deepseek.com,DIRECT
-- DOMAIN-SUFFIX,deepseek.com,DIRECT
-- DOMAIN-SUFFIX,api.deepseek.com,DIRECT
+- DOMAIN-SUFFIX,net.mm,DIRECT
+- DOMAIN-SUFFIX,ooredoo.com.mm,DIRECT
 - DOMAIN-SUFFIX,openai.com,DIRECT
-- DOMAIN-SUFFIX,chat.openai.com,DIRECT
-- DOMAIN-SUFFIX,platform.openai.com,DIRECT
-- DOMAIN-SUFFIX,api.openai.com,DIRECT
-- DOMAIN-SUFFIX,claude.ai,DIRECT
-- DOMAIN-SUFFIX,anthropic.com,DIRECT
-- DOMAIN-SUFFIX,console.anthropic.com,DIRECT
-- DOMAIN-SUFFIX,ai.cloudflare.com,DIRECT
-- DOMAIN-SUFFIX,workers.ai,DIRECT
-- DOMAIN-SUFFIX,ffa.chat,DIRECT
+- DOMAIN-SUFFIX,org.mm,DIRECT
 - DOMAIN-SUFFIX,perplexity.ai,DIRECT
-- DOMAIN-KEYWORD,ai,DIRECT
-- DOMAIN-KEYWORD,gpt,DIRECT
-- DOMAIN-KEYWORD,deepseek,DIRECT
+- DOMAIN-SUFFIX,platform.openai.com,DIRECT
 - DOMAIN-SUFFIX,qwen.ai,DIRECT
-- DOMAIN-SUFFIX,chat.qwen.ai,DIRECT
+- DOMAIN-SUFFIX,telenor.com.mm,DIRECT
+- DOMAIN-SUFFIX,truemoney.com.mm,DIRECT
+- DOMAIN-SUFFIX,vertexai.google.com,DIRECT
+- DOMAIN-SUFFIX,wavemoney.com.mm,DIRECT
+- DOMAIN-SUFFIX,whatsapp.com,☁️ Proxy
+- DOMAIN-SUFFIX,workers.ai,DIRECT
+- DOMAIN-SUFFIX,xx.fbcdn.net,☁️ Proxy
+- DOMAIN-SUFFIX,xy.fbcdn.net,☁️ Proxy
+- DOMAIN-SUFFIX,yomabank.com,DIRECT
+- DOMAIN-SUFFIX,youtube.com,DIRECT
+- DOMAIN-SUFFIX,ytimg.com,DIRECT
+- DOMAIN,idope.se,DIRECT
+- GEOIP,MM,DIRECT,no-resolve
+- PROCESS-NAME,com.ascend.money.rewards.app.mm,DIRECT
+- PROCESS-NAME,com.ayaplus.subscriber,DIRECT
+- PROCESS-NAME,com.com.jits.mbanking.aya,DIRECT
+- PROCESS-NAME,com.deepseek.chat,DIRECT
+- PROCESS-NAME,com.ezviz,DIRECT
+- PROCESS-NAME,com.google.android.apps.docs,DIRECT
+- PROCESS-NAME,com.google.android.apps.maps,DIRECT
+- PROCESS-NAME,com.google.android.youtube,DIRECT
+- PROCESS-NAME,com.kbzbank.kpaycustomer,DIRECT
+- PROCESS-NAME,com.mm.android.smartlifeiot,DIRECT
+- PROCESS-NAME,com.mytel.myid,DIRECT
+- PROCESS-NAME,com.mytel.viettech.abl.eu.v2.android,DIRECT
+- PROCESS-NAME,com.ofss.digx.mab,DIRECT
+- PROCESS-NAME,com.ooredoo.selfcare,DIRECT
+- PROCESS-NAME,com.openai.chatgpt,DIRECT
+- PROCESS-NAME,com.tencent.mm,DIRECT
+- PROCESS-NAME,mm.com.atom.store,DIRECT
+- PROCESS-NAME,mm.com.mptvas,DIRECT
+- PROCESS-NAME,mm.com.wavemoney.wavepay,DIRECT
+- PROCESS-NAME,network.kalock.myanmar2d,DIRECT
+- PROCESS-NAME,org.telegram.messenger,DIRECT
+- PROCESS-NAME,qbittorrent.exe,DIRECT
+- PROCESS-NAME,us.zoom.videomeetings,DIRECT
+- RULE-SET,🆎 AdBlock,REJECT
+- RULE-SET,🆎 AdBlock Privacy,REJECT
+- RULE-SET,🍃 BanProgramAD,REJECT
+- RULE-SET,🛑 BanAD,REJECT
+- RULE-SET,Ⓜ️ Microsoft,DIRECT
+- RULE-SET,♻️ OneDrive,DIRECT
+- RULE-SET,⚙️ mm-ipcidr,DIRECT
+- RULE-SET,🏠LAN,DIRECT
 - MATCH,🎈 Others
+rule-providers:
+  Ⓜ️ Microsoft:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/Microsoft.list
+    interval: 86400
+    path: ./rule-providers/Microsoft.list
+  ♻️ OneDrive:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/OneDrive.list
+    interval: 86400
+    path: ./rule-providers/OneDrive.list
+  ⚙️ mm-ipcidr:
+    behavior: ipcidr
+    format: yaml
+    type: http
+    url: https://cdn.jsdelivr.net/gh/PoeMyintzu/clash@0db295b40002caa26e36c695a035a2a1e84e2abb/mm-cidr.yaml
+    interval: 86400
+    path: ./rule-providers/mm-ipcidr.yaml
+  🆎 AdBlock:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/BanEasyList.list
+    interval: 86400
+    path: ./rule-providers/BanEasyList.list
+  🆎 AdBlock Privacy:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/BanEasyPrivacy.list
+    interval: 86400
+    path: ./rule-providers/BanEasyPrivacy.list
+  🍃 BanProgramAD:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/BanProgramAD.list
+    interval: 86400
+    path: ./rule-providers/BanProgramAD.list
+  🏠LAN:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/LocalAreaNetwork.list
+    interval: 86400
+    path: ./rule-providers/LocalAreaNetwork.list
+  🛑 BanAD:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://file.sh.seejoy.top:9999/subscribe/rule/BanAD.list
+    interval: 86400
+    path: ./rule-providers/BanAD.list
 dns:
   enable: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - '*.arpa'
   nameserver:
-  - https://security.cloudflare-dns.com/dns-query
-  - https://cloudflare-dns.com/dns-query
+  - 163.5.255.250
+  - 203.81.64.2
+  - 223.5.5.5
+  - 114.114.114.114
+  - 1.0.0.1
   fallback:
-  - tls://1dot1dot1dot1.cloudflare-dns.com:853
-  - tls://1dot0dot0dot0.cloudflare-dns.com:853
-  - https://doh.opendns.com/dns-query
+  - https://1.1.1.1/dns-query
+  - tls://8.8.8.8:853
   fallback-filter:
-    geoip: true
-    geoip-code: MM
+    geoip: false
     domain:
     - +.google.com
     - +.facebook.com
     - +.youtube.com
-    - +.twitter.com
-rule-providers:
-  🛑 BanAD:
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanAD.yaml
-    path: ./rules/🛑_BanAD.yaml
-    interval: 86400
-  🍃 BanProgramAD:
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanProgramAD.yaml
-    path: ./rules/🍃_BanProgramAD.yaml
-    interval: 86400
-  🆎 AdBlock:
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanEasyList.yaml
-    path: ./rules/🆎_AdBlock.yaml
-    interval: 86400
-  🆎 AdBlock Privacy:
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/PoeMyintzu/clash/main/BanEasyPrivacy.yaml
-    path: ./rules/🆎_AdBlock_Privacy.yaml
-    interval: 86400
-  🌐 IP_CIDR-MM:
-    type: http
-    behavior: domain
-    url: https://cdn.jsdelivr.net/gh/mrpauk/demo@master/mm-cidr.txt
-    path: ./rules/🌐_IP_CIDR-MM.yaml
-    interval: 86400
+  use-host-dns: true
+  prefer-h3: true
+  max-ttl: 600
+  min-ttl: 60
