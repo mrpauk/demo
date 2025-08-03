@@ -5,439 +5,84 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  server: 43.160.193.138
-  port: 34045
-  type: vless
-  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-  tls: true
-  reality-opts:
-    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-    short-id: e8ab71d0
-  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
-  client-fingerprint: firefox
-  network: tcp
-- name: 🇸🇬 Lv2 新加坡 00 [1.5]
-  server: tlbasic.com
-  port: 443
-  type: trojan
-  password: '@@40csjTL8517'
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡｜03｜aws
-  server: sgaws.ccwink.cc
-  port: 56309
+- name: 🇯🇵 Japan-1
+  server: 45.149.156.151
+  port: 10634
   type: hysteria2
-  password: 15b403d1-90f1-4e22-8018-7a439aac8902
-  auth: 15b403d1-90f1-4e22-8018-7a439aac8902
-  sni: sgaws.ccwink.cc
+  password: 8e1cd2aa0e413470
+  auth: 8e1cd2aa0e413470
+  sni: bing.com
   skip-cert-verify: true
-- name: Node-vpn.stupidworld.web.id
-  server: 172.67.149.26
+- name: 🇯🇵 Secure-JP1
+  server: jp.pub.csjoy.online
   port: 443
-  type: trojan
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vpn.stupidworld.web.id/Stupid-World/103.106.228.126-2053
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: 🇺🇸 江江美国 IEPL｜公益 256
-  server: 104.18.20.69
-  port: 443
-  type: vless
-  uuid: 222a1c34-96f5-45fd-bedd-b9ac4b477b98
-  tls: true
-  servername: bp.singbox.ggff.net
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /r6PSatuYdS9gZH6L/c2pjLm8wMG8ub29v
-    headers:
-      Host: bp.singbox.ggff.net
-- name: 🇸🇬 新加坡
-  server: 167.253.158.214
-  port: 23333
   type: hysteria2
-  password: qq102030
-  auth: qq102030
-  sni: weinan.eu.org
-  skip-cert-verify: true
-- name: 🇺🇸 江江美国 IEPL｜公益 319
-  server: 104.18.2.26
-  port: 2083
-  type: vless
-  uuid: d60fc3c5-9f07-4cdb-b81f-70af27936bdc
-  tls: true
-  servername: ex.sue.x10.mx
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: ex.sue.x10.mx
-- name: qg.lqiang.link-domain
-  server: www.visa.com.hk
-  port: 2052
-  type: vless
-  uuid: 7388ad51-365e-496e-8823-d14fa33b7135
+  password: Freedom.fdb2025
+  auth: Freedom.fdb2025
+- name: 🇯🇵 免费-日本4-Ver.7
+  server: lv4k9-g04.jp04-3771-vm0.entry.fr0307a.art
+  port: 447
+  type: vmess
+  uuid: 1e6ad906-0aee-39e4-bc62-baf392a0dfb7
+  alterId: 1
+  cipher: auto
   tls: false
-  servername: qg.lqiang.link
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: qg.lqiang.link
-- name: 🇸🇬 SG-Rs
-  server: 66.179.48.3
-  port: 443
-  type: vless
-  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
+- name: 🇯🇵 免费-日本7-Ver.1
+  server: pe4st-g04.jp07-1f28-vm0.entry.fr0307a.art
+  port: 28786
+  type: vmess
+  uuid: 1e6ad906-0aee-39e4-bc62-baf392a0dfb7
+  alterId: 1
+  cipher: auto
+  tls: false
+- name: YCC 01
+  server: e4j77-g04.jp07-1f28-vm0.entry.fr0307a.art
+  port: 28786
+  type: vmess
+  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
+  alterId: 1
+  cipher: auto
+  tls: false
+- name: YCC 02
+  server: jf5bw-g04.jp06-7c5a-vm0.entry.fr0307a.art
+  port: 28786
+  type: vmess
+  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
+  alterId: 1
+  cipher: auto
   tls: true
-  servername: rs-sg1-1.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /lzj6666
-    headers:
-      Host: rs-sg1-1.lzjnb.shop
-- name: 🇳🇱 江江荷兰 IEPL｜公益 41
-  server: 188.114.98.184
-  port: 2053
-  type: vless
-  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+- name: YCC 03
+  server: t9hhc-g04.jp05-6786-vm0.entry.fr0307a.art
+  port: 46485
+  type: vmess
+  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
+  alterId: 1
+  cipher: auto
+  tls: false
+- name: YCC 04
+  server: yscfd-g04.jp02-9a99-vm0.entry.fr0307a.art
+  port: 11776
+  type: vmess
+  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
+  alterId: 1
+  cipher: auto
+  tls: false
+- name: YCC 05
+  server: s4wdb-g04.jp03-7d22-vm0.entry.fr0307a.art
+  port: 21584
+  type: vmess
+  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
+  alterId: 1
+  cipher: auto
   tls: true
-  servername: bitget1.asdasd.click
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: bitget1.asdasd.click
-- name: 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  server: fshop.web.id
-  port: 443
-  type: vless
-  uuid: 2882451f-ab01-4000-a9a2-aa503e0e44b4
-  tls: true
-  servername: fshop.web.id
-  client-fingerprint: randomized
-  network: ws
-  ws-opts:
-    path: /SG1
-    headers:
-      Host: fshop.web.id
-- name: Node-ttfang.fange.me
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: ttfang
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ttfang.fange.me/
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: Node-torjan.xn--xhq44j.eu.org
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: tg-fq521free
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /torjan.xn--xhq44j.eu.org/
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: 🇸🇬 Legendvps-SG
-  server: www.racknerd.com
-  port: 443
-  type: vless
-  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
-  tls: true
-  servername: legendvps-sg.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /lzjjjjjjj
-    headers:
-      Host: legendvps-sg.lzjnb.shop
-- name: 🇮🇳 印度+V2CROSS.COM
-  server: 103.160.204.26
-  port: 2053
-  type: trojan
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  sni: vle.amclubdns.dpdns.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560&PROT_TYPE=trojan
-    headers:
-      Host: vle.amclubdns.dpdns.org
-- name: 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  server: 162.159.129.11
-  port: 2053
-  type: vless
-  uuid: b1a8ceea-6601-45b5-a674-7e5b64ab6f6f
-  tls: true
-  servername: sub.divib.dynv6.net
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed=2560/?Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps----@Rk_Vps
-    headers:
-      Host: sub.divib.dynv6.net
-- name: XRAY_VLESS_TLS_pindangYes
-  server: debian.sugala.tech
-  port: 443
-  type: vless
-  uuid: b9d91915-5116-4ec6-88a9-a2c3db0b6943
-  tls: true
-  servername: debian.sugala.tech
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: debian.sugala.tech
-- name: Node-inviNcIble.fafa20.ShOp
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: 13253e6e-a1f7-4090-801f-a8dc2b083bef
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /inviNcIble.fafa20.ShOp/tr7PXHQRn4VPwGA2zY/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=?ed=2560
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: Node-ocost-dy.wmlefl.cc
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: slch2024
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ocost-dy.wmlefl.cc/
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: XRAY_VLESS_TLS_vivo19
-  server: debian.sugala.tech
-  port: 443
-  type: vless
-  uuid: ac55da49-5b73-4a27-9e3e-f81a59f0e50b
-  tls: true
-  servername: debian.sugala.tech
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: debian.sugala.tech
-- name: XRAY_VLESS_TLS_realme12x
-  server: debian.sugala.tech
-  port: 443
-  type: vless
-  uuid: 05dac652-123c-4889-8518-b6264373142e
-  tls: true
-  servername: debian.sugala.tech
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: debian.sugala.tech
-- name: 保底防失联CF
-  server: 104.20.2.221
-  port: 8443
-  type: vless
-  uuid: 6c7a6a6a-6a6a-4000-8000-000000000002
-  tls: true
-  servername: bycf.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: bycf.lzjnb.shop
-- name: 🇺🇸 江江美国 IEPL｜公益 353
-  server: 172.66.40.87
-  port: 2083
-  type: vless
-  uuid: 8f320d6a-9953-4065-b61c-d62f89a6767f
-  tls: true
-  servername: e.exedu.ip-ddns.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: e.exedu.ip-ddns.com
-- name: 🇸🇬 SG-Rs 2
-  server: 5.10.244.7
-  port: 443
-  type: vless
-  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
-  tls: true
-  servername: rs-sg2.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /lzjjjjj666
-    headers:
-      Host: rs-sg2.lzjnb.shop
-- name: TG@lzjjjjjjjjjjj
-  server: 103.160.204.40
-  port: 8443
-  type: trojan
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  sni: vle.amclubdns.dpdns.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560&PROT_TYPE=trojan
-    headers:
-      Host: vle.amclubdns.dpdns.org
-- name: 🇸🇬 SG-Rs 3
-  server: 66.179.48.243
-  port: 443
-  type: vless
-  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
-  tls: true
-  servername: rs-sg3.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /lzjjjjjjj666666
-    headers:
-      Host: rs-sg3.lzjnb.shop
-- name: Node-yaml7.ggff.net
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: yaml777
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /yaml7.ggff.net/
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: Node-c2.validbv3528.eu.org
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: Ng35283528
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /c2.validbv3528.eu.org/?ed=2560
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: Node-c2.validbv3528.eu.org 2
-  server: 172.67.149.26
-  port: 443
-  type: trojan
-  password: Ng35283528
-  sni: xz.fanoravpn.web.id
-  alpn:
-  - http%2F1.1
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /c2.validbv3528.eu.org
-    headers:
-      Host: xz.fanoravpn.web.id
-- name: TG@lzjjjjjjjjjjj 2
-  server: 104.17.128.1
-  port: 2096
-  type: trojan
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  sni: vle.amclubdns.dpdns.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560&PROT_TYPE=trojan
-    headers:
-      Host: vle.amclubdns.dpdns.org
-- name: 🇸🇬 SG HY2
-  server: sg.71111111.xyz
-  port: 48793
-  type: hysteria2
-  password: e1986eed-b311-4dd6-b037-2c4f1c3eaf0e
-  auth: e1986eed-b311-4dd6-b037-2c4f1c3eaf0e
-  sni: sg.71111111.xyz
-  skip-cert-verify: false
-- name: 【h2-MG】🏂
-  server: mg.111142.xyz
-  port: 19588
-  type: hysteria2
-  password: pwd5921
-  auth: pwd5921
-  sni: mg.111142.xyz
-  skip-cert-verify: false
-- name: 🇭🇰 香港01
-  server: 149.104.22.201
-  port: 25511
-  type: vless
-  uuid: 9bea4d65-aa80-4c08-85ab-22c49724beab
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: FH6_9znQZ8kTXbWFWV1xgYzOEaJI7orlfxDNPguYGHQ
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇭🇰 香港_Dmit_1
-  server: 103.135.249.16
-  port: 11001
-  type: vless
-  uuid: ed07bbd8-7588-4fc5-aaa6-9a9baa6b6562
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: VyizZ6WGvOrFn32SBp-y0AMUyqR8Ig6WqDyQTsmWjFw
-    short-id: d2ee6a9a
-  servername: addons.mozilla.org
-  client-fingerprint: firefox
-  network: tcp
-- name: Xray_HK
-  server: home.851004.xyz
-  port: 443
-  type: vless
-  uuid: 6353300d-e20f-4f18-ad4f-7494ff68032d
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: sKhZRF8k17E5qjU6liXMAJWiihSIyix5dLs5bgLtVR8
-    short-id: 09dd12b03580b273
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-- name: XRAY_VLESS_TLS_ais
-  server: ff.sobadxr.online
-  port: 443
-  type: vless
-  uuid: 3a5409a5-a520-4e6c-8812-3f98b64c576d
-  tls: true
-  servername: ff.sobadxr.online
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: ff.sobadxr.online
+- name: 星道智能链内网
+  server: vpnicp.xyc.hk.cn
+  port: 20001
+  type: vmess
+  uuid: 7f5f0705-3dfb-4f56-9657-c95cade2ba83
+  alterId: 0
+  cipher: auto
+  tls: false
 - name: 22151-sing-box-reality
   server: 45.149.156.151
   port: 16670
@@ -451,19 +96,41 @@ proxies:
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: tcp
-- name: 🇸🇬 SG-Rs 4
-  server: 45.144.167.46
-  port: 19816
-  type: vless
-  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
-  tls: true
-  servername: rs-sg2.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /lzjjjjj666
-    headers:
-      Host: rs-sg2.lzjnb.shop
-- name: JP_09
+- name: çº½çº¦
+  server: 107.173.229.61
+  port: 43779
+  type: ss
+  cipher: aes-256-gcm
+  password: 9942559781
+- name: 🇯🇵 JP_46
+  server: eo831-g01.jp05-6786-vm0.entry.fr0307a.art
+  port: 46482
+  type: vmess
+  uuid: 4adef4ee-957d-3375-b2f6-8135a051f208
+  alterId: 1
+  cipher: auto
+  tls: false
+- name: 🇯🇵 JP_47
+  server: k5wue-g01.jp05-6786-vm0.entry.fr0307a.art
+  port: 46482
+  type: vmess
+  uuid: 4adef4ee-957d-3375-b2f6-8135a051f208
+  alterId: 1
+  cipher: auto
+  tls: false
+- name: 🇯🇵 CSJoy-SecureNetJP
+  server: jp.pub.csjoy.online
+  port: 443
+  type: hysteria2
+  password: Freedom.fdb2025
+  auth: Freedom.fdb2025
+- name: Joy-SN-Hy2@Freedom
+  server: pub.csjoy.online
+  port: 443
+  type: hysteria2
+  password: Freedom.fdb2024
+  auth: Freedom.fdb2024
+- name: 🇯🇵 JP_03
   server: 45.149.156.151
   port: 10634
   type: hysteria2
@@ -471,42 +138,6 @@ proxies:
   auth: 8e1cd2aa0e413470
   sni: bing.com
   skip-cert-verify: true
-- name: 🇭🇰 香港_Dmit_1 2
-  server: 103.135.249.16
-  port: 11001
-  type: vless
-  uuid: ed07bbd8-7588-4fc5-aaa6-9a9baa6b6562
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: VyizZ6WGvOrFn32SBp-y0AMUyqR8Ig6WqDyQTsmWjFw
-    short-id: d2ee6a9a
-  servername: addons.mozilla.org
-  client-fingerprint: safari
-  network: tcp
-- name: 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  server: 104.21.10.25
-  port: 8880
-  type: vless
-  uuid: cca45b57-0f24-43c8-8911-f8dab5af1e10
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 0522.yeyefeng.dpdns.org
-- name: 🇭🇰 HK-Rs
-  server: 45.144.167.46
-  port: 19816
-  type: vless
-  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
-  tls: true
-  servername: rs-hk.lzjnb.shop
-  network: ws
-  ws-opts:
-    path: /lzjjjj666
-    headers:
-      Host: rs-hk.lzjnb.shop
 proxy-groups:
 - name: ☁️ Proxy
   type: select
@@ -521,93 +152,43 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 120
   proxies:
-  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj 2
-  - 🇸🇬 SG HY2
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
+  - 🇯🇵 Japan-1
+  - 🇯🇵 Secure-JP1
+  - 🇯🇵 免费-日本4-Ver.7
+  - 🇯🇵 免费-日本7-Ver.1
+  - YCC 01
+  - YCC 02
+  - YCC 03
+  - YCC 04
+  - YCC 05
+  - 星道智能链内网
   - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - JP_09
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇭🇰 HK-Rs
+  - çº½çº¦
+  - 🇯🇵 JP_46
+  - 🇯🇵 JP_47
+  - 🇯🇵 CSJoy-SecureNetJP
+  - Joy-SN-Hy2@Freedom
+  - 🇯🇵 JP_03
 - name: ✏️ Manual
   type: select
   proxies:
-  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj 2
-  - 🇸🇬 SG HY2
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
+  - 🇯🇵 Japan-1
+  - 🇯🇵 Secure-JP1
+  - 🇯🇵 免费-日本4-Ver.7
+  - 🇯🇵 免费-日本7-Ver.1
+  - YCC 01
+  - YCC 02
+  - YCC 03
+  - YCC 04
+  - YCC 05
+  - 星道智能链内网
   - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - JP_09
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇭🇰 HK-Rs
+  - çº½çº¦
+  - 🇯🇵 JP_46
+  - 🇯🇵 JP_47
+  - 🇯🇵 CSJoy-SecureNetJP
+  - Joy-SN-Hy2@Freedom
+  - 🇯🇵 JP_03
 - name: 🎈 Others
   type: select
   proxies:
@@ -615,99 +196,49 @@ proxy-groups:
   - DIRECT
 - name: 📶 Balance
   type: load-balance
-  strategy: round-robin
+  strategy: consistent-hashing
   url: http://www.gstatic.com/generate_204
   interval: 120
   proxies:
-  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj 2
-  - 🇸🇬 SG HY2
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
+  - 🇯🇵 Japan-1
+  - 🇯🇵 Secure-JP1
+  - 🇯🇵 免费-日本4-Ver.7
+  - 🇯🇵 免费-日本7-Ver.1
+  - YCC 01
+  - YCC 02
+  - YCC 03
+  - YCC 04
+  - YCC 05
+  - 星道智能链内网
   - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - JP_09
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇭🇰 HK-Rs
+  - çº½çº¦
+  - 🇯🇵 JP_46
+  - 🇯🇵 JP_47
+  - 🇯🇵 CSJoy-SecureNetJP
+  - Joy-SN-Hy2@Freedom
+  - 🇯🇵 JP_03
 - name: 🛡 Auto
   type: fallback
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 [www.v2nodes.com] vless-SG-9774633
-  - 🇸🇬 Lv2 新加坡 00 [1.5]
-  - 🇸🇬 新加坡｜03｜aws
-  - Node-vpn.stupidworld.web.id
-  - 🇺🇸 江江美国 IEPL｜公益 256
-  - 🇸🇬 新加坡
-  - 🇺🇸 江江美国 IEPL｜公益 319
-  - qg.lqiang.link-domain
-  - 🇸🇬 SG-Rs
-  - 🇳🇱 江江荷兰 IEPL｜公益 41
-  - 🇸🇬 (SG) Akamai Technologies 🇸🇬  🇸🇬
-  - Node-ttfang.fange.me
-  - Node-torjan.xn--xhq44j.eu.org
-  - 🇸🇬 Legendvps-SG
-  - 🇮🇳 印度+V2CROSS.COM
-  - 🇸🇬 [www.v2nodes.com] vless-SG-11975
-  - XRAY_VLESS_TLS_pindangYes
-  - Node-inviNcIble.fafa20.ShOp
-  - Node-ocost-dy.wmlefl.cc
-  - XRAY_VLESS_TLS_vivo19
-  - XRAY_VLESS_TLS_realme12x
-  - 保底防失联CF
-  - 🇺🇸 江江美国 IEPL｜公益 353
-  - 🇸🇬 SG-Rs 2
-  - TG@lzjjjjjjjjjjj
-  - 🇸🇬 SG-Rs 3
-  - Node-yaml7.ggff.net
-  - Node-c2.validbv3528.eu.org
-  - Node-c2.validbv3528.eu.org 2
-  - TG@lzjjjjjjjjjjj 2
-  - 🇸🇬 SG HY2
-  - 【h2-MG】🏂
-  - 🇭🇰 香港01
-  - 🇭🇰 香港_Dmit_1
-  - Xray_HK
-  - XRAY_VLESS_TLS_ais
+  - 🇯🇵 Japan-1
+  - 🇯🇵 Secure-JP1
+  - 🇯🇵 免费-日本4-Ver.7
+  - 🇯🇵 免费-日本7-Ver.1
+  - YCC 01
+  - YCC 02
+  - YCC 03
+  - YCC 04
+  - YCC 05
+  - 星道智能链内网
   - 22151-sing-box-reality
-  - 🇸🇬 SG-Rs 4
-  - JP_09
-  - 🇭🇰 香港_Dmit_1 2
-  - 🇸🇬 [www.v2nodes.com] vless-SG-8800560
-  - 🇭🇰 HK-Rs
+  - çº½çº¦
+  - 🇯🇵 JP_46
+  - 🇯🇵 JP_47
+  - 🇯🇵 CSJoy-SecureNetJP
+  - Joy-SN-Hy2@Freedom
+  - 🇯🇵 JP_03
 rules:
 - DOMAIN-KEYWORD,ai,DIRECT
 - DOMAIN-KEYWORD,deepseek,DIRECT
