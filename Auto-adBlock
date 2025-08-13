@@ -13,68 +13,6 @@ proxies:
   auth: 8e1cd2aa0e413470
   sni: bing.com
   skip-cert-verify: true
-- name: 🇯🇵 Secure-JP1
-  server: jp.pub.csjoy.online
-  port: 443
-  type: hysteria2
-  password: Freedom.fdb2025
-  auth: Freedom.fdb2025
-- name: 🇯🇵 免费-日本4-Ver.7
-  server: lv4k9-g04.jp04-3771-vm0.entry.fr0307a.art
-  port: 447
-  type: vmess
-  uuid: 1e6ad906-0aee-39e4-bc62-baf392a0dfb7
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: 🇯🇵 免费-日本7-Ver.1
-  server: pe4st-g04.jp07-1f28-vm0.entry.fr0307a.art
-  port: 28786
-  type: vmess
-  uuid: 1e6ad906-0aee-39e4-bc62-baf392a0dfb7
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: YCC 01
-  server: e4j77-g04.jp07-1f28-vm0.entry.fr0307a.art
-  port: 28786
-  type: vmess
-  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: YCC 02
-  server: jf5bw-g04.jp06-7c5a-vm0.entry.fr0307a.art
-  port: 28786
-  type: vmess
-  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
-  alterId: 1
-  cipher: auto
-  tls: true
-- name: YCC 03
-  server: t9hhc-g04.jp05-6786-vm0.entry.fr0307a.art
-  port: 46485
-  type: vmess
-  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: YCC 04
-  server: yscfd-g04.jp02-9a99-vm0.entry.fr0307a.art
-  port: 11776
-  type: vmess
-  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: YCC 05
-  server: s4wdb-g04.jp03-7d22-vm0.entry.fr0307a.art
-  port: 21584
-  type: vmess
-  uuid: b75a27e9-9e5b-3bec-a069-9eb2f7e327db
-  alterId: 1
-  cipher: auto
-  tls: true
 - name: 星道智能链内网
   server: vpnicp.xyc.hk.cn
   port: 20001
@@ -83,13 +21,16 @@ proxies:
   alterId: 0
   cipher: auto
   tls: false
+  skip-cert-verify: true
 - name: 22151-sing-box-reality
   server: 45.149.156.151
   port: 16670
   type: vless
   uuid: 7828e04b-37ec-45bd-88bc-a762b7617faa
   tls: true
+  tfo: false
   flow: xtls-rprx-vision
+  skip-cert-verify: true
   reality-opts:
     public-key: lk3pZgHR-BXXn98Wbm1WL4nZVk87pTqv5DQUJhKOnHs
     short-id: 2c262d078a2523e1
@@ -102,35 +43,7 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: 9942559781
-- name: 🇯🇵 JP_46
-  server: eo831-g01.jp05-6786-vm0.entry.fr0307a.art
-  port: 46482
-  type: vmess
-  uuid: 4adef4ee-957d-3375-b2f6-8135a051f208
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: 🇯🇵 JP_47
-  server: k5wue-g01.jp05-6786-vm0.entry.fr0307a.art
-  port: 46482
-  type: vmess
-  uuid: 4adef4ee-957d-3375-b2f6-8135a051f208
-  alterId: 1
-  cipher: auto
-  tls: false
-- name: 🇯🇵 CSJoy-SecureNetJP
-  server: jp.pub.csjoy.online
-  port: 443
-  type: hysteria2
-  password: Freedom.fdb2025
-  auth: Freedom.fdb2025
-- name: Joy-SN-Hy2@Freedom
-  server: pub.csjoy.online
-  port: 443
-  type: hysteria2
-  password: Freedom.fdb2024
-  auth: Freedom.fdb2024
-- name: 🇯🇵 JP_03
+- name: JP_03
   server: 45.149.156.151
   port: 10634
   type: hysteria2
@@ -138,6 +51,164 @@ proxies:
   auth: 8e1cd2aa0e413470
   sni: bing.com
   skip-cert-verify: true
+- name: c44576d2-VLESS_TCP/TLS_Vision
+  server: chancezone.top
+  port: 41436
+  type: vless
+  uuid: c44576d2-c560-4fe3-913e-cc34d018fec9
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  network: tcp
+- name: c44576d2-VLESS_WS
+  server: chancezone.top
+  port: 34699
+  type: vless
+  uuid: c44576d2-c560-4fe3-913e-cc34d018fec9
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: chancezone.top
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /kbfpws
+    headers:
+      Host: chancezone.top
+- name: c44576d2-VMess_WS
+  server: chancezone.top
+  port: 21799
+  type: vmess
+  uuid: c44576d2-c560-4fe3-913e-cc34d018fec9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: chancezone.top
+  network: ws
+  ws-opts:
+    path: /kbfp
+    headers:
+      Host: chancezone.top
+- name: c44576d2-Trojan_TCP
+  server: chancezone.top
+  port: 20157
+  type: trojan
+  password: c44576d2-c560-4fe3-913e-cc34d018fec9
+  sni: chancezone.top
+  skip-cert-verify: true
+- name: c44576d2-singbox_hysteria2
+  server: chancezone.top
+  port: 36381
+  type: hysteria2
+  password: c44576d2-c560-4fe3-913e-cc34d018fec9
+  auth: c44576d2-c560-4fe3-913e-cc34d018fec9
+  sni: chancezone.top
+  skip-cert-verify: true
+- name: c44576d2-VLESS_Reality_Vision
+  server: chancezone.top
+  port: 35672
+  type: vless
+  uuid: c44576d2-c560-4fe3-913e-cc34d018fec9
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: XGF6Ruqv47ibJ3v356h6HS2bR_u5fh45tgKn5UxUYV0
+    short-id: 6ba85179e30d4fc2
+  servername: chancezone.top
+  client-fingerprint: chrome
+  network: tcp
+- name: c44576d2-VLESS_Reality_gPRC
+  server: chancezone.top
+  port: 17421
+  type: vless
+  uuid: c44576d2-c560-4fe3-913e-cc34d018fec9
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  reality-opts:
+    public-key: XGF6Ruqv47ibJ3v356h6HS2bR_u5fh45tgKn5UxUYV0
+    short-id: 6ba85179e30d4fc2
+  servername: chancezone.top
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc
+- name: 🇭🇰 Basic-香港-BGP-06
+  server: 1111-2222.0020.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 34795
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0020.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+- name: Basic-官网 helloshudong.com
+  server: 1111-2222.0016.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 34794
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0016.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+- name: 🇭🇰 Basic-香港-BGP-02
+  server: 1111-2222.0016.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 34794
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0016.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+- name: 🇯🇵 Basic-日本-BGP-02
+  server: 1111-2222.0006.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 58417
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0006.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+- name: 🇯🇵 Basic-日本-BGP-01
+  server: 1111-2222.0005.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 50001
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0005.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+- name: 🇸🇬 Basic-新加坡-BGP-02
+  server: 1111-2222.0004.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 48752
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0004.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+- name: 🇭🇰 Basic-香港-BGP-05
+  server: 1111-2222.0019.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
+  port: 36675
+  type: vmess
+  uuid: e2691ff6-13d5-3897-9718-46914aea22c0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: 1111-2222.0019.aaaa-cloud-cdna-apia-gwsd-aaaa-aabb.com
 proxy-groups:
 - name: ☁️ Proxy
   type: select
@@ -153,42 +224,46 @@ proxy-groups:
   interval: 120
   proxies:
   - 🇯🇵 Japan-1
-  - 🇯🇵 Secure-JP1
-  - 🇯🇵 免费-日本4-Ver.7
-  - 🇯🇵 免费-日本7-Ver.1
-  - YCC 01
-  - YCC 02
-  - YCC 03
-  - YCC 04
-  - YCC 05
   - 星道智能链内网
   - 22151-sing-box-reality
   - çº½çº¦
-  - 🇯🇵 JP_46
-  - 🇯🇵 JP_47
-  - 🇯🇵 CSJoy-SecureNetJP
-  - Joy-SN-Hy2@Freedom
-  - 🇯🇵 JP_03
+  - JP_03
+  - c44576d2-VLESS_TCP/TLS_Vision
+  - c44576d2-VLESS_WS
+  - c44576d2-VMess_WS
+  - c44576d2-Trojan_TCP
+  - c44576d2-singbox_hysteria2
+  - c44576d2-VLESS_Reality_Vision
+  - c44576d2-VLESS_Reality_gPRC
+  - 🇭🇰 Basic-香港-BGP-06
+  - Basic-官网 helloshudong.com
+  - 🇭🇰 Basic-香港-BGP-02
+  - 🇯🇵 Basic-日本-BGP-02
+  - 🇯🇵 Basic-日本-BGP-01
+  - 🇸🇬 Basic-新加坡-BGP-02
+  - 🇭🇰 Basic-香港-BGP-05
 - name: ✏️ Manual
   type: select
   proxies:
   - 🇯🇵 Japan-1
-  - 🇯🇵 Secure-JP1
-  - 🇯🇵 免费-日本4-Ver.7
-  - 🇯🇵 免费-日本7-Ver.1
-  - YCC 01
-  - YCC 02
-  - YCC 03
-  - YCC 04
-  - YCC 05
   - 星道智能链内网
   - 22151-sing-box-reality
   - çº½çº¦
-  - 🇯🇵 JP_46
-  - 🇯🇵 JP_47
-  - 🇯🇵 CSJoy-SecureNetJP
-  - Joy-SN-Hy2@Freedom
-  - 🇯🇵 JP_03
+  - JP_03
+  - c44576d2-VLESS_TCP/TLS_Vision
+  - c44576d2-VLESS_WS
+  - c44576d2-VMess_WS
+  - c44576d2-Trojan_TCP
+  - c44576d2-singbox_hysteria2
+  - c44576d2-VLESS_Reality_Vision
+  - c44576d2-VLESS_Reality_gPRC
+  - 🇭🇰 Basic-香港-BGP-06
+  - Basic-官网 helloshudong.com
+  - 🇭🇰 Basic-香港-BGP-02
+  - 🇯🇵 Basic-日本-BGP-02
+  - 🇯🇵 Basic-日本-BGP-01
+  - 🇸🇬 Basic-新加坡-BGP-02
+  - 🇭🇰 Basic-香港-BGP-05
 - name: 🎈 Others
   type: select
   proxies:
@@ -201,162 +276,71 @@ proxy-groups:
   interval: 120
   proxies:
   - 🇯🇵 Japan-1
-  - 🇯🇵 Secure-JP1
-  - 🇯🇵 免费-日本4-Ver.7
-  - 🇯🇵 免费-日本7-Ver.1
-  - YCC 01
-  - YCC 02
-  - YCC 03
-  - YCC 04
-  - YCC 05
   - 星道智能链内网
   - 22151-sing-box-reality
   - çº½çº¦
-  - 🇯🇵 JP_46
-  - 🇯🇵 JP_47
-  - 🇯🇵 CSJoy-SecureNetJP
-  - Joy-SN-Hy2@Freedom
-  - 🇯🇵 JP_03
+  - JP_03
+  - c44576d2-VLESS_TCP/TLS_Vision
+  - c44576d2-VLESS_WS
+  - c44576d2-VMess_WS
+  - c44576d2-Trojan_TCP
+  - c44576d2-singbox_hysteria2
+  - c44576d2-VLESS_Reality_Vision
+  - c44576d2-VLESS_Reality_gPRC
+  - 🇭🇰 Basic-香港-BGP-06
+  - Basic-官网 helloshudong.com
+  - 🇭🇰 Basic-香港-BGP-02
+  - 🇯🇵 Basic-日本-BGP-02
+  - 🇯🇵 Basic-日本-BGP-01
+  - 🇸🇬 Basic-新加坡-BGP-02
+  - 🇭🇰 Basic-香港-BGP-05
 - name: 🛡 Auto
   type: fallback
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 Japan-1
-  - 🇯🇵 Secure-JP1
-  - 🇯🇵 免费-日本4-Ver.7
-  - 🇯🇵 免费-日本7-Ver.1
-  - YCC 01
-  - YCC 02
-  - YCC 03
-  - YCC 04
-  - YCC 05
   - 星道智能链内网
   - 22151-sing-box-reality
   - çº½çº¦
-  - 🇯🇵 JP_46
-  - 🇯🇵 JP_47
-  - 🇯🇵 CSJoy-SecureNetJP
-  - Joy-SN-Hy2@Freedom
-  - 🇯🇵 JP_03
+  - JP_03
+  - c44576d2-VLESS_TCP/TLS_Vision
+  - c44576d2-VLESS_WS
+  - c44576d2-VMess_WS
+  - c44576d2-Trojan_TCP
+  - c44576d2-singbox_hysteria2
+  - c44576d2-VLESS_Reality_Vision
+  - c44576d2-VLESS_Reality_gPRC
+  - 🇭🇰 Basic-香港-BGP-06
+  - Basic-官网 helloshudong.com
+  - 🇭🇰 Basic-香港-BGP-02
+  - 🇯🇵 Basic-日本-BGP-02
+  - 🇯🇵 Basic-日本-BGP-01
+  - 🇸🇬 Basic-新加坡-BGP-02
+  - 🇭🇰 Basic-香港-BGP-05
 rules:
-- DOMAIN-KEYWORD,ai,DIRECT
-- DOMAIN-KEYWORD,deepseek,DIRECT
 - DOMAIN-KEYWORD,facebook,☁️ Proxy
 - DOMAIN-KEYWORD,fb,☁️ Proxy
-- DOMAIN-KEYWORD,gpt,DIRECT
-- DOMAIN-SUFFIX,agdbank.com,DIRECT
-- DOMAIN-SUFFIX,ai.cloudflare.com,DIRECT
-- DOMAIN-SUFFIX,ai.google.dev,DIRECT
-- DOMAIN-SUFFIX,aihub.google.com,DIRECT
-- DOMAIN-SUFFIX,anthropic.com,DIRECT
-- DOMAIN-SUFFIX,api.deepseek.com,DIRECT
-- DOMAIN-SUFFIX,api.openai.com,DIRECT
-- DOMAIN-SUFFIX,ayabank.com,DIRECT
-- DOMAIN-SUFFIX,cbbank.com.mm,DIRECT
-- DOMAIN-SUFFIX,chat.deepseek.com,DIRECT
-- DOMAIN-SUFFIX,chat.openai.com,DIRECT
-- DOMAIN-SUFFIX,chat.qwen.ai,DIRECT
-- DOMAIN-SUFFIX,claude.ai,DIRECT
-- DOMAIN-SUFFIX,com.mm,DIRECT
-- DOMAIN-SUFFIX,console.anthropic.com,DIRECT
-- DOMAIN-SUFFIX,deepmind.google,DIRECT
-- DOMAIN-SUFFIX,deepseek.com,DIRECT
-- DOMAIN-SUFFIX,edu.mm,DIRECT
-- DOMAIN-SUFFIX,facebook.com,☁️ Proxy
-- DOMAIN-SUFFIX,fb.com,☁️ Proxy
-- DOMAIN-SUFFIX,fbcdn.net,☁️ Proxy
-- DOMAIN-SUFFIX,ffa.chat,DIRECT
-- DOMAIN-SUFFIX,fzxx.net,☁️ Proxy
-- DOMAIN-SUFFIX,gemini.google.com,DIRECT
-- DOMAIN-SUFFIX,generativelanguage.googleapis.com,DIRECT
-- DOMAIN-SUFFIX,ggpht.com,DIRECT
-- DOMAIN-SUFFIX,gmail.com,DIRECT
-- DOMAIN-SUFFIX,goog,DIRECT
-- DOMAIN-SUFFIX,google-analytics.com,DIRECT
-- DOMAIN-SUFFIX,google.com,DIRECT
-- DOMAIN-SUFFIX,google.net,DIRECT
-- DOMAIN-SUFFIX,google.org,DIRECT
-- DOMAIN-SUFFIX,googleapis.com,DIRECT
-- DOMAIN-SUFFIX,googlemail.com,DIRECT
-- DOMAIN-SUFFIX,googleplex.com,DIRECT
-- DOMAIN-SUFFIX,googleusercontent.com,DIRECT
-- DOMAIN-SUFFIX,googlevideo.com,DIRECT
-- DOMAIN-SUFFIX,gov.mm,DIRECT
-- DOMAIN-SUFFIX,gstatic.com,DIRECT
 - DOMAIN-SUFFIX,instagram.com,☁️ Proxy
-- DOMAIN-SUFFIX,kbzbank.com,DIRECT
-- DOMAIN-SUFFIX,mabbank.com,DIRECT
 - DOMAIN-SUFFIX,messenger.com,☁️ Proxy
-- DOMAIN-SUFFIX,mpt.com.mm,DIRECT
-- DOMAIN-SUFFIX,mytel.com.mm,DIRECT
-- DOMAIN-SUFFIX,net.mm,DIRECT
-- DOMAIN-SUFFIX,ooredoo.com.mm,DIRECT
-- DOMAIN-SUFFIX,openai.com,DIRECT
-- DOMAIN-SUFFIX,org.mm,DIRECT
-- DOMAIN-SUFFIX,perplexity.ai,DIRECT
-- DOMAIN-SUFFIX,platform.openai.com,DIRECT
-- DOMAIN-SUFFIX,qwen.ai,DIRECT
-- DOMAIN-SUFFIX,telenor.com.mm,DIRECT
-- DOMAIN-SUFFIX,truemoney.com.mm,DIRECT
-- DOMAIN-SUFFIX,vertexai.google.com,DIRECT
-- DOMAIN-SUFFIX,wavemoney.com.mm,DIRECT
-- DOMAIN-SUFFIX,whatsapp.com,☁️ Proxy
-- DOMAIN-SUFFIX,workers.ai,DIRECT
-- DOMAIN-SUFFIX,xx.fbcdn.net,☁️ Proxy
-- DOMAIN-SUFFIX,xy.fbcdn.net,☁️ Proxy
-- DOMAIN-SUFFIX,yomabank.com,DIRECT
-- DOMAIN-SUFFIX,youtube.com,DIRECT
-- DOMAIN-SUFFIX,ytimg.com,DIRECT
+- DOMAIN-KEYWORD,google,DIRECT
 - DOMAIN,idope.se,DIRECT
-- GEOIP,MM,DIRECT,no-resolve
-- PROCESS-NAME,com.ascend.money.rewards.app.mm,DIRECT
-- PROCESS-NAME,com.ayaplus.subscriber,DIRECT
-- PROCESS-NAME,com.com.jits.mbanking.aya,DIRECT
-- PROCESS-NAME,com.deepseek.chat,DIRECT
 - PROCESS-NAME,com.ezviz,DIRECT
-- PROCESS-NAME,com.google.android.apps.docs,DIRECT
-- PROCESS-NAME,com.google.android.apps.maps,DIRECT
-- PROCESS-NAME,com.google.android.youtube,DIRECT
-- PROCESS-NAME,com.kbzbank.kpaycustomer,DIRECT
 - PROCESS-NAME,com.mm.android.smartlifeiot,DIRECT
-- PROCESS-NAME,com.mytel.myid,DIRECT
-- PROCESS-NAME,com.mytel.viettech.abl.eu.v2.android,DIRECT
-- PROCESS-NAME,com.ofss.digx.mab,DIRECT
-- PROCESS-NAME,com.ooredoo.selfcare,DIRECT
 - PROCESS-NAME,com.openai.chatgpt,DIRECT
 - PROCESS-NAME,com.tencent.mm,DIRECT
-- PROCESS-NAME,mm.com.atom.store,DIRECT
-- PROCESS-NAME,mm.com.mptvas,DIRECT
-- PROCESS-NAME,mm.com.wavemoney.wavepay,DIRECT
 - PROCESS-NAME,network.kalock.myanmar2d,DIRECT
 - PROCESS-NAME,org.telegram.messenger,DIRECT
-- PROCESS-NAME,qbittorrent.exe,DIRECT
 - PROCESS-NAME,us.zoom.videomeetings,DIRECT
 - RULE-SET,🆎 AdBlock,REJECT
 - RULE-SET,🆎 AdBlock Privacy,REJECT
 - RULE-SET,🍃 BanProgramAD,REJECT
 - RULE-SET,🛑 BanAD,REJECT
-- RULE-SET,Ⓜ️ Microsoft,DIRECT
-- RULE-SET,♻️ OneDrive,DIRECT
 - RULE-SET,⚙️ mm-ipcidr,DIRECT
 - RULE-SET,🏠LAN,DIRECT
+- GEOIP,MM,DIRECT,no-resolve
 - MATCH,🎈 Others
 rule-providers:
-  Ⓜ️ Microsoft:
-    behavior: classical
-    format: yaml
-    type: http
-    url: https://file.sh.seejoy.top:9999/subscribe/rule/Microsoft.list
-    interval: 86400
-    path: ./rule-providers/Microsoft.list
-  ♻️ OneDrive:
-    behavior: classical
-    format: yaml
-    type: http
-    url: https://file.sh.seejoy.top:9999/subscribe/rule/OneDrive.list
-    interval: 86400
-    path: ./rule-providers/OneDrive.list
   ⚙️ mm-ipcidr:
     behavior: ipcidr
     format: yaml
@@ -409,20 +393,24 @@ dns:
   - '*.local'
   - '*.arpa'
   nameserver:
-  - 163.5.255.250
-  - 203.81.64.2
-  - 223.5.5.5
-  - 114.114.114.114
-  - 1.0.0.1
+  - tls://1.1.1.1
+  - https://dns.google/dns-query
   fallback:
-  - https://1.1.1.1/dns-query
   - tls://8.8.8.8:853
+  - https://1.1.1.1/dns-query
   fallback-filter:
     geoip: false
     domain:
     - +.google.com
     - +.facebook.com
     - +.youtube.com
+  nameserver-policy:
+    192.168.*: https://dns.google/dns-query
+    10.*: https://dns.google/dns-query
+    172.16.*: https://dns.google/dns-query
+    '*.lan': https://dns.google/dns-query
+    '*.local': https://dns.google/dns-query
+    '*.arpa': https://dns.google/dns-query
   use-host-dns: true
   prefer-h3: true
   max-ttl: 600
