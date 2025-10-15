@@ -1,23 +1,22 @@
-####################################
-# Creator: KOPAUK
-# Client: Clash.Meta
-# Time: October 1, 2025 at 00:37:59
-####################################
-# !! ဤ config ကို Clash.Meta,Clash Verge တို့ဖြင့်အသုံးပြုပါ
 port: 7890
 socks-port: 7891
+mixed-port: 7788
 allow-lan: false
 mode: rule
 log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+ipv6: false
 external-controller: 127.0.0.1:9090
+secret: ''
 geodata-mode: true
 geo-auto-update: true
 geo-update-interval: 24
 geox-url:
-  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
-  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
 experimental:
   quic:
     enable: true
@@ -25,616 +24,521 @@ tun:
   enable: true
   stack: system
   dns-hijack:
-    - 198.18.0.2:53
+  - 198.18.0.2:53
+  auto-route: true
+  auto-detect-interface: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - 114.114.114.114
-    - 8.8.4.4
-    - 1.0.0.1
-    - https://dns.google/dns-query
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+  - 8.8.4.4
+  - 1.0.0.1
+  - https://dns.google/dns-query
   fallback:
-    - https://cloudflare-dns.com/dns-query
-    - 8.8.4.4
-    - 1.0.0.1
+  - https://cloudflare-dns.com/dns-query
+  - 8.8.4.4
+  - 1.0.0.1
   fallback-filter:
     geoip: true
     geoip-code: MM
     ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+    - 240.0.0.0/4
+bypass-tun:
+- 10.0.0.0/8
+- 100.64.0.0/10
+- 127.0.0.0/8
+- 169.254.0.0/16
+- 172.16.0.0/12
+- 192.0.0.0/24
+- 192.0.2.0/24
+- 192.88.99.0/24
+- 198.18.0.0/15
+- 198.51.100.0/24
+- 203.0.113.0/24
+- 224.0.0.0/4
+- 255.255.255.255/32
+bypass-system: true
+dns-direct-fallback-proxy: true
 sniffer:
   enable: true
   force-dns-mapping: true
+  parse-pure-ip: true
   sniff:
     HTTP:
-      ports: [80]
+      ports:
+      - 80
       override-destination: true
     TLS:
-      ports: [443]
+      ports:
+      - 443
+      override-destination: true
     QUIC:
-      ports: [443]
+      ports:
+      - 443
+      override-destination: true
 proxies:
-  - name: "🇸🇬亚马逊新加坡1号"
-    type: vless
-    server: 3bd9.55dca.e048.f7-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: b295-23ap29-6bh.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇸🇬亚马逊新加坡4号"
-    type: vless
-    server: 3bd9.55dca.e048.f10-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: yfsg-1.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇸🇬AWS新加坡04 | 高速专线推荐"
-    type: vless
-    server: pq.aws61.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: iosapps.itunes.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 9076EbD5vM8kATc_08QvDiqZF5KHTM_LaSrMOvcwfHw
-      short-id: 57b7989c
-    client-fingerprint: chrome
-  - name: "🇸🇬AWS新加坡05 | 高速专线推荐"
-    type: vless
-    server: pq.aws62.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: iosapps.itunes.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: kzlqssyYFyVB-nGMDTQXITmiEZNUF4S_ygmuTJ2BEA8
-      short-id: 1f922969
-    client-fingerprint: chrome
-  - name: "🇸🇬AWS新加坡03 | 高速专线推荐"
-    type: vless
-    server: pq.aws60.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: iosapps.itunes.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: xjWkdgeetCnB1-kHqwVnAaSUqg4qK9TFWQlamW8FSRI
-      short-id: e2e15173
-    client-fingerprint: chrome
-  - name: "🇸🇬亚马逊新加坡3号"
-    type: vless
-    server: 3bd9.55dca.e048.f9-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: yfsg-1.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇸🇬亚马逊新加坡2号"
-    type: vless
-    server: 3bd9.55dca.e048.f8-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: yfsg-1.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇸🇬新加坡3"
-    type: vless
-    server: 213.35.108.22
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: buylite.music.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: IPno1w9GUxhRN2JY_yIka2DNlnuJHQeb3_0yOCM4pQg
-      short-id: 3ae54db4833c
-    client-fingerprint: chrome
-  - name: "🇭🇰AWS香港04 | 高速专线推荐"
-    type: vless
-    server: pq.aws14.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: www.mi.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: Rwqxz0M2DjcW39poMFeZzfjlYZf2PwxxQ0UEI4CSZik
-      short-id: 6891d99c
-    client-fingerprint: ios
-  - name: "🇸🇬新加坡4"
-    type: vless
-    server: 168.138.165.109
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: buylite.music.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: kR-_5J2EPiB9nrdgyXjgzfJQnxQodkGeV_jgKOEnlEM
-      short-id: fc814374abba
-    client-fingerprint: ios
-  - name: "🇭🇰AWS香港03 | 高速专线推荐"
-    type: vless
-    server: pq.aws13.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: cdn-dynmedia-1.microsoft.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: d0lNmb2Ao0UELGAQ037dgn_dtoOxHuPMEwo9Z4zhLzE
-      short-id: 4d84e084
-    client-fingerprint: ios
-  - name: "🇭🇰AWS香港05 | 高速专线推荐"
-    type: vless
-    server: pq.aws15.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: dyn.felissimo.co.jp
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: XDOJMg-h4KXwKN5KelFXi1bFB8XBmM1XtxgdHnw6qik
-      short-id: 56e852ac
-    client-fingerprint: ios
-  - name: "🇯🇵亚马逊日本2号"
-    type: vless
-    server: 3bd9.55dca.e048.f2-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: yfjp.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇯🇵亚马逊日本3号"
-    type: vless
-    server: 3bd9.55dca.e048.f3-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: yfjp.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇯🇵AWS日本东京02 | 高速专线推荐"
-    type: vless
-    server: pq.aws49.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: buylite.tv.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: xOnY2ykLrcFMIhp7GBQu1mSH7yIW-yCc1ThJnVVtKDc
-      short-id: 5b6762be
-    client-fingerprint: chrome
-  - name: "🇯🇵日本东京"
-    type: vless
-    server: 152.70.99.180
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: buylite.music.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: IHJ7w7m13QsYPFq8eppdqyTyeLmXzTtOG9EGu_-ep2c
-      short-id: 49824283a241
-    client-fingerprint: chrome
-  - name: "🇯🇵AWS日本东京01 | 高速专线推荐"
-    type: vless
-    server: pq.aws48.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: buylite.tv.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 6T-kYBf65ERaEAhxIyHL1FCfu0QR6P2XQMtcvUgzSjM
-      short-id: 70ad150d
-    client-fingerprint: chrome
-  - name: "🇸🇬AWS新加坡01 | 高速专线推荐"
-    type: vless
-    server: pq.aws58.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: iosapps.itunes.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: T1qm-lWyGwT_sYy7KsoVsIH20qVR3W79wHmElqjdgz4
-      short-id: c5905f97
-    client-fingerprint: chrome
-  - name: "🇮🇳印度01-0.1倍"
-    type: vless
-    server: 104.18.20.69
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: in1s-s.pqvip.top
-    network: ws
-    ws-opts:
-      path: /pq/in1
-      headers:
-        host: in1s-s.pqvip.top
-    client-fingerprint: chrome
-  - name: "🇫🇷法国马赛"
-    type: vless
-    server: 144.24.206.147
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: b2-9fr5232-96bh.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇫🇷法国巴黎2"
-    type: vless
-    server: 141.253.124.138
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: b2-9fr2329-6bh.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇳🇱荷兰阿姆斯特丹"
-    type: vless
-    server: 158.101.195.118
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: b295-23nl29-6bh.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇳🇱荷兰| BT下载-0.1倍率"
-    type: vless
-    server: 204.10.194.78
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: yfnl1.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇺🇸美国01 | 合适下载使用-0.01倍"
-    type: vless
-    server: 104.18.20.69
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: us1c.pqvip.top
-    network: ws
-    ws-opts:
-      path: /pq/us1
-      headers:
-        host: us1c.pqvip.top
-    client-fingerprint: chrome
-  - name: "🇩🇪德国法兰克福"
-    type: vless
-    server: 141.147.33.180
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: 767w1-85dc0-9yjd.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇬🇧英国伦敦"
-    type: vless
-    server: 140.238.101.15
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: 767w1-38dc0-9icf2.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇬🇧英国伦敦2"
-    type: vless
-    server: 193.123.187.39
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: 767w1-38dc0-9kcf2.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇰🇷韩国首尔01"
-    type: vless
-    server: 131.186.22.238
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: buylite.music.apple.com
-    network: tcp
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: P--AseuV7sGvgy7YJ8iX58GxeP5-M2oq0Mq2YxPAXRs
-      short-id: f00d40f38482
-    client-fingerprint: chrome
-  - name: "🇹🇼台湾"
-    type: vless
-    server: 3bd9.55dba.e048.f65-fef1f.yfjcs.com
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: tw.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇺🇸美国圣何塞05 | 三网推荐"
-    type: vless
-    server: 146.235.228.34
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: dcpqjs.yydjc.top
-    network: tcp
-    flow: xtls-rprx-vision
-    client-fingerprint: ios
-  - name: "🇺🇸美国圣何塞3"
-    type: vless
-    server: 64.181.255.250
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: b295-23ae29-6bh.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇺🇸美国圣何塞01 | 三网推荐"
-    type: vless
-    server: 146.235.208.162
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: dcpqjs.yydjc.top
-    network: tcp
-    flow: xtls-rprx-vision
-    client-fingerprint: ios
-  - name: "🇺🇸美国圣何塞5"
-    type: vless
-    server: 165.1.68.155
-    port: 443
-    uuid: d8fc842e-169b-485b-926a-b41b278f4dc9
-    udp: true
-    tls: true
-    servername: 767w1-38dc0-9ocf2.xn--4gq62f52gppi29k.com
-    network: tcp
-    flow: xtls-rprx-vision
-  - name: "🇹🇼台湾 | 避免晚高峰使用"
-    type: vless
-    server: pq.hinet.tw1.yydjc.top
-    port: 443
-    uuid: bbdbdc2c-0577-4b97-8924-8a5db8fd6454
-    udp: true
-    tls: true
-    servername: download.yydjc.top
-    network: tcp
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
+- name: 🇮🇳 印度-202606aa
+  server: mooc9.mathematics.ltd
+  port: 443
+  type: vless
+  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
+    short-id: 202606aa
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇭🇰 香港-202606aa
+  server: mooc0.mathematics.ltd
+  port: 443
+  type: vless
+  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
+    short-id: 202606aa
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇨🇳 台湾-202606aa
+  server: mooc7.mathematics.ltd
+  port: 8443
+  type: vless
+  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
+    short-id: 202606aa
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇯🇵 日本-sc202606aa
+  server: mooc4.mathematics.ltd
+  port: 443
+  type: vless
+  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
+    short-id: 202606aa
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸 洛杉矶-cc202606aa
+  server: mooc2.mathematics.ltd
+  port: 443
+  type: vless
+  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
+    short-id: 202606aa
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: tcp
+- name: 旧金山-202606aa
+  server: mooc3.mathematics.ltd
+  port: 443
+  type: vless
+  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: true
+  reality-opts:
+    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
+    short-id: 202606aa
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: tcp
+- name: 中转-202606cc
+  server: moocss.mathematics.ltd
+  port: 32123
+  type: ss
+  cipher: aes-128-gcm
+  password: 4d3d395b202606cc
+- name: 🇭🇰 香港-07
+  server: hk07.jsyjiedian8.com
+  port: 44302
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港-05
+  server: hk05.jsyjiedian8.com
+  port: 41217
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港_02
+  server: hk02.jsyjiedian8.com
+  port: 20511
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港_A5
+  server: hka5.jsyjiedian8.com
+  port: 14025
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港_B2
+  server: bgp2.jsyjiedian8.com
+  port: 34012
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 极速666.com
+  server: hk14.jsylianjie8.com
+  port: 25635
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇸🇬 更新失败官网重新获取订阅配置
+  server: hk15.jsylianjie8.com
+  port: 25847
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港_10
+  server: hk19.jsyjiedian8.com
+  port: 53255
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港-04
+  server: hk04.jsyjiedian8.com
+  port: 45465
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港_B1
+  server: bgp1.jsyjiedian8.com
+  port: 14011
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港-06
+  server: hk06.jsyjiedian8.com
+  port: 22074
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港_B4
+  server: bgp4.jsyjiedian8.com
+  port: 34014
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港_B5
+  server: bgp5.jsylianjie8.com
+  port: 34015
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 套餐到期：2025-12-24
+  server: hk14.jsylianjie8.com
+  port: 25635
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港_09
+  server: hk18.jsyjiedian8.com
+  port: 51254
+  type: vmess
+  uuid: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk18.jsyjiedian8.com
+- name: 🇭🇰 IEPL香港-08
+  server: hk16.jsyjiedian8.com
+  port: 23252
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港_03
+  server: hk03.jsyjiedian8.com
+  port: 44552
+  type: vmess
+  uuid: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk03.jsyjiedian8.com
+- name: 🇭🇰 香港_A1
+  server: hka1.jsyjiedian8.com
+  port: 14021
+  type: vmess
+  uuid: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hka1.jsyjiedian8.com
+- name: 🇭🇰 IEPL香港_A4
+  server: hka4.jsyjiedian8.com
+  port: 34004
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港_01
+  server: hk01.jsylianjie5.com
+  port: 21510
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🏳️‍🌈 剩余流量：1017.23 GB
+  server: hk14.jsylianjie8.com
+  port: 25635
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 距离下次重置剩余：16 天
+  server: hk14.jsylianjie8.com
+  port: 25635
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港B3
+  server: bgp3.jsylianjie8.com
+  port: 14013
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇭🇰 IEPL香港_A2
+  server: hka22.jsyjiedian8.com
+  port: 34022
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
+- name: 🇸🇬 IEPL新加坡-10
+  server: sg10.jsyjiedian8.com
+  port: 45074
+  type: trojan
+  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
+  sni: jsygouer.weixin-baidu-qq.com
+  skip-cert-verify: true
 proxy-groups:
-  - name: "🟢 GLOBAL"
-    type: select
-    proxies:
-      - "🚀 Auto"
-      - "✏️ Manual"
-      - "📶 Stable"
-      - DIRECT
-  - name: "🚀 Auto"
-    type: url-test
-    proxies: 
-      - "🇸🇬亚马逊新加坡1号"
-      - "🇸🇬亚马逊新加坡4号"
-      - "🇸🇬AWS新加坡04 | 高速专线推荐"
-      - "🇸🇬AWS新加坡05 | 高速专线推荐"
-      - "🇸🇬AWS新加坡03 | 高速专线推荐"
-      - "🇸🇬亚马逊新加坡3号"
-      - "🇸🇬亚马逊新加坡2号"
-      - "🇸🇬新加坡3"
-      - "🇭🇰AWS香港04 | 高速专线推荐"
-      - "🇸🇬新加坡4"
-      - "🇭🇰AWS香港03 | 高速专线推荐"
-      - "🇭🇰AWS香港05 | 高速专线推荐"
-      - "🇯🇵亚马逊日本2号"
-      - "🇯🇵亚马逊日本3号"
-      - "🇯🇵AWS日本东京02 | 高速专线推荐"
-      - "🇯🇵日本东京"
-      - "🇯🇵AWS日本东京01 | 高速专线推荐"
-      - "🇸🇬AWS新加坡01 | 高速专线推荐"
-      - "🇮🇳印度01-0.1倍"
-      - "🇫🇷法国马赛"
-      - "🇫🇷法国巴黎2"
-      - "🇳🇱荷兰阿姆斯特丹"
-      - "🇳🇱荷兰| BT下载-0.1倍率"
-      - "🇺🇸美国01 | 合适下载使用-0.01倍"
-      - "🇩🇪德国法兰克福"
-      - "🇬🇧英国伦敦"
-      - "🇬🇧英国伦敦2"
-      - "🇰🇷韩国首尔01"
-      - "🇹🇼台湾"
-      - "🇺🇸美国圣何塞05 | 三网推荐"
-      - "🇺🇸美国圣何塞3"
-      - "🇺🇸美国圣何塞01 | 三网推荐"
-      - "🇺🇸美国圣何塞5"
-      - "🇹🇼台湾 | 避免晚高峰使用"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
-  - name: "✏️ Manual"
-    type: select
-    proxies:
-      - "🇸🇬亚马逊新加坡1号"
-      - "🇸🇬亚马逊新加坡4号"
-      - "🇸🇬AWS新加坡04 | 高速专线推荐"
-      - "🇸🇬AWS新加坡05 | 高速专线推荐"
-      - "🇸🇬AWS新加坡03 | 高速专线推荐"
-      - "🇸🇬亚马逊新加坡3号"
-      - "🇸🇬亚马逊新加坡2号"
-      - "🇸🇬新加坡3"
-      - "🇭🇰AWS香港04 | 高速专线推荐"
-      - "🇸🇬新加坡4"
-      - "🇭🇰AWS香港03 | 高速专线推荐"
-      - "🇭🇰AWS香港05 | 高速专线推荐"
-      - "🇯🇵亚马逊日本2号"
-      - "🇯🇵亚马逊日本3号"
-      - "🇯🇵AWS日本东京02 | 高速专线推荐"
-      - "🇯🇵日本东京"
-      - "🇯🇵AWS日本东京01 | 高速专线推荐"
-      - "🇸🇬AWS新加坡01 | 高速专线推荐"
-      - "🇮🇳印度01-0.1倍"
-      - "🇫🇷法国马赛"
-      - "🇫🇷法国巴黎2"
-      - "🇳🇱荷兰阿姆斯特丹"
-      - "🇳🇱荷兰| BT下载-0.1倍率"
-      - "🇺🇸美国01 | 合适下载使用-0.01倍"
-      - "🇩🇪德国法兰克福"
-      - "🇬🇧英国伦敦"
-      - "🇬🇧英国伦敦2"
-      - "🇰🇷韩国首尔01"
-      - "🇹🇼台湾"
-      - "🇺🇸美国圣何塞05 | 三网推荐"
-      - "🇺🇸美国圣何塞3"
-      - "🇺🇸美国圣何塞01 | 三网推荐"
-      - "🇺🇸美国圣何塞5"
-      - "🇹🇼台湾 | 避免晚高峰使用"
-  - name: "📶 Stable"
-    type: fallback
-    proxies: 
-      - "🇸🇬亚马逊新加坡1号"
-      - "🇸🇬亚马逊新加坡4号"
-      - "🇸🇬AWS新加坡04 | 高速专线推荐"
-      - "🇸🇬AWS新加坡05 | 高速专线推荐"
-      - "🇸🇬AWS新加坡03 | 高速专线推荐"
-      - "🇸🇬亚马逊新加坡3号"
-      - "🇸🇬亚马逊新加坡2号"
-      - "🇸🇬新加坡3"
-      - "🇭🇰AWS香港04 | 高速专线推荐"
-      - "🇸🇬新加坡4"
-      - "🇭🇰AWS香港03 | 高速专线推荐"
-      - "🇭🇰AWS香港05 | 高速专线推荐"
-      - "🇯🇵亚马逊日本2号"
-      - "🇯🇵亚马逊日本3号"
-      - "🇯🇵AWS日本东京02 | 高速专线推荐"
-      - "🇯🇵日本东京"
-      - "🇯🇵AWS日本东京01 | 高速专线推荐"
-      - "🇸🇬AWS新加坡01 | 高速专线推荐"
-      - "🇮🇳印度01-0.1倍"
-      - "🇫🇷法国马赛"
-      - "🇫🇷法国巴黎2"
-      - "🇳🇱荷兰阿姆斯特丹"
-      - "🇳🇱荷兰| BT下载-0.1倍率"
-      - "🇺🇸美国01 | 合适下载使用-0.01倍"
-      - "🇩🇪德国法兰克福"
-      - "🇬🇧英国伦敦"
-      - "🇬🇧英国伦敦2"
-      - "🇰🇷韩国首尔01"
-      - "🇹🇼台湾"
-      - "🇺🇸美国圣何塞05 | 三网推荐"
-      - "🇺🇸美国圣何塞3"
-      - "🇺🇸美国圣何塞01 | 三网推荐"
-      - "🇺🇸美国圣何塞5"
-      - "🇹🇼台湾 | 避免晚高峰使用"
-    url: https://www.google.com/generate_204
-    interval: 600
-  - name: 🧠 AI
-    type: select
-    exclude-filter: (?i)港|HK
-    proxies:
-      - DIRECT
-      - "🚀 Auto"
-      - "✏️ Manual"
-  - name: 🎬 YouTube
-    type: select
-    proxies:
-      - DIRECT
-      - "🚀 Auto"
-  - name: ✈️ Telegram
-    type: select
-    proxies:
-      - DIRECT
-      - "🚀 Auto"
-  - name: 🔍 Google
-    type: select
-    proxies:
-      - DIRECT
-      - "🚀 Auto"
-  - name: 🍎 Apple
-    type: select
-    proxies:
-      - DIRECT
-      - "🚀 Auto"
-  - name: 🪟 Microsoft
-    type: select
-    proxies:
-      - DIRECT
-      - "🚀 Auto"
-  - name: 📘 Facebook
-    type: select
-    proxies:
-      - "🚀 Auto"
-      - "📶 Stable"
-  - name: 💬 Viber
-    type: select
-    proxies:
-      - "📶 Stable"
-      - "🚀 Auto"
-      - DIRECT
-  - name: 🎵 TikTok
-    type: select
-    proxies:
-      - "🚀 Auto"
-      - "📶 Stable"
-      - DIRECT
+- name: 🟢 GLOBAL
+  type: select
+  proxies:
+  - 🚀 Auto
+  - ✏️ Manual
+  - 📶 Stable
+  - DIRECT
+- name: 🚀 Auto
+  proxies:
+  - 🇮🇳 印度-202606aa
+  - 🇭🇰 香港-202606aa
+  - 🇨🇳 台湾-202606aa
+  - 🇯🇵 日本-sc202606aa
+  - 🇺🇸 洛杉矶-cc202606aa
+  - 旧金山-202606aa
+  - 中转-202606cc
+  - 🇭🇰 香港-07
+  - 🇭🇰 IEPL香港-05
+  - 🇭🇰 IEPL香港_02
+  - 🇭🇰 香港_A5
+  - 🇭🇰 IEPL香港_B2
+  - 极速666.com
+  - 🇸🇬 更新失败官网重新获取订阅配置
+  - 🇭🇰 IEPL香港_10
+  - 🇭🇰 IEPL香港-04
+  - 🇭🇰 香港_B1
+  - 🇭🇰 IEPL香港-06
+  - 🇭🇰 IEPL香港_B4
+  - 🇭🇰 香港_B5
+  - 套餐到期：2025-12-24
+  - 🇭🇰 香港_09
+  - 🇭🇰 IEPL香港-08
+  - 🇭🇰 香港_03
+  - 🇭🇰 香港_A1
+  - 🇭🇰 IEPL香港_A4
+  - 🇭🇰 香港_01
+  - 🏳️‍🌈 剩余流量：1017.23 GB
+  - 距离下次重置剩余：16 天
+  - 🇭🇰 香港B3
+  - 🇭🇰 IEPL香港_A2
+  - 🇸🇬 IEPL新加坡-10
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: ✏️ Manual
+  proxies:
+  - 🇮🇳 印度-202606aa
+  - 🇭🇰 香港-202606aa
+  - 🇨🇳 台湾-202606aa
+  - 🇯🇵 日本-sc202606aa
+  - 🇺🇸 洛杉矶-cc202606aa
+  - 旧金山-202606aa
+  - 中转-202606cc
+  - 🇭🇰 香港-07
+  - 🇭🇰 IEPL香港-05
+  - 🇭🇰 IEPL香港_02
+  - 🇭🇰 香港_A5
+  - 🇭🇰 IEPL香港_B2
+  - 极速666.com
+  - 🇸🇬 更新失败官网重新获取订阅配置
+  - 🇭🇰 IEPL香港_10
+  - 🇭🇰 IEPL香港-04
+  - 🇭🇰 香港_B1
+  - 🇭🇰 IEPL香港-06
+  - 🇭🇰 IEPL香港_B4
+  - 🇭🇰 香港_B5
+  - 套餐到期：2025-12-24
+  - 🇭🇰 香港_09
+  - 🇭🇰 IEPL香港-08
+  - 🇭🇰 香港_03
+  - 🇭🇰 香港_A1
+  - 🇭🇰 IEPL香港_A4
+  - 🇭🇰 香港_01
+  - 🏳️‍🌈 剩余流量：1017.23 GB
+  - 距离下次重置剩余：16 天
+  - 🇭🇰 香港B3
+  - 🇭🇰 IEPL香港_A2
+  - 🇸🇬 IEPL新加坡-10
+  type: select
+- name: 📶 Stable
+  proxies:
+  - 🇮🇳 印度-202606aa
+  - 🇭🇰 香港-202606aa
+  - 🇨🇳 台湾-202606aa
+  - 🇯🇵 日本-sc202606aa
+  - 🇺🇸 洛杉矶-cc202606aa
+  - 旧金山-202606aa
+  - 中转-202606cc
+  - 🇭🇰 香港-07
+  - 🇭🇰 IEPL香港-05
+  - 🇭🇰 IEPL香港_02
+  - 🇭🇰 香港_A5
+  - 🇭🇰 IEPL香港_B2
+  - 极速666.com
+  - 🇸🇬 更新失败官网重新获取订阅配置
+  - 🇭🇰 IEPL香港_10
+  - 🇭🇰 IEPL香港-04
+  - 🇭🇰 香港_B1
+  - 🇭🇰 IEPL香港-06
+  - 🇭🇰 IEPL香港_B4
+  - 🇭🇰 香港_B5
+  - 套餐到期：2025-12-24
+  - 🇭🇰 香港_09
+  - 🇭🇰 IEPL香港-08
+  - 🇭🇰 香港_03
+  - 🇭🇰 香港_A1
+  - 🇭🇰 IEPL香港_A4
+  - 🇭🇰 香港_01
+  - 🏳️‍🌈 剩余流量：1017.23 GB
+  - 距离下次重置剩余：16 天
+  - 🇭🇰 香港B3
+  - 🇭🇰 IEPL香港_A2
+  - 🇸🇬 IEPL新加坡-10
+  type: fallback
+  url: https://www.google.com/generate_204
+  interval: 600
+- name: 🧠 AI
+  type: select
+  exclude-filter: (?i)港|HK
+  proxies:
+  - DIRECT
+  - 🚀 Auto
+  - ✏️ Manual
+- name: 🎬 YouTube
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 Auto
+- name: ✈️ Telegram
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 Auto
+- name: 🔍 Google
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 Auto
+- name: 🍎 Apple
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 Auto
+- name: 🪟 Microsoft
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 Auto
+- name: 📘 Facebook
+  type: select
+  proxies:
+  - 🚀 Auto
+  - 📶 Stable
+- name: 💬 Viber
+  type: select
+  proxies:
+  - 📶 Stable
+  - 🚀 Auto
+  - DIRECT
+- name: 🎵 TikTok
+  type: select
+  proxies:
+  - 🚀 Auto
+  - 📶 Stable
+  - DIRECT
 rules:
 - GEOSITE,category-ads-all,REJECT
 - GEOIP,MM,DIRECT
@@ -697,6 +601,6 @@ rules:
 - DOMAIN-SUFFIX,phind.com,🧠 AI
 - DOMAIN-SUFFIX,githubassets.com,🧠 AI
 - DOMAIN-SUFFIX,cdn-lfs.huggingface.co,🧠 AI
-- PROCESS-NAME,ChatGPT,🧠 AI
+- PROCESS-NAME,com.openai.chatgpt,🧠 AI
 - PROCESS-NAME,Copilot,🧠 AI
 - MATCH,🟢 GLOBAL
