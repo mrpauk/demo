@@ -1,51 +1,62 @@
 port: 7890
 socks-port: 7891
 mixed-port: 7788
-allow-lan: false
-mode: rule
+allow-lan: true
+mode: Rule
 log-level: info
 unified-delay: true
 global-client-fingerprint: chrome
 ipv6: false
-external-controller: 127.0.0.1:9090
+external-controller: 0.0.0.0:9090
 secret: ''
-geodata-mode: true
-geo-auto-update: true
-geo-update-interval: 24
-geox-url:
-  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat
-  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
-  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
-  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
-experimental:
-  quic:
-    enable: true
 tun:
   enable: true
   stack: system
   dns-hijack:
-  - 198.18.0.2:53
+  - 8.8.8.8:53
+  - 8.8.4.4:53
   auto-route: true
   auto-detect-interface: true
 dns:
   enable: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
-  nameserver:
-  - 223.5.5.5
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
   - 119.29.29.29
   - 114.114.114.114
+  - 223.5.5.5
+  nameserver:
+  - 119.29.29.29
+  - 114.114.114.114
+  - 223.5.5.5
   - 8.8.4.4
   - 1.0.0.1
-  - https://dns.google/dns-query
   fallback:
   - https://cloudflare-dns.com/dns-query
+  - https://dns.google/dns-query
   - 8.8.4.4
   - 1.0.0.1
   fallback-filter:
     geoip: true
     geoip-code: MM
     ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
     - 240.0.0.0/4
+    - 255.255.255.255/32
 bypass-tun:
 - 10.0.0.0/8
 - 100.64.0.0/10
@@ -62,316 +73,674 @@ bypass-tun:
 - 255.255.255.255/32
 bypass-system: true
 dns-direct-fallback-proxy: true
-sniffer:
-  enable: true
-  force-dns-mapping: true
-  parse-pure-ip: true
-  sniff:
-    HTTP:
-      ports:
-      - 80
-      override-destination: true
-    TLS:
-      ports:
-      - 443
-      override-destination: true
-    QUIC:
-      ports:
-      - 443
-      override-destination: true
+cfw-bypass:
+- localhost
+- 127.*
+- 10.*
+- 172.16.*
+- 172.17.*
+- 172.18.*
+- 172.19.*
+- 172.20.*
+- 172.21.*
+- 172.22.*
+- 172.23.*
+- 172.24.*
+- 172.25.*
+- 172.26.*
+- 172.27.*
+- 172.28.*
+- 172.29.*
+- 172.30.*
+- 172.31.*
+- 192.168.*
+- <local>
+- mpt.com.mm
+- ooredoo.com.mm
+- mytel.com.mm
+- telenor.com.mm
+- myanmar.com.mm
+- kbzbank.com
+- kpay.com.mm
+- wavemoney.com.mm
+- ayabank.com
+- cbbank.com.mm
+- uab.com.mm
+- yoma.com.mm
+- aya.com.mm
+- cbbank.com.mm
+cfw-latency-timeout: 5000
 proxies:
-- name: 🇮🇳 印度-202606aa
-  server: mooc9.mathematics.ltd
+- name: 198.41.223.225
+  server: 198.41.223.225
   port: 443
   type: vless
-  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
-    short-id: 202606aa
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇭🇰 香港-202606aa
-  server: mooc0.mathematics.ltd
-  port: 443
-  type: vless
-  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
-    short-id: 202606aa
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇨🇳 台湾-202606aa
-  server: mooc7.mathematics.ltd
-  port: 8443
-  type: vless
-  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
-    short-id: 202606aa
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇯🇵 日本-sc202606aa
-  server: mooc4.mathematics.ltd
-  port: 443
-  type: vless
-  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
-    short-id: 202606aa
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 洛杉矶-cc202606aa
-  server: mooc2.mathematics.ltd
-  port: 443
-  type: vless
-  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
-    short-id: 202606aa
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: tcp
-- name: 旧金山-202606aa
-  server: mooc3.mathematics.ltd
-  port: 443
-  type: vless
-  uuid: 1257774c-2bad-4eaa-8369-456a4571982c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI
-    short-id: 202606aa
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: tcp
-- name: 中转-202606cc
-  server: moocss.mathematics.ltd
-  port: 32123
-  type: ss
-  cipher: aes-128-gcm
-  password: 4d3d395b202606cc
-- name: 🇭🇰 香港-07
-  server: hk07.jsyjiedian8.com
-  port: 44302
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港-05
-  server: hk05.jsyjiedian8.com
-  port: 41217
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港_02
-  server: hk02.jsyjiedian8.com
-  port: 20511
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港_A5
-  server: hka5.jsyjiedian8.com
-  port: 14025
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港_B2
-  server: bgp2.jsyjiedian8.com
-  port: 34012
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 极速666.com
-  server: hk14.jsylianjie8.com
-  port: 25635
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇸🇬 更新失败官网重新获取订阅配置
-  server: hk15.jsylianjie8.com
-  port: 25847
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港_10
-  server: hk19.jsyjiedian8.com
-  port: 53255
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港-04
-  server: hk04.jsyjiedian8.com
-  port: 45465
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港_B1
-  server: bgp1.jsyjiedian8.com
-  port: 14011
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港-06
-  server: hk06.jsyjiedian8.com
-  port: 22074
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港_B4
-  server: bgp4.jsyjiedian8.com
-  port: 34014
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港_B5
-  server: bgp5.jsylianjie8.com
-  port: 34015
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 套餐到期：2025-12-24
-  server: hk14.jsylianjie8.com
-  port: 25635
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港_09
-  server: hk18.jsyjiedian8.com
-  port: 51254
-  type: vmess
-  uuid: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
   network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /?ed=2048
     headers:
-      Host: hk18.jsyjiedian8.com
-- name: 🇭🇰 IEPL香港-08
-  server: hk16.jsyjiedian8.com
-  port: 23252
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港_03
-  server: hk03.jsyjiedian8.com
-  port: 44552
-  type: vmess
-  uuid: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
+      host: sn.yzqiang.site
+- name: 198.41.222.146
+  server: 198.41.222.146
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
   network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /?ed=2048
     headers:
-      Host: hk03.jsyjiedian8.com
-- name: 🇭🇰 香港_A1
-  server: hka1.jsyjiedian8.com
-  port: 14021
-  type: vmess
-  uuid: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
+      host: sn.yzqiang.site
+- name: 198.41.219.62
+  server: 198.41.219.62
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
   network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /?ed=2048
     headers:
-      Host: hka1.jsyjiedian8.com
-- name: 🇭🇰 IEPL香港_A4
-  server: hka4.jsyjiedian8.com
-  port: 34004
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港_01
-  server: hk01.jsylianjie5.com
-  port: 21510
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🏳️‍🌈 剩余流量：1017.23 GB
-  server: hk14.jsylianjie8.com
-  port: 25635
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 距离下次重置剩余：16 天
-  server: hk14.jsylianjie8.com
-  port: 25635
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 香港B3
-  server: bgp3.jsylianjie8.com
-  port: 14013
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇭🇰 IEPL香港_A2
-  server: hka22.jsyjiedian8.com
-  port: 34022
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
-- name: 🇸🇬 IEPL新加坡-10
-  server: sg10.jsyjiedian8.com
-  port: 45074
-  type: trojan
-  password: eb57b3d4-0346-4b93-93ab-75d54a3a65ce
-  sni: jsygouer.weixin-baidu-qq.com
-  skip-cert-verify: true
+      host: sn.yzqiang.site
+- name: 198.41.218.203
+  server: 198.41.218.203
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 198.41.217.134
+  server: 198.41.217.134
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 198.41.216.24
+  server: 198.41.216.24
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 198.41.215.25
+  server: 198.41.215.25
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 198.41.214.11
+  server: 198.41.214.11
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 198.41.211.59
+  server: 198.41.211.59
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: ct.877774.xyz
+  server: ct.877774.xyz
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: bestcf.yzqiang.site
+  server: bestcf.yzqiang.site
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: ai.cloudflare.com
+  server: ai.cloudflare.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: workers.cloudflare.com
+  server: workers.cloudflare.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: developers.cloudflare.com
+  server: developers.cloudflare.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: blog.cloudflare.com
+  server: blog.cloudflare.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.visa.cn
+  server: www.visa.cn
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: usa.visa.com
+  server: usa.visa.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.visa.com.tw
+  server: www.visa.com.tw
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.visa.com.hk
+  server: www.visa.com.hk
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.visa.com.sg
+  server: www.visa.com.sg
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.shopify.com
+  server: www.shopify.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: icook.hk
+  server: icook.hk
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.epicgames.com
+  server: www.epicgames.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: www.fortnite.com
+  server: www.fortnite.com
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: cloudflare.182682.xyz
+  server: cloudflare.182682.xyz
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.17.49.240
+  server: 104.17.49.240
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.19.42.110
+  server: 104.19.42.110
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.16.147.104
+  server: 104.16.147.104
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.18.95.112
+  server: 104.18.95.112
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.16.144.221
+  server: 104.16.144.221
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.17.155.36
+  server: 104.17.155.36
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 172.64.152.103
+  server: 172.64.152.103
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.17.28.3
+  server: 104.17.28.3
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 172.64.158.200
+  server: 172.64.158.200
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.19.49.226
+  server: 104.19.49.226
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 162.159.36.214
+  server: 162.159.36.214
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.17.128.156
+  server: 104.17.128.156
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.16.150.251
+  server: 104.16.150.251
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.18.188.104
+  server: 104.18.188.104
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 162.159.153.157
+  server: 162.159.153.157
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 162.159.133.49
+  server: 162.159.133.49
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 198.41.208.133
+  server: 198.41.208.133
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 172.64.81.108
+  server: 172.64.81.108
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 162.159.136.65
+  server: 162.159.136.65
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
+- name: 104.19.4.91
+  server: 104.19.4.91
+  port: 443
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  network: ws
+  tls: true
+  udp: false
+  sni: sn.yzqiang.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      host: sn.yzqiang.site
 proxy-groups:
 - name: 🟢 GLOBAL
   type: select
@@ -381,115 +750,159 @@ proxy-groups:
   - 📶 Stable
   - DIRECT
 - name: 🚀 Auto
-  proxies:
-  - 🇮🇳 印度-202606aa
-  - 🇭🇰 香港-202606aa
-  - 🇨🇳 台湾-202606aa
-  - 🇯🇵 日本-sc202606aa
-  - 🇺🇸 洛杉矶-cc202606aa
-  - 旧金山-202606aa
-  - 中转-202606cc
-  - 🇭🇰 香港-07
-  - 🇭🇰 IEPL香港-05
-  - 🇭🇰 IEPL香港_02
-  - 🇭🇰 香港_A5
-  - 🇭🇰 IEPL香港_B2
-  - 极速666.com
-  - 🇸🇬 更新失败官网重新获取订阅配置
-  - 🇭🇰 IEPL香港_10
-  - 🇭🇰 IEPL香港-04
-  - 🇭🇰 香港_B1
-  - 🇭🇰 IEPL香港-06
-  - 🇭🇰 IEPL香港_B4
-  - 🇭🇰 香港_B5
-  - 套餐到期：2025-12-24
-  - 🇭🇰 香港_09
-  - 🇭🇰 IEPL香港-08
-  - 🇭🇰 香港_03
-  - 🇭🇰 香港_A1
-  - 🇭🇰 IEPL香港_A4
-  - 🇭🇰 香港_01
-  - 🏳️‍🌈 剩余流量：1017.23 GB
-  - 距离下次重置剩余：16 天
-  - 🇭🇰 香港B3
-  - 🇭🇰 IEPL香港_A2
-  - 🇸🇬 IEPL新加坡-10
   type: url-test
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+  proxies:
+  - 198.41.223.225
+  - 198.41.222.146
+  - 198.41.219.62
+  - 198.41.218.203
+  - 198.41.217.134
+  - 198.41.216.24
+  - 198.41.215.25
+  - 198.41.214.11
+  - 198.41.211.59
+  - ct.877774.xyz
+  - bestcf.yzqiang.site
+  - ai.cloudflare.com
+  - workers.cloudflare.com
+  - developers.cloudflare.com
+  - blog.cloudflare.com
+  - www.visa.cn
+  - usa.visa.com
+  - www.visa.com.tw
+  - www.visa.com.hk
+  - www.visa.com.sg
+  - www.shopify.com
+  - icook.hk
+  - www.epicgames.com
+  - www.fortnite.com
+  - cloudflare.182682.xyz
+  - 104.17.49.240
+  - 104.19.42.110
+  - 104.16.147.104
+  - 104.18.95.112
+  - 104.16.144.221
+  - 104.17.155.36
+  - 172.64.152.103
+  - 104.17.28.3
+  - 172.64.158.200
+  - 104.19.49.226
+  - 162.159.36.214
+  - 104.17.128.156
+  - 104.16.150.251
+  - 104.18.188.104
+  - 162.159.153.157
+  - 162.159.133.49
+  - 198.41.208.133
+  - 172.64.81.108
+  - 162.159.136.65
+  - 104.19.4.91
 - name: ✏️ Manual
-  proxies:
-  - 🇮🇳 印度-202606aa
-  - 🇭🇰 香港-202606aa
-  - 🇨🇳 台湾-202606aa
-  - 🇯🇵 日本-sc202606aa
-  - 🇺🇸 洛杉矶-cc202606aa
-  - 旧金山-202606aa
-  - 中转-202606cc
-  - 🇭🇰 香港-07
-  - 🇭🇰 IEPL香港-05
-  - 🇭🇰 IEPL香港_02
-  - 🇭🇰 香港_A5
-  - 🇭🇰 IEPL香港_B2
-  - 极速666.com
-  - 🇸🇬 更新失败官网重新获取订阅配置
-  - 🇭🇰 IEPL香港_10
-  - 🇭🇰 IEPL香港-04
-  - 🇭🇰 香港_B1
-  - 🇭🇰 IEPL香港-06
-  - 🇭🇰 IEPL香港_B4
-  - 🇭🇰 香港_B5
-  - 套餐到期：2025-12-24
-  - 🇭🇰 香港_09
-  - 🇭🇰 IEPL香港-08
-  - 🇭🇰 香港_03
-  - 🇭🇰 香港_A1
-  - 🇭🇰 IEPL香港_A4
-  - 🇭🇰 香港_01
-  - 🏳️‍🌈 剩余流量：1017.23 GB
-  - 距离下次重置剩余：16 天
-  - 🇭🇰 香港B3
-  - 🇭🇰 IEPL香港_A2
-  - 🇸🇬 IEPL新加坡-10
   type: select
-- name: 📶 Stable
   proxies:
-  - 🇮🇳 印度-202606aa
-  - 🇭🇰 香港-202606aa
-  - 🇨🇳 台湾-202606aa
-  - 🇯🇵 日本-sc202606aa
-  - 🇺🇸 洛杉矶-cc202606aa
-  - 旧金山-202606aa
-  - 中转-202606cc
-  - 🇭🇰 香港-07
-  - 🇭🇰 IEPL香港-05
-  - 🇭🇰 IEPL香港_02
-  - 🇭🇰 香港_A5
-  - 🇭🇰 IEPL香港_B2
-  - 极速666.com
-  - 🇸🇬 更新失败官网重新获取订阅配置
-  - 🇭🇰 IEPL香港_10
-  - 🇭🇰 IEPL香港-04
-  - 🇭🇰 香港_B1
-  - 🇭🇰 IEPL香港-06
-  - 🇭🇰 IEPL香港_B4
-  - 🇭🇰 香港_B5
-  - 套餐到期：2025-12-24
-  - 🇭🇰 香港_09
-  - 🇭🇰 IEPL香港-08
-  - 🇭🇰 香港_03
-  - 🇭🇰 香港_A1
-  - 🇭🇰 IEPL香港_A4
-  - 🇭🇰 香港_01
-  - 🏳️‍🌈 剩余流量：1017.23 GB
-  - 距离下次重置剩余：16 天
-  - 🇭🇰 香港B3
-  - 🇭🇰 IEPL香港_A2
-  - 🇸🇬 IEPL新加坡-10
+  - 198.41.223.225
+  - 198.41.222.146
+  - 198.41.219.62
+  - 198.41.218.203
+  - 198.41.217.134
+  - 198.41.216.24
+  - 198.41.215.25
+  - 198.41.214.11
+  - 198.41.211.59
+  - ct.877774.xyz
+  - bestcf.yzqiang.site
+  - ai.cloudflare.com
+  - workers.cloudflare.com
+  - developers.cloudflare.com
+  - blog.cloudflare.com
+  - www.visa.cn
+  - usa.visa.com
+  - www.visa.com.tw
+  - www.visa.com.hk
+  - www.visa.com.sg
+  - www.shopify.com
+  - icook.hk
+  - www.epicgames.com
+  - www.fortnite.com
+  - cloudflare.182682.xyz
+  - 104.17.49.240
+  - 104.19.42.110
+  - 104.16.147.104
+  - 104.18.95.112
+  - 104.16.144.221
+  - 104.17.155.36
+  - 172.64.152.103
+  - 104.17.28.3
+  - 172.64.158.200
+  - 104.19.49.226
+  - 162.159.36.214
+  - 104.17.128.156
+  - 104.16.150.251
+  - 104.18.188.104
+  - 162.159.153.157
+  - 162.159.133.49
+  - 198.41.208.133
+  - 172.64.81.108
+  - 162.159.136.65
+  - 104.19.4.91
+- name: 📶 Stable
   type: fallback
   url: https://www.google.com/generate_204
   interval: 600
+  proxies:
+  - 198.41.223.225
+  - 198.41.222.146
+  - 198.41.219.62
+  - 198.41.218.203
+  - 198.41.217.134
+  - 198.41.216.24
+  - 198.41.215.25
+  - 198.41.214.11
+  - 198.41.211.59
+  - ct.877774.xyz
+  - bestcf.yzqiang.site
+  - ai.cloudflare.com
+  - workers.cloudflare.com
+  - developers.cloudflare.com
+  - blog.cloudflare.com
+  - www.visa.cn
+  - usa.visa.com
+  - www.visa.com.tw
+  - www.visa.com.hk
+  - www.visa.com.sg
+  - www.shopify.com
+  - icook.hk
+  - www.epicgames.com
+  - www.fortnite.com
+  - cloudflare.182682.xyz
+  - 104.17.49.240
+  - 104.19.42.110
+  - 104.16.147.104
+  - 104.18.95.112
+  - 104.16.144.221
+  - 104.17.155.36
+  - 172.64.152.103
+  - 104.17.28.3
+  - 172.64.158.200
+  - 104.19.49.226
+  - 162.159.36.214
+  - 104.17.128.156
+  - 104.16.150.251
+  - 104.18.188.104
+  - 162.159.153.157
+  - 162.159.133.49
+  - 198.41.208.133
+  - 172.64.81.108
+  - 162.159.136.65
+  - 104.19.4.91
+- name: 🇲🇲 Myanmar
+  type: select
+  proxies:
+  - DIRECT
+  - REJECT
 - name: 🧠 AI
   type: select
   exclude-filter: (?i)港|HK
@@ -540,67 +953,106 @@ proxy-groups:
   - 📶 Stable
   - DIRECT
 rules:
+- RULE-SET,🆎 AdBlock,REJECT
+- RULE-SET,🆎 AdBlock Privacy,REJECT
+- RULE-SET,🍃 BanProgramAD,REJECT
+- RULE-SET,🛑 BanAD,REJECT
+- RULE-SET,⚙️ mm-ipcidr,DIRECT
+- RULE-SET,🏠LAN,DIRECT
 - GEOSITE,category-ads-all,REJECT
-- GEOIP,MM,DIRECT
+- GEOIP,MM,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,kbzbank.com,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,kpay.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,wavemoney.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,ayabank.com,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,cb-bank.com,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,uab.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,yoma.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,aya.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,cbbank.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,mpt.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,ooredoo.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,mytel.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,telenor.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,atom.com.mm,🇲🇲 Myanmar
+- DOMAIN-SUFFIX,mectelecom.com.mm,🇲🇲 Myanmar
+- PROCESS-NAME,com.kbzbank.kpaycustomer,🇲🇲 Myanmar
+- PROCESS-NAME,com.ayaplus.subscriber,🇲🇲 Myanmar
+- PROCESS-NAME,com.ofss.digx.mab,🇲🇲 Myanmar
+- PROCESS-NAME,com.ooredoo.selfcare,🇲🇲 Myanmar
+- PROCESS-NAME,mm.com.mptvas,🇲🇲 Myanmar
+- PROCESS-NAME,mm.com.wavemoney.wavepay,🇲🇲 Myanmar
+- PROCESS-NAME,com.mytel.myid,🇲🇲 Myanmar
+- PROCESS-NAME,mm.com.atom.store,🇲🇲 Myanmar
 - GEOSITE,youtube,🎬 YouTube
 - GEOSITE,telegram,✈️ Telegram
 - GEOSITE,google,🔍 Google
 - GEOSITE,apple,🍎 Apple
 - GEOSITE,microsoft,🪟 Microsoft
 - GEOSITE,facebook,📘 Facebook
-- DOMAIN-SUFFIX,viber.com,💬 Viber
-- DOMAIN-KEYWORD,viber,💬 Viber
-- PROCESS-NAME,💬 Viber,💬 Viber
 - DOMAIN-KEYWORD,facebook,📘 Facebook
 - DOMAIN-KEYWORD,fb,📘 Facebook
 - DOMAIN-SUFFIX,facebook.com,📘 Facebook
 - DOMAIN-SUFFIX,fb.com,📘 Facebook
 - DOMAIN-SUFFIX,fbcdn.net,📘 Facebook
-- DOMAIN-SUFFIX,xx.fbcdn.net,📘 Facebook
-- DOMAIN-SUFFIX,xy.fbcdn.net,📘 Facebook
 - DOMAIN-SUFFIX,messenger.com,📘 Facebook
 - DOMAIN-SUFFIX,instagram.com,📘 Facebook
 - DOMAIN-SUFFIX,whatsapp.com,📘 Facebook
 - GEOSITE,tiktok,🎵 TikTok
 - DOMAIN-SUFFIX,tiktokcdn.com,🎵 TikTok
 - DOMAIN-SUFFIX,tiktokv.com,🎵 TikTok
-- DOMAIN-SUFFIX,ibytedtos.com,🎵 TikTok
-- DOMAIN-SUFFIX,byteoversea.com,🎵 TikTok
-- DOMAIN-SUFFIX,muscdn.com,🎵 TikTok
-- DOMAIN-SUFFIX,musical.ly,🎵 TikTok
-- PROCESS-NAME,com.kbzbank.kpaycustomer,DIRECT
-- PROCESS-NAME,com.ayaplus.subscriber,DIRECT
-- PROCESS-NAME,com.ofss.digx.mab,DIRECT
-- PROCESS-NAME,com.ooredoo.selfcare,DIRECT
-- PROCESS-NAME,mm.com.mptvas,DIRECT
-- PROCESS-NAME,mm.com.wavemoney.wavepay,DIRECT
-- PROCESS-NAME,com.mytel.myid,DIRECT
-- PROCESS-NAME,mm.com.atom.store,DIRECT
 - DOMAIN-SUFFIX,openai.com,🧠 AI
 - DOMAIN-SUFFIX,chat.openai.com,🧠 AI
 - DOMAIN-SUFFIX,api.openai.com,🧠 AI
 - DOMAIN-SUFFIX,anthropic.com,🧠 AI
 - DOMAIN-SUFFIX,claude.ai,🧠 AI
-- DOMAIN-SUFFIX,console.anthropic.com,🧠 AI
 - DOMAIN-SUFFIX,googleapis.com,🧠 AI
-- DOMAIN-SUFFIX,generativelanguage.googleapis.com,🧠 AI
 - DOMAIN-SUFFIX,gemini.google.com,🧠 AI
 - DOMAIN-SUFFIX,bard.google.com,🧠 AI
-- DOMAIN-SUFFIX,github.com,🧠 AI
 - DOMAIN-SUFFIX,huggingface.co,🧠 AI
-- DOMAIN-SUFFIX,hf.co,🧠 AI
-- DOMAIN-SUFFIX,replicate.com,🧠 AI
 - DOMAIN-SUFFIX,midjourney.com,🧠 AI
-- DOMAIN-SUFFIX,leonardo.ai,🧠 AI
-- DOMAIN-SUFFIX,stability.ai,🧠 AI
-- DOMAIN-SUFFIX,api.stability.ai,🧠 AI
-- DOMAIN-SUFFIX,deepai.org,🧠 AI
-- DOMAIN-SUFFIX,character.ai,🧠 AI
-- DOMAIN-SUFFIX,cohere.com,🧠 AI
-- DOMAIN-SUFFIX,perplexity.ai,🧠 AI
-- DOMAIN-SUFFIX,phind.com,🧠 AI
-- DOMAIN-SUFFIX,githubassets.com,🧠 AI
-- DOMAIN-SUFFIX,cdn-lfs.huggingface.co,🧠 AI
 - PROCESS-NAME,com.openai.chatgpt,🧠 AI
-- PROCESS-NAME,Copilot,🧠 AI
 - MATCH,🟢 GLOBAL
+rule-providers:
+  ⚙️ mm-ipcidr:
+    behavior: ipcidr
+    format: yaml
+    type: http
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/refs/heads/main/mm-cidr.yaml
+    interval: 86400
+    path: ./rule-providers/mm-ipcidr.yaml
+  🆎 AdBlock:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/refs/heads/main/BanEasyList.yaml
+    interval: 86400
+    path: ./rule-providers/BanEasyList.list
+  🆎 AdBlock Privacy:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/refs/heads/main/BanEasyPrivacy.yaml
+    interval: 86400
+    path: ./rule-providers/BanEasyPrivacy.list
+  🍃 BanProgramAD:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/refs/heads/main/BanProgramAD.yaml
+    interval: 86400
+    path: ./rule-providers/BanProgramAD.list
+  🏠LAN:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
+    interval: 86400
+    path: ./rule-providers/LocalAreaNetwork.list
+  🛑 BanAD:
+    behavior: classical
+    format: yaml
+    type: http
+    url: https://raw.githubusercontent.com/PoeMyintzu/clash/refs/heads/main/BanAD.yaml
+    interval: 86400
+    path: ./rule-providers/BanAD.list
