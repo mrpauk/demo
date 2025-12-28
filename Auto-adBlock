@@ -38,8 +38,6 @@ dns:
   - 8.8.4.4
   - 1.0.0.1
   fallback-filter:
-    geoip: true
-    geoip-code: MM
     ipcidr:
     - 0.0.0.0/8
     - 10.0.0.0/8
@@ -960,7 +958,6 @@ rules:
 - RULE-SET,⚙️ mm-ipcidr,DIRECT
 - RULE-SET,🏠LAN,DIRECT
 - GEOSITE,category-ads-all,REJECT
-- GEOIP,MM,🇲🇲 Myanmar
 - DOMAIN-SUFFIX,kbzbank.com,🇲🇲 Myanmar
 - DOMAIN-SUFFIX,kpay.com.mm,🇲🇲 Myanmar
 - DOMAIN-SUFFIX,wavemoney.com.mm,🇲🇲 Myanmar
