@@ -1,4 +1,4 @@
-# ==== VIBER DOMAIN RULES ====
+payload:
 - DOMAIN-SUFFIX,viber.com,VIBER
 - DOMAIN-SUFFIX,account.viber.com,VIBER
 - DOMAIN-SUFFIX,activate.cdn.viber.com,VIBER
@@ -79,3 +79,4 @@
 # ==== VIBER IP RULES ====
 - IP-CIDR,52.84.0.0/14,VIBER
 - IP-CIDR,52.88.0.0/13,VIBER
+
